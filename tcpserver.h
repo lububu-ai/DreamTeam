@@ -11,6 +11,8 @@
 #include <QByteArray>
 #include <QDebug>
 
+#include "commandparser.h"
+
 class MyTcpServer : public QObject
 {
     Q_OBJECT
@@ -23,7 +25,8 @@ public slots:
     void slotServerRead();
 private:
     QTcpServer * mTcpServer;
-    QMap<int, QTcpSocket*> mSockets;
+    QMap<qintptr, QTcpSocket*> mSockets;
+    CommandParser mParser;
     //int server_status;
 };
 #endif // TCPSERVER_H

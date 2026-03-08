@@ -3,6 +3,7 @@
 MyTcpServer::~MyTcpServer()
 {
     for (auto socket : mSockets) {
+        Database::getInstance()->log_out(mSockets.key(socket));
         socket->close();
         socket->deleteLater();
     }
@@ -27,7 +28,7 @@ void MyTcpServer::slotNewConnection(){
     while (mTcpServer->hasPendingConnections()) {
         QTcpSocket *mTcpSocket;
         mTcpSocket = mTcpServer->nextPendingConnection(); //добавить объявление: QTcpSocket *mTcpSocket...
-        mTcpSocket->write("Hello, World!!! I am echo server!\r\n");
+        mTcpSocket->write("connected\r\n");
         connect(mTcpSocket, &QTcpSocket::readyRead,this,&MyTcpServer::slotServerRead);
         connect(mTcpSocket,&QTcpSocket::disconnected,this,&MyTcpServer::slotClientDisconnected);
         mSockets[mTcpSocket->socketDescriptor()] = mTcpSocket;
@@ -52,17 +53,22 @@ void MyTcpServer::slotServerRead(){
         else
             res.append(array);
     }
-    if (res.toUtf8().toLower() == "exit\r\n") {
-        mTcpSocket->write("Connection will be closed!\r\n");
-        mTcpSocket->disconnectFromHost();
-    }
-    // mTcpSocket->write(parsing(res).toUtf8()); //parsing - обработчик входящих команд
+    // if (res.toUtf8().toLower() == "exit\r\n") {
+    //     mTcpSocket->write("Connection will be closed!\r\n");
+    //     mTcpSocket->disconnectFromHost();
+    // }
+    mTcpSocket->write(mParser.parse(res, mTcpSocket->socketDescriptor()).toUtf8()); //parsing - обработчик входящих команд
 
 }
 
 void MyTcpServer::slotClientDisconnected(){
     QTcpSocket *mTcpSocket = qobject_cast<QTcpSocket*>(sender());
-    mSockets.remove(mTcpSocket->socketDescriptor());
+    if (!mTcpSocket)
+        return;
+
+    qintptr socket_descriptor = mSockets.key(mTcpSocket);
+    Database::getInstance()->log_out(socket_descriptor);
+    mSockets.remove(socket_descriptor);
     mTcpSocket->close();
     mTcpSocket->deleteLater();
 }
