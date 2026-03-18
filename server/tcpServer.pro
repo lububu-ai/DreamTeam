@@ -1,6 +1,6 @@
 QT -= gui
 
-QT += network sql #Для работы с сетью
+QT += network sql #Для работы с сетью и бд
 
 
 CONFIG += c++20 console

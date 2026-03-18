@@ -1,0 +1,26 @@
+name: Project build
+
+on:
+  push:
+    branches: ["Main_Server_Client"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download project requirements
+        run: sudo apt update && sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5sql5 libqt5sql5-sqlite build-essential
+
+      - name: Show qmake version
+        run: qmake --version
+
+      - name: Build project
+        run: |
+          qmake
+          make
+
+      - name: Run
+        run: echo "Build finished"

@@ -154,6 +154,16 @@ bool Database::update_stat(int task_number, int socket_descriptor, bool is_corre
         return false;
     }
     return true;
+}
+
+bool Database::drop_all_connections()
+{
+    QSqlQuery query(db);
+    if (!query.exec("UPDATE User set socket_id = NULL")) {
+        qDebug() << query.lastError().text();
+        return false;
+    }
+    return true;
 };
 
 bool Database::log_out(int socket_descriptor)

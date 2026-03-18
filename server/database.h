@@ -38,6 +38,7 @@ class Database
         bool is_reg_ok(QString, QString, QString, int);
         bool log_out(int);
         bool update_stat(int, int, bool);
+        bool drop_all_connections();
         QString get_current_stat(int);
         QString get_all_stat(int);
 };
