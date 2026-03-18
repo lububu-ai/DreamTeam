@@ -19,7 +19,8 @@ jobs:
 
       - name: Build project
         run: |
-          qmake
+          cd server
+          qmake tcpServer.pro
           make
 
       - name: Run
