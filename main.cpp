@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     SingletonClient::getInstance();
 
     std::string msg;
-    std::cin >> msg;
+    std::getline(std::cin,msg);
 
     SingletonClient::getInstance()->send_msg_to_server(QString::fromStdString(msg));
 
