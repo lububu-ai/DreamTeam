@@ -1,0 +1,36 @@
+# Название проекта
+PROJECT_NAME = "TCP Client-Server"
+
+# Папка для генерации документации
+OUTPUT_DIRECTORY = docs
+
+# Какие файлы сканировать
+INPUT = server/ client/
+
+# Рекурсивный обход папок
+RECURSIVE = YES
+
+# Включить все элементы (даже без комментариев)
+EXTRACT_ALL = YES
+
+# Показывать private методы
+EXTRACT_PRIVATE = YES
+
+# Генерация HTML
+GENERATE_HTML = YES
+
+# Не генерировать LaTeX (PDF)
+GENERATE_LATEX = NO
+
+# Включить исходный код
+SOURCE_BROWSER = YES
+
+# Подсветка кода
+INLINE_SOURCES = YES
+
+# Показывать дерево классов
+HAVE_DOT = YES
+CLASS_DIAGRAMS = YES
+
+# Тихий режим (NO = показывать процесс)
+QUIET = NO
