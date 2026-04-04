@@ -44,37 +44,44 @@ QString get_all_stat(QStringList args, int socket_descriptor)
 }
 
 QString get_task(QStringList args, int socket_descriptor) {
-    if (args.size() >= 2) {
-        int task_number = args[1].toInt();
-        if (!tasks.contains(task_number)) {
-            return "task_not_found\r\n";
-        }
-        return QString("TASK %1 %2 %3 %4\r\n")
-            .arg(task_number)
-            .arg(tasks[task_number].a)
-            .arg(tasks[task_number].b)
-            .arg(tasks[task_number].k);
+    Database* db = Database::getInstance();
+    if(args.size() < 2) {
+        return "get_task_error\r\n";
     }
-    return "get_task_error\r\n";
+    if (!db->is_connected(socket_descriptor)) {
+        return "not_authenticated\r\n";
+    }
+    int task_type = args[1].toInt();
+    if (task_type < 1 || task_type > 5) {
+        return "task_not_found\r\n";
+    }
+    CurrentTask current = db->get_current_task(socket_descriptor);
+    if (current.is_valid() && current.type == task_type) {
+        return QString("TASK %1 %2\r\n").arg(current.type).arg(current.payload);
+    }
+    CurrentTask new_task = generate_task(task_type);
+    if (!new_task.is_valid()) {
+        return "task_generation_error\r\n";
+    }
+    if (!db->save_current_task(socket_descriptor, new_task)) {
+        return "task_save_error\r\n";
+    }
+    return QString("TASK %1 %2\r\n").arg(new_task.type).arg(new_task.payload);
 }
 
 QString solve_task(QStringList args, int socket_descriptor) {
     Database* db = Database::getInstance();
-    if (args.size() >= 3) {
+    CurrentTask task = db->get_current_task(socket_descriptor);
+    if (args.size() >= 3 && db->is_connected(socket_descriptor) && task.is_valid()) {
         int task_number = args[1].toInt();
         double answer = args[2].toDouble();
-        bool is_correct = check_task(tasks[task_number], answer);
-        if (!tasks.contains(task_number)) {
+        if (task_number < 1 || task_number > 5 || task_number != task.type) {
             return "task_not_found\r\n";
         }
-        db->update_stat(task_number, socket_descriptor,is_correct);
+        bool is_correct = std::abs(task.answer - answer) < 1e-3;
+        db->update_stat(task_number, socket_descriptor, is_correct);
+        db->clear_current_task(socket_descriptor);
         return is_correct ? "answer_correct\r\n" : "answer_incorrect\r\n";
     }
     return "solve_task_error\r\n";
-}
-
-bool check_task(Task task, double answer)
-{
-    double correct = (task.b - task.a) / std::pow(2.0, task.k);
-    return std::abs(correct - answer) < 1e-6;
 }

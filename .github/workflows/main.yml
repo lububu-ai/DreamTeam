@@ -1,10 +1,12 @@
-name: Project build
+name: Build and Unit tests
 
 on:
   push:
-    branches: ["Server_MusikhinGleb"]
+    branches: ['Server_MusikhinGleb', 'Main_Server_Client']
+  pull_request:
+    branches: ['Server_MusikhinGleb', 'Main_Server_Client']
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,14 +16,17 @@ jobs:
       - name: Download project requirements
         run: sudo apt update && sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5sql5 libqt5sql5-sqlite build-essential
 
-      - name: Show qmake version
-        run: qmake --version
-
       - name: Build project
         run: |
-          cd server
-          qmake tcpServer.pro
+          cd server/app
+          qmake app.pro
           make
-
-      - name: Run
-        run: echo "Build finished"
+      - name: Build tests
+        run: |
+          cd server/unitTest
+          qmake unitTest.pro
+          make
+      - name: Run unit tests
+        run: |
+          cd server/unitTest
+          ./unitTest

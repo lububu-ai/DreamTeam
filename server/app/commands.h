@@ -11,6 +11,8 @@ QString login(QStringList, int);
 QString logout(QStringList, int);
 QString get_current_stat(QStringList, int);
 QString get_all_stat(QStringList, int);
+
 QString get_task(QStringList, int);
-QString solve_task(QStringList args, int socket_descriptor);
-bool check_task(Task, double);
+QString solve_task(QStringList, int);
+CurrentTask generate_task(int);
+bool check_task(const CurrentTask&, double);
