@@ -5,6 +5,7 @@
 #include <functional>
 #include <vector>
 #include <utility>
+#include <cmath>
 
 struct CurrentTask {
     int type = 0;
