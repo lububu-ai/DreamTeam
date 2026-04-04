@@ -10,6 +10,7 @@ class TestDatabase : public QObject
 {
     Q_OBJECT
 private slots:
+    void initTestCase();
     void reg_not_enough_arguments_error();
     void reg_success();
     void logout_success();

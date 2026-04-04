@@ -1,6 +1,12 @@
 #include "test_database.h"
 
 
+
+void TestDatabase::initTestCase()
+{
+    Database::getInstance()->drop_all_connections();
+}
+
 void TestDatabase::reg_not_enough_arguments_error()
 {
     CommandParser parser;
