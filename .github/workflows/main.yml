@@ -6,21 +6,26 @@ on:
   pull_request:
     branches: ['Server_MusikhinGleb', 'Main_Server_Client']
 jobs:
-  build-and-test:
+  build-app:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Download project requirements
         run: sudo apt update && sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5sql5 libqt5sql5-sqlite build-essential
-
       - name: Build project
         run: |
           cd server/app
           qmake app.pro
           make
+  test:
+    runs-on: ubuntu-latest
+    needs: build-app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download project requirements
+        run: sudo apt update && sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5sql5 libqt5sql5-sqlite build-essential
       - name: Build tests
         run: |
           cd server/unitTest
