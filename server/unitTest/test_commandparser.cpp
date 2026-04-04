@@ -10,7 +10,7 @@ void TestCommandParser::unknown_command() {
 };
 void TestCommandParser::get_task_success() {
     CommandParser parser;
-    parser.parse("REG user user1@mail.com pass1")
+    parser.parse("REG user user1@mail.com pass1", 1)
     QString res = parser.parse("GET_TASK 1", 1);
     QVERIFY(res.startsWith("TASK 1 "));
 };
