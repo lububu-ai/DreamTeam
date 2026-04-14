@@ -15,4 +15,3 @@ QString get_all_stat(QStringList, int);
 QString get_task(QStringList, int);
 QString solve_task(QStringList, int);
 CurrentTask generate_task(int);
-bool check_task(const CurrentTask&, double);

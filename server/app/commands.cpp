@@ -72,13 +72,28 @@ QString get_task(QStringList args, int socket_descriptor) {
 QString solve_task(QStringList args, int socket_descriptor) {
     Database* db = Database::getInstance();
     CurrentTask task = db->get_current_task(socket_descriptor);
+
     if (args.size() >= 3 && db->is_connected(socket_descriptor) && task.is_valid()) {
         int task_number = args[1].toInt();
-        double answer = args[2].toDouble();
+        QString user_answer = args[2];
+
         if (task_number < 1 || task_number > 5 || task_number != task.type) {
             return "task_not_found\r\n";
         }
-        bool is_correct = std::abs(task.answer - answer) < 1e-3;
+
+        bool is_correct = false;
+
+        if (task_number == 4) {
+            is_correct = (user_answer == task.answer);
+        } else {
+            bool ok1 = false, ok2 = false;
+            double a = user_answer.toDouble(&ok1);
+            double b = task.answer.toDouble(&ok2);
+            if (ok1 && ok2) {
+                is_correct = std::abs(a - b) < 1e-3;
+            }
+        }
+
         db->update_stat(task_number, socket_descriptor, is_correct);
         db->clear_current_task(socket_descriptor);
         return is_correct ? "answer_correct\r\n" : "answer_incorrect\r\n";

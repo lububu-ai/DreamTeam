@@ -2,15 +2,17 @@
 #define TASKS_H
 
 #include <QString>
+#include <QStringList>
 #include <functional>
 #include <vector>
 #include <utility>
 #include <cmath>
+#include <algorithm>
 
 struct CurrentTask {
     int type = 0;
     QString payload = "";
-    double answer = 0.0;
+    QString answer = "";
 
     bool is_valid() const;
     void clear();

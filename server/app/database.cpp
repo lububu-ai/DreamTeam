@@ -31,7 +31,7 @@ Database::Database(){
                "socket_id varchar(20),"
                "current_task_type INT not NULL default 0,"
                "current_task_payload TEXT,"
-               "current_task_answer REAL,"
+               "current_task_answer TEXT,"
                "task1_stat int not null,"
                "task2_stat int not null,"
                "task3_stat int NOT NULL,"
@@ -192,7 +192,7 @@ CurrentTask Database::get_current_task(int socket_descriptor)
     CurrentTask task;
     task.type = query.value(0).toInt();
     task.payload = query.value(1).toString();
-    task.answer = query.value(2).toDouble();
+    task.answer = query.value(2).toString();
     return task;
 }
 
@@ -202,7 +202,7 @@ bool Database::clear_current_task(int socket_descriptor)
     query.prepare("update User set "
                   "current_task_type = 0,"
                   "current_task_payload = '',"
-                  "current_task_answer = 0 "
+                  "current_task_answer = '' "
                   "where socket_id = :socket_id");
     query.bindValue(":socket_id", socket_descriptor);
     if (!query.exec()) {
