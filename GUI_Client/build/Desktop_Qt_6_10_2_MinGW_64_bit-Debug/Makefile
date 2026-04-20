@@ -306,6 +306,8 @@ Makefile: ../../GUI_Client.pro D:/Qt/frmwrk/6.10.2/mingw_64/mkspecs/win32-g++/qm
 		../../GUI_Client.pro \
 		D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Widgets.prl \
 		D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Gui.prl \
+		D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Network.prl \
+		D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Sql.prl \
 		D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Core.prl \
 		D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6EntryPoint.prl \
 		D:/Qt/frmwrk/6.10.2/mingw_64/mkspecs/features/build_pass.prf
@@ -546,6 +548,8 @@ D:/Qt/frmwrk/6.10.2/mingw_64/mkspecs/features/lex.prf:
 ../../GUI_Client.pro:
 D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Widgets.prl:
 D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Gui.prl:
+D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Network.prl:
+D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Sql.prl:
 D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6Core.prl:
 D:/Qt/frmwrk/6.10.2/mingw_64/lib/Qt6EntryPoint.prl:
 D:/Qt/frmwrk/6.10.2/mingw_64/mkspecs/features/build_pass.prf:

@@ -47,7 +47,8 @@ template <> constexpr inline auto MainForm::qt_create_metaobjectdata<qt_meta_tag
         "on_pushButtonTASK5_clicked",
         "on_pushButtonEXIT_clicked",
         "on_pushButtonBACK_clicked",
-        "on_pushButtonSTATS_clicked"
+        "on_pushButtonSTATS_clicked",
+        "on_pushButtonSendAnswer_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -67,6 +68,8 @@ template <> constexpr inline auto MainForm::qt_create_metaobjectdata<qt_meta_tag
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_pushButtonSTATS_clicked'
         QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButtonSendAnswer_clicked'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -98,6 +101,7 @@ void MainForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 5: _t->on_pushButtonEXIT_clicked(); break;
         case 6: _t->on_pushButtonBACK_clicked(); break;
         case 7: _t->on_pushButtonSTATS_clicked(); break;
+        case 8: _t->on_pushButtonSendAnswer_clicked(); break;
         default: ;
         }
     }
@@ -123,14 +127,14 @@ int MainForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

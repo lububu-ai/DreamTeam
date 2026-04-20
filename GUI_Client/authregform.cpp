@@ -29,7 +29,37 @@ void AuthRegForm::on_pushButtonAuth_clicked(){
         emit auth_ok();
         this->hide();
     }
-    //else msgBox;
+    else{
+        QMessageBox msgBox;
+        msgBox.setText("Wrong login/password!");
+        msgBox.exec();
+    }
+}
+
+void AuthRegForm::on_pushButtonReg_clicked(){
+    QString log = ui->lineEditLogin->text();
+    QString email = ui->lineEditEmail->text();
+    QString pw = ui->lineEditPassword->text();
+    QString pwConfirm = ui->lineEditConfirmPW->text();
+
+    if(pw!=pwConfirm) {
+        QMessageBox msgBox;
+        msgBox.setText("Passwords are different!");
+        msgBox.exec();
+    }
+    else{
+        if(reg(log,email,pw)){
+            emit reg_ok();
+            QMessageBox msgBox;
+            msgBox.setText("Successfully registered!");
+            msgBox.exec();
+        }
+        else{
+            QMessageBox msgBox;
+            msgBox.setText("Registration failed: Not enough arguments/login occupied");
+            msgBox.exec();
+        }
+    }
 }
 
 void AuthRegForm::on_pushButtonChangeToREG_clicked(){

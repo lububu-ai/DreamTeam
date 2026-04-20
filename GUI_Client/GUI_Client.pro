@@ -1,6 +1,7 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets \
+    network sql
 
 CONFIG += c++17
 
@@ -13,13 +14,15 @@ SOURCES += \
     main.cpp \
     authregform.cpp \
     mainform.cpp \
-    managerform.cpp
+    managerform.cpp \
+    singletonclient.cpp
 
 HEADERS += \
     authregform.h \
     clientfuncs.h \
     mainform.h \
-    managerform.h
+    managerform.h \
+    singletonclient.h
 
 FORMS += \
     authregform.ui \

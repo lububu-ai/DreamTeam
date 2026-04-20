@@ -3,6 +3,7 @@
 
 #include "authregform.h"
 #include "mainform.h"
+
 #include <QObject>
 
 class ManagerForm:public QObject
@@ -13,8 +14,10 @@ public:
 private:
     AuthRegForm *w;
     MainForm *m;
+
 public slots:
     void slot_on_auth_ok();
+
 
 };
 

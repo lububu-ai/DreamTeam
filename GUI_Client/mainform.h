@@ -2,6 +2,9 @@
 #define MAINFORM_H
 
 #include <QWidget>
+#include <QMessageBox>
+
+#include "clientfuncs.h"
 
 namespace Ui {
 class MainForm;
@@ -18,7 +21,7 @@ public:
 private:
     Ui::MainForm *ui;
     void changeToTask(bool flag);
-    void changeHeader(char button);
+    QString task_num{"0"};
 
 private slots:
     void on_pushButtonTASK1_clicked();
@@ -29,7 +32,9 @@ private slots:
     void on_pushButtonEXIT_clicked();
     void on_pushButtonBACK_clicked();
     void on_pushButtonSTATS_clicked();
-
+    void on_pushButtonSendAnswer_clicked();
+/*signals:
+    void taskChoice_ok();*/
 };
 
 #endif // MAINFORM_H
