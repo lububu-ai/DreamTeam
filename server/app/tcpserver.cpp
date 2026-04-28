@@ -22,6 +22,7 @@ MyTcpServer::MyTcpServer(QObject *parent): QObject(parent),
     } else {
         qDebug() << "Server is started";
     }
+    Database::getInstance()->drop_all_connections();
 }
 
 void MyTcpServer::slotNewConnection(){

@@ -4,8 +4,13 @@
 #include <QSqlRecord>
 #include <QVariant>
 
+#ifndef DATABASE_H
+#define DATABASE_H
+
 #include <QDebug>
 #include <QString>
+
+#include "tasks.h"
 
 class Database;
 
@@ -34,10 +39,17 @@ class Database
 	public:
         static Database* getInstance();
         bool is_admin(int);
+        bool is_connected(int);
         bool is_auth_ok(QString, QString, int);
         bool is_reg_ok(QString, QString, QString, int);
         bool log_out(int);
+        bool save_current_task(int, const CurrentTask&);
+        CurrentTask get_current_task(int);
+        bool clear_current_task(int);
         bool update_stat(int, int, bool);
+        bool drop_all_connections();
         QString get_current_stat(int);
         QString get_all_stat(int);
 };
+
+#endif // DATABASE_H
