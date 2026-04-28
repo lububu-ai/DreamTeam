@@ -53,6 +53,8 @@ void AuthRegForm::on_pushButtonReg_clicked(){
             QMessageBox msgBox;
             msgBox.setText("Successfully registered!");
             msgBox.exec();
+            emit auth_ok();
+            this->hide();
         }
         else{
             QMessageBox msgBox;
