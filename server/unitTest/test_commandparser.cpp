@@ -1,5 +1,9 @@
 #include "test_commandparser.h"
 
+void TestCommandParser::cleanup() {
+    Database::getInstance()->delete_user("user");
+}
+
 void TestCommandParser::empty_command() {
     CommandParser parser;
     QCOMPARE(parser.parse("   ", 1), QString("empty_command\r\n"));

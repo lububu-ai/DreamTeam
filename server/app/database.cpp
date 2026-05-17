@@ -53,6 +53,14 @@ Database* Database::getInstance() {
     return p_instance;
 }
 
+bool Database::delete_user(QString login)
+{
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM User WHERE login = :login");
+    query.bindValue(":login", login);
+    return query.exec();
+}
+
 bool Database::is_admin(int socket_descriptor)
 {
     QSqlQuery query(db);

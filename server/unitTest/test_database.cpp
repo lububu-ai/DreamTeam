@@ -7,6 +7,11 @@ void TestDatabase::initTestCase()
     Database::getInstance()->drop_all_connections();
 }
 
+void TestDatabase::cleanup()
+{
+    Database::getInstance()->delete_user("test_user");
+}
+
 void TestDatabase::reg_not_enough_arguments_error()
 {
     CommandParser parser;
@@ -35,6 +40,7 @@ void TestDatabase::log_error()
 void TestDatabase::log_success()
 {
     CommandParser parser;
+    parser.parse("REG test_user test@mail.com test_password",1), "reg_success\r\n";
     parser.parse("OUT",1);
     QCOMPARE(parser.parse("LOG test_user test_password",1), "log_success\r\n");
 }

@@ -38,6 +38,7 @@ class Database
         friend class DatabaseDestroyer;
 	public:
         static Database* getInstance();
+        bool delete_user(QString login);
         bool is_admin(int);
         bool is_connected(int);
         bool is_auth_ok(QString, QString, int);

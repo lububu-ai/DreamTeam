@@ -114,5 +114,6 @@ CMakeLists.txt.user*
 .rcc/
 .uic/
 /build*/
-/server/build*/
+/server/build/
+/server/app/build/
 Dockerfile
