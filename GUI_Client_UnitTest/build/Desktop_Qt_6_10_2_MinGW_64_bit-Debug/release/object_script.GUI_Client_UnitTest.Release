@@ -1,0 +1,11 @@
+release/clientfuncs.o
+release/singletonclient.o
+release/test_clientfuncs.o
+release/test_main.o
+release/test_main.o
+release/test_clientfuncs.o
+release/test_singletonclient.o
+release/test_singletonclient.o
+release/moc_singletonclient.o
+release/moc_test_clientfuncs.o
+release/moc_test_singletonclient.o

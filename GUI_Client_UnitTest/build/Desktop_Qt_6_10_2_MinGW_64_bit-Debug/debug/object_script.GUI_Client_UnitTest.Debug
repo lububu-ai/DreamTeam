@@ -1,0 +1,11 @@
+debug/clientfuncs.o
+debug/singletonclient.o
+debug/test_clientfuncs.o
+debug/test_main.o
+debug/test_main.o
+debug/test_clientfuncs.o
+debug/test_singletonclient.o
+debug/test_singletonclient.o
+debug/moc_singletonclient.o
+debug/moc_test_clientfuncs.o
+debug/moc_test_singletonclient.o
