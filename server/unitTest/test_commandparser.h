@@ -10,6 +10,7 @@ class TestCommandParser : public QObject
     Q_OBJECT
 
 private slots:
+    void cleanup();
     void empty_command();
     void unknown_command();
     // void reg_error();
