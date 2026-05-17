@@ -1,0 +1,10 @@
+release/clientfuncs.o
+release/main.o
+release/authregform.o
+release/mainform.o
+release/managerform.o
+release/singletonclient.o
+release/moc_authregform.o
+release/moc_mainform.o
+release/moc_managerform.o
+release/moc_singletonclient.o
