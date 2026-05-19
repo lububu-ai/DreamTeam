@@ -56,7 +56,7 @@ Database* Database::getInstance() {
 bool Database::is_admin(int socket_descriptor)
 {
     QSqlQuery query(db);
-    query.prepare("SELECT role from User where socket_id = :socket_id");
+    query.prepare("SELECT 1 from User where socket_id = :socket_id and role = \'admin\'");
     query.bindValue(":socket_id", socket_descriptor);
     if (!query.exec()) {
         qDebug() << query.lastError().text();
