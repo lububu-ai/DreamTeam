@@ -104,7 +104,7 @@ QString solve_task(QStringList args, int socket_descriptor) {
     return "solve_task_error\r\n";
 }
 
-QString user_delete(QStringList args, int socket_descriptor){
+QString delete_user(QStringList args, int socket_descriptor){
     Database* db = Database::getInstance();
     QString login = args[1];
 
