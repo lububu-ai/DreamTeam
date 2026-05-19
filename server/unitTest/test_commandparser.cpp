@@ -1,7 +1,7 @@
 #include "test_commandparser.h"
 
 void TestCommandParser::cleanup() {
-    Database::getInstance()->delete_user("user");
+    Database::getInstance()->delete_user_test("user");
 }
 
 void TestCommandParser::empty_command() {

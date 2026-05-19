@@ -9,7 +9,7 @@ SingletonClient::SingletonClient(QObject * parent):QObject(parent){
 
 QString SingletonClient::send_msg_to_server(QString query){
     m_pTcpSocket->write(query.toUtf8());
-    m_pTcpSocket->waitForReadyRead(500);
+    m_pTcpSocket->waitForReadyRead(5000);
 
     //qDebug()<<"slot\n";
     QString msg = "";

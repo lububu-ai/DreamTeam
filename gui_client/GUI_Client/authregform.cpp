@@ -24,14 +24,15 @@ AuthRegForm::~AuthRegForm()
 void AuthRegForm::on_pushButtonAuth_clicked(){
     QString log = ui->lineEditLogin->text();
     QString pw = ui->lineEditPassword->text();
+    QString role;
 
-    if(auth(log,pw)){
-        emit auth_ok();
+    if(auth(log, pw, role)){
+        emit auth_ok(role);
         this->hide();
     }
     else{
         QMessageBox msgBox;
-        msgBox.setText("Wrong login/password!");
+        msgBox.setText("Неверный логин/пароль!");
         msgBox.exec();
     }
 }
@@ -41,24 +42,26 @@ void AuthRegForm::on_pushButtonReg_clicked(){
     QString email = ui->lineEditEmail->text();
     QString pw = ui->lineEditPassword->text();
     QString pwConfirm = ui->lineEditConfirmPW->text();
+    QString role;
 
-    if(pw!=pwConfirm) {
+    if(pw != pwConfirm) {
         QMessageBox msgBox;
-        msgBox.setText("Passwords are different!");
+        msgBox.setText("Пароли не совпадают!");
         msgBox.exec();
     }
     else{
-        if(reg(log,email,pw)){
-            emit reg_ok();
+        if(reg(log, email, pw, role)){
             QMessageBox msgBox;
-            msgBox.setText("Successfully registered!");
+            msgBox.setText("Регистрация успешна!");
             msgBox.exec();
-            emit auth_ok();
+
+            qDebug() << "New user role:" << role;
+            emit auth_ok(role);
             this->hide();
         }
         else{
             QMessageBox msgBox;
-            msgBox.setText("Registration failed: Not enough arguments/login occupied");
+            msgBox.setText("Ошибка регистрации: Недостаточно полей заполнено/Логин уже занят!");
             msgBox.exec();
         }
     }

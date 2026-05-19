@@ -121,8 +121,6 @@ void MainForm::on_pushButtonTASK3_clicked(){//Shilova
                   .arg(args[2]);
 
     ui->labelToDo->setText(uslovie);
-
-
 }
 
 void MainForm::on_pushButtonTASK4_clicked(){//Semenets
@@ -176,6 +174,7 @@ void MainForm::on_pushButtonEXIT_clicked(){
 
 void MainForm::on_pushButtonBACK_clicked(){
     changeToTask(true);
+    ui->lineEditAnswer->setText("");
 }
 
 void MainForm::on_pushButtonSTATS_clicked(){
@@ -188,8 +187,57 @@ void MainForm::on_pushButtonSTATS_clicked(){
 
     QString stats = getStats();
 
-    ui->labelShowStats->setText
-        ("1||2||3||4||5\r\n"+stats);
+    QString compactStats;
+
+    QStringList scores = stats.split("||", Qt::SkipEmptyParts);
+
+    QStringList displayValues;
+    for (int i = 0; i < scores.size(); ++i) {
+        int score = scores[i].toInt();
+        if (score > 0) displayValues << QString("+%1").arg(score);
+        else if (score < 0) displayValues << QString::number(score);
+        else displayValues << "0";
+    }
+
+    // Находим максимальную ширину
+    int maxWidth = 2; // минимум
+    for (const QString& val : displayValues) {
+        maxWidth = qMax(maxWidth, val.length());
+    }
+
+    // Создаем таблицу
+    QString line = "+";
+    for (int i = 0; i < 5; ++i) {
+        line += QString("-").repeated(maxWidth + 2);
+        if (i < 4) line += "+";
+    }
+    line += "+\r\n";
+
+    QString header = "|";
+    for (int i = 1; i <= 5; ++i) {
+        header += QString(" T%1 ").arg(i).leftJustified(maxWidth + 1, ' ');
+        header += "|";
+    }
+    header += "\r\n";
+
+    QString values = "|";
+    for (const QString& val : displayValues) {
+        values += QString(" %1 ").arg(val).leftJustified(maxWidth + 2, ' ');
+        values += "|";
+    }
+    values += "\r\n";
+
+    int total = 0;
+    for (const QString& score : scores) total += score.toInt();
+
+    QString result = line + header + line + values + line;
+    result += QString("\r\nВсего: %1").arg(total);
+
+    QFont monoFont("Courier New");
+    monoFont.setPointSize(15);
+
+    ui->labelShowStats->setFont(monoFont);
+    ui->labelShowStats->setText(result);
 }
 
 void MainForm::on_pushButtonSendAnswer_clicked(){
@@ -197,16 +245,14 @@ void MainForm::on_pushButtonSendAnswer_clicked(){
 
     if(sendAnswer(task_num,ans)){
         QMessageBox msgBox;
-        msgBox.setText("Answer is correct!");
+        msgBox.setText("Ответ правильный!");
         msgBox.exec();
     }
     else{
         QMessageBox msgBox;
-        msgBox.setText("Answer is incorrect");
+        msgBox.setText("Ответ неправильный!");
         msgBox.exec();
     }
-
-    changeToTask(true);
 }
 
 

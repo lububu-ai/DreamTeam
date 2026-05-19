@@ -11,6 +11,5 @@ int main(int argc, char *argv[])
 
     QString conec = SingletonClient::getInstance()->send_msg_to_server(QString::fromStdString(""));
 
-
     return a.exec();
 }

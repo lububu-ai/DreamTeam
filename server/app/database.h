@@ -39,6 +39,7 @@ class Database
 	public:
         static Database* getInstance();
         bool delete_user(QString, int);
+        bool delete_user_test(QString);
         bool is_admin(int);
         bool is_connected(int);
         bool is_auth_ok(QString, QString, int);

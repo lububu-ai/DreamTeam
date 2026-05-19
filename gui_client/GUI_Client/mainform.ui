@@ -35,7 +35,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Back</string>
+    <string>Назад</string>
    </property>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
@@ -43,7 +43,7 @@
     <rect>
      <x>64</x>
      <y>20</y>
-     <width>671</width>
+     <width>1015</width>
      <height>80</height>
     </rect>
    </property>
@@ -60,7 +60,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Choose a Task</string>
+       <string>Выберите задание</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -76,7 +76,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Task 1</string>
+       <string>Задание 1</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -92,7 +92,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Task 2</string>
+       <string>Задание 2</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -108,7 +108,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Task 3</string>
+       <string>Задание3</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -124,7 +124,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Task 4</string>
+       <string>Задание 4</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -140,7 +140,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Task 5</string>
+       <string>Задание 5</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -184,7 +184,7 @@
        </font>
       </property>
       <property name="text">
-       <string>USLOVIE</string>
+       <string>Условия задачи</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
@@ -203,7 +203,7 @@
        </font>
       </property>
       <property name="text">
-       <string>STATISTIKA</string>
+       <string>СТАТИСТИКА</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -225,7 +225,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Task 2</string>
+         <string>Задание 2</string>
         </property>
        </widget>
       </item>
@@ -239,7 +239,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Task 4</string>
+         <string>Задание 4</string>
         </property>
        </widget>
       </item>
@@ -253,7 +253,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Exit</string>
+         <string>Выход</string>
         </property>
        </widget>
       </item>
@@ -266,7 +266,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Send</string>
+         <string>Ответить</string>
         </property>
        </widget>
       </item>
@@ -280,7 +280,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Task 5</string>
+         <string>Задание 5</string>
         </property>
        </widget>
       </item>
@@ -307,7 +307,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Stats</string>
+         <string>Статистика</string>
         </property>
        </widget>
       </item>
@@ -321,7 +321,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Task 3</string>
+         <string>Задание 3</string>
         </property>
        </widget>
       </item>
@@ -335,7 +335,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Task 1</string>
+         <string>Задание 1</string>
         </property>
        </widget>
       </item>

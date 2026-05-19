@@ -25,7 +25,7 @@ private slots:
     void on_pushButtonChangeToAUTH_clicked();
     void on_pushButtonReg_clicked();
 signals:
-    void auth_ok();
+    void auth_ok(const QString& role);
     void reg_ok();
 
 private:

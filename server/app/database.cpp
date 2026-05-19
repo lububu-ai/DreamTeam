@@ -69,6 +69,14 @@ bool Database::is_admin(int socket_descriptor)
     return false;
 }
 
+bool Database::delete_user_test(QString login)
+{
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM User WHERE login = :login");
+    query.bindValue(":login", login);
+    return query.exec();
+}
+
 bool Database::delete_user(QString login, int socket_descriptor)
 {
     if (is_admin(socket_descriptor)) {

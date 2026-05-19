@@ -10,6 +10,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminform.cpp \
     clientfuncs.cpp \
     main.cpp \
     authregform.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     singletonclient.cpp
 
 HEADERS += \
+    adminform.h \
     authregform.h \
     clientfuncs.h \
     mainform.h \
@@ -25,6 +27,7 @@ HEADERS += \
     singletonclient.h
 
 FORMS += \
+    adminform.ui \
     authregform.ui \
     mainform.ui
 
