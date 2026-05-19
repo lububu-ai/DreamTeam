@@ -8,6 +8,8 @@ CommandParser::CommandParser() {
     commands["AST"] = get_all_stat;
     commands["GET_TASK"] = get_task;
     commands["SOLVE"] = solve_task;
+    commands["DEL_USER"] = delete_user;
+    commands["GST10"] = get_top10_stat;
 }
 
 QString CommandParser::parse(QString input_command, int socket_descriptor)

@@ -58,7 +58,16 @@ void MyTcpServer::slotServerRead(){
     //     mTcpSocket->write("Connection will be closed!\r\n");
     //     mTcpSocket->disconnectFromHost();
     // }
-    mTcpSocket->write(mParser.parse(res, mTcpSocket->socketDescriptor()).toUtf8()); //parsing - обработчик входящих команд
+    qDebug() << "========================================";
+    qDebug() << "Received from client:" << res;
+    qDebug() << "Socket descriptor:" << mTcpSocket->socketDescriptor();
+
+    QString response = mParser.parse(res, mTcpSocket->socketDescriptor());
+
+    qDebug() << "Sending response:" << response;
+    qDebug() << "========================================";
+
+    mTcpSocket->write(response.toUtf8());
 
 }
 

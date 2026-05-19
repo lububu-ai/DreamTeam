@@ -9,7 +9,7 @@ void TestDatabase::initTestCase()
 
 void TestDatabase::cleanup()
 {
-    Database::getInstance()->delete_user("test_user");
+    Database::getInstance()->delete_user_test("test_user");
 }
 
 void TestDatabase::reg_not_enough_arguments_error()
@@ -21,7 +21,8 @@ void TestDatabase::reg_not_enough_arguments_error()
 void TestDatabase::reg_success()
 {
     CommandParser parser;
-    QCOMPARE(parser.parse("REG test_user test@mail.com test_password",1), "reg_success\r\n");
+    QString res = parser.parse("REG test_user test@mail.com test_password", 1);
+    QVERIFY(res.startsWith("reg_success"));
 }
 
 void TestDatabase::logout_success()
@@ -42,7 +43,8 @@ void TestDatabase::log_success()
     CommandParser parser;
     parser.parse("REG test_user test@mail.com test_password",1), "reg_success\r\n";
     parser.parse("OUT",1);
-    QCOMPARE(parser.parse("LOG test_user test_password",1), "log_success\r\n");
+    QString res = parser.parse("LOG test_user test_password", 1);
+    QVERIFY(res.startsWith("log_success"));
 }
 
 

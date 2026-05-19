@@ -53,14 +53,6 @@ Database* Database::getInstance() {
     return p_instance;
 }
 
-bool Database::delete_user(QString login)
-{
-    QSqlQuery query(db);
-    query.prepare("DELETE FROM User WHERE login = :login");
-    query.bindValue(":login", login);
-    return query.exec();
-}
-
 bool Database::is_admin(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -71,9 +63,30 @@ bool Database::is_admin(int socket_descriptor)
         return false;
     }
     if (query.next()) {
-        return true;
+        QString role = query.value(0).toString();
+        return role == "admin";
     }
     return false;
+}
+
+bool Database::delete_user_test(QString login)
+{
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM User WHERE login = :login");
+    query.bindValue(":login", login);
+    return query.exec();
+}
+
+bool Database::delete_user(QString login, int socket_descriptor)
+{
+    if (is_admin(socket_descriptor)) {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM User WHERE login = :login");
+        query.bindValue(":login", login);
+        return query.exec();
+    }
+    return false;
+
 }
 
 bool Database::is_connected(int socket_descriptor)
@@ -295,7 +308,7 @@ QString Database::get_all_stat(int socket_descriptor)
     QSqlQuery query(db);
     QString result = "";
     if (is_admin(socket_descriptor)) {
-        if (!query.exec("SELECT login, task1_stat, task2_stat, task3_stat, task4_stat, task5_stat from User")) {
+        if (!query.exec("SELECT login, task1_stat, task2_stat, task3_stat, task4_stat, task5_stat, (task1_stat + task2_stat + task3_stat + task4_stat + task5_stat) as all_stats from User limit 15")) {
             return query.lastError().text();
         }
 
@@ -305,7 +318,8 @@ QString Database::get_all_stat(int socket_descriptor)
                       + query.value(2).toString() + "||"
                       + query.value(3).toString() + "||"
                       + query.value(4).toString() + "||"
-                      + query.value(5).toString() + "\r\n";
+                      + query.value(5).toString() + "||"
+                      + query.value(6).toString() + "\r\n";
         }
         return result;
     }
@@ -313,3 +327,29 @@ QString Database::get_all_stat(int socket_descriptor)
         return "all_stat_access_denied\r\n";
     }
 };
+
+QString Database::get_top_10_stat(int socket_descriptor)
+{
+    QSqlQuery query(db);
+    QString result = "";
+    if (is_admin(socket_descriptor)) {
+        if (!query.exec("SELECT login, task1_stat, task2_stat, task3_stat, task4_stat, task5_stat, (task1_stat + task2_stat + task3_stat + task4_stat + task5_stat) as all_stats from User order by all_stats desc limit 10")) {
+            return query.lastError().text();
+        }
+
+        while (query.next()) {
+            result += query.value(0).toString() + "||"
+                      + query.value(1).toString() + "||"
+                      + query.value(2).toString() + "||"
+                      + query.value(3).toString() + "||"
+                      + query.value(4).toString() + "||"
+                      + query.value(5).toString() + "||"
+                      + query.value(6).toString() + "\r\n";
+        }
+        return result;
+    }
+    else {
+        return "top10_stat_access_denied\r\n";
+    }
+};
+

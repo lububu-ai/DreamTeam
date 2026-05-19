@@ -5,7 +5,7 @@ QString register_user(QStringList args, int socket_descriptor)
     Database* db = Database::getInstance();
     if (args.size() >= 4){
         if(db->is_reg_ok(args[1], args[2], args[3], socket_descriptor)) {
-            return "reg_success\r\n";
+            return "reg_success user\r\n";
         }
     }
     return "reg_fail\r\n";
@@ -16,7 +16,10 @@ QString login(QStringList args, int socket_descriptor)
     Database* db = Database::getInstance();
     if (args.size() >= 3) {
         if (db->is_auth_ok(args[1], args[2], socket_descriptor)) {
-            return "log_success\r\n";
+            if (db->is_admin(socket_descriptor)) {
+                return "log_success admin\r\n";
+            }
+            return "log_success user\r\n";
         }
     }
     return "log_fail\r\n";
@@ -99,4 +102,20 @@ QString solve_task(QStringList args, int socket_descriptor) {
         return is_correct ? "answer_correct\r\n" : "answer_incorrect\r\n";
     }
     return "solve_task_error\r\n";
+}
+
+QString delete_user(QStringList args, int socket_descriptor){
+    Database* db = Database::getInstance();
+    QString login = args[1];
+
+    if (db->delete_user(login, socket_descriptor)) {
+        return "del_user_success\r\n";
+    }
+    return "del_user_error\r\n";
+}
+
+QString get_top10_stat(QStringList args, int socket_descriptor)
+{
+    Database* db = Database::getInstance();
+    return db->get_top_10_stat(socket_descriptor);
 }
