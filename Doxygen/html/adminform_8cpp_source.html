@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Исходный файл GUI_client/GUI_Client/adminform.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('adminform_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">adminform.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="adminform_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="clientfuncs_8h.html">clientfuncs.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="adminform_8h.html">adminform.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="ui__adminform_8h.html">ui_adminform.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_admin_form.html#a2621d45659a166d1a71e3535cc2831ee">   13</a></span><a class="code hl_function" href="class_admin_form.html#a2621d45659a166d1a71e3535cc2831ee">AdminForm::AdminForm</a>(QWidget *parent)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    : QWidget(parent)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    , <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>(new <a class="code hl_namespace" href="namespace_ui.html">Ui</a>::<a class="code hl_function" href="class_admin_form.html#a2621d45659a166d1a71e3535cc2831ee">AdminForm</a>)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonBack-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonDeleteUser-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelLogin-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelStats-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;lineEditLogin-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_admin_form.html#aa4531c5a4134638ef663d73895fbcf0e">   29</a></span><a class="code hl_function" href="class_admin_form.html#aa4531c5a4134638ef663d73895fbcf0e">AdminForm::~AdminForm</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">   37</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">AdminForm::changeToPanel</a>(){</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonBack-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonDeleteUser-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelLogin-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelStats-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;lineEditLogin-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;lineEditLogin-&gt;setText(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setText(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_admin_form.html#a58a34b59d57f2fc9d51ee8bc9516ef15">   52</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_admin_form.html#a58a34b59d57f2fc9d51ee8bc9516ef15">AdminForm::on_pushButtonDelete_clicked</a>(){</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">changeToPanel</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonBack-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonDeleteUser-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelLogin-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;lineEditLogin-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_admin_form.html#afa8797891f86d497e2dd8185cc4d50cc">   63</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_admin_form.html#afa8797891f86d497e2dd8185cc4d50cc">AdminForm::on_pushButtonExit_clicked</a>(){</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    this-&gt;close();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_admin_form.html#ad6c96f42fbfb7dee8843db80da4f2b64">   70</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_admin_form.html#ad6c96f42fbfb7dee8843db80da4f2b64">AdminForm::on_pushButtonStats_clicked</a>(){</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_function" href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">changeToPanel</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonBack-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelStats-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    QString stats = <a class="code hl_function" href="clientfuncs_8cpp.html#aab931635632b195bedb3a9f318f62820">getAllStats</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    QString ready_data = <a class="code hl_function" href="clientfuncs_8cpp.html#add978382e7aabf7079a55f7693bb6348">getStatsTable</a>(stats);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    QFont monoFont(<span class="stringliteral">&quot;Courier New&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    monoFont.setPointSize(10);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setFont(monoFont);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setAlignment(Qt::AlignTop);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setText(ready_data);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_admin_form.html#abbcf9f3fc8cf29e98976f433360babbc">   90</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_admin_form.html#abbcf9f3fc8cf29e98976f433360babbc">AdminForm::on_pushButtonTop10_clicked</a>(){</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">changeToPanel</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;pushButtonBack-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelStats-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    QString stats = <a class="code hl_function" href="clientfuncs_8cpp.html#a09932038075aee79f06c9cb8aaf75aeb">getTop10Stats</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (stats != <span class="stringliteral">&quot;top10_stat_access_denied\r\n&quot;</span>) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        QString ready_data = <a class="code hl_function" href="clientfuncs_8cpp.html#add978382e7aabf7079a55f7693bb6348">getStatsTable</a>(stats);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        QFont monoFont(<span class="stringliteral">&quot;Courier New&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        monoFont.setPointSize(10);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setFont(monoFont);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setAlignment(Qt::AlignTop);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;labelAllStats-&gt;setText(ready_data);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        QMessageBox msgBox;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        msgBox.setText(<span class="stringliteral">&quot;Недостаточно прав!&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        msgBox.exec();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        this-&gt;close();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_admin_form.html#a93338c7b83be95bfde45c00e3d6c84c3">  118</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_admin_form.html#a93338c7b83be95bfde45c00e3d6c84c3">AdminForm::on_pushButtonDeleteUser_clicked</a>(){</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    QString <a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a> = <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;lineEditLogin-&gt;text();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="commands_8cpp.html#aa6ef2530c17760c7e7c610061c9fe5f7">delete_user</a>(<a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a>)){</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_variable" href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">ui</a>-&gt;lineEditLogin-&gt;setText(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        QMessageBox msgBox;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        msgBox.setText(<span class="stringliteral">&quot;Пользователь успешно удалён!(если он существовал)&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        msgBox.exec();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    QMessageBox msgBox;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    msgBox.setText(<span class="stringliteral">&quot;Недостаточно прав!&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    msgBox.exec();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_admin_form.html#a8f351d7741329d968641bef0075b981e">  135</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_admin_form.html#a8f351d7741329d968641bef0075b981e">AdminForm::on_pushButtonBack_clicked</a>(){</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_function" href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">changeToPanel</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>};</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="ttc" id="aadminform_8h_html"><div class="ttname"><a href="adminform_8h.html">adminform.h</a></div><div class="ttdoc">Окно панели управления для пользователей с правами администратора.</div></div>
+<div class="ttc" id="aclass_admin_form_html_a2621d45659a166d1a71e3535cc2831ee"><div class="ttname"><a href="class_admin_form.html#a2621d45659a166d1a71e3535cc2831ee">AdminForm::AdminForm</a></div><div class="ttdeci">AdminForm(QWidget *parent=nullptr)</div><div class="ttdoc">Конструктор формы администратора.</div><div class="ttdef"><b>Определения</b> <a href="#l00013">adminform.cpp:13</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_a58a34b59d57f2fc9d51ee8bc9516ef15"><div class="ttname"><a href="class_admin_form.html#a58a34b59d57f2fc9d51ee8bc9516ef15">AdminForm::on_pushButtonDelete_clicked</a></div><div class="ttdeci">void on_pushButtonDelete_clicked()</div><div class="ttdoc">Слот открытия режима удаления пользователя.</div><div class="ttdef"><b>Определения</b> <a href="#l00052">adminform.cpp:52</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_a8f351d7741329d968641bef0075b981e"><div class="ttname"><a href="class_admin_form.html#a8f351d7741329d968641bef0075b981e">AdminForm::on_pushButtonBack_clicked</a></div><div class="ttdeci">void on_pushButtonBack_clicked()</div><div class="ttdoc">Слот возврата из окон просмотра таблиц назад в главное меню администратора.</div><div class="ttdef"><b>Определения</b> <a href="#l00135">adminform.cpp:135</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_a93338c7b83be95bfde45c00e3d6c84c3"><div class="ttname"><a href="class_admin_form.html#a93338c7b83be95bfde45c00e3d6c84c3">AdminForm::on_pushButtonDeleteUser_clicked</a></div><div class="ttdeci">void on_pushButtonDeleteUser_clicked()</div><div class="ttdoc">Слот подтверждения операции удаления конкретного пользователя по логину.</div><div class="ttdef"><b>Определения</b> <a href="#l00118">adminform.cpp:118</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_a9436a3ca40f951696f0bff1d70836742"><div class="ttname"><a href="class_admin_form.html#a9436a3ca40f951696f0bff1d70836742">AdminForm::changeToPanel</a></div><div class="ttdeci">void changeToPanel()</div><div class="ttdoc">Вспомогательный метод переключения внутренних панелей или представлений виджета.</div><div class="ttdef"><b>Определения</b> <a href="#l00037">adminform.cpp:37</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_aa4531c5a4134638ef663d73895fbcf0e"><div class="ttname"><a href="class_admin_form.html#aa4531c5a4134638ef663d73895fbcf0e">AdminForm::~AdminForm</a></div><div class="ttdeci">~AdminForm()</div><div class="ttdoc">Деструктор класса AdminForm.</div><div class="ttdef"><b>Определения</b> <a href="#l00029">adminform.cpp:29</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_abbcf9f3fc8cf29e98976f433360babbc"><div class="ttname"><a href="class_admin_form.html#abbcf9f3fc8cf29e98976f433360babbc">AdminForm::on_pushButtonTop10_clicked</a></div><div class="ttdeci">void on_pushButtonTop10_clicked()</div><div class="ttdoc">Слот отображения таблицы топ-10 лучших аккаунтов.</div><div class="ttdef"><b>Определения</b> <a href="#l00090">adminform.cpp:90</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_ac61336c847c4f5244be1dda3aabb13cd"><div class="ttname"><a href="class_admin_form.html#ac61336c847c4f5244be1dda3aabb13cd">AdminForm::ui</a></div><div class="ttdeci">Ui::AdminForm * ui</div><div class="ttdoc">Указатель на UI-дизайн формы администратора.</div><div class="ttdef"><b>Определения</b> <a href="adminform_8h_source.html#l00037">adminform.h:37</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_ad6c96f42fbfb7dee8843db80da4f2b64"><div class="ttname"><a href="class_admin_form.html#ad6c96f42fbfb7dee8843db80da4f2b64">AdminForm::on_pushButtonStats_clicked</a></div><div class="ttdeci">void on_pushButtonStats_clicked()</div><div class="ttdoc">Слот вывода полного списка пользователей и их детальных баллов.</div><div class="ttdef"><b>Определения</b> <a href="#l00070">adminform.cpp:70</a></div></div>
+<div class="ttc" id="aclass_admin_form_html_afa8797891f86d497e2dd8185cc4d50cc"><div class="ttname"><a href="class_admin_form.html#afa8797891f86d497e2dd8185cc4d50cc">AdminForm::on_pushButtonExit_clicked</a></div><div class="ttdeci">void on_pushButtonExit_clicked()</div><div class="ttdoc">Слот завершения работы с панелью администратора и выхода в окно авторизации.</div><div class="ttdef"><b>Определения</b> <a href="#l00063">adminform.cpp:63</a></div></div>
+<div class="ttc" id="aclientfuncs_8cpp_html_a09932038075aee79f06c9cb8aaf75aeb"><div class="ttname"><a href="clientfuncs_8cpp.html#a09932038075aee79f06c9cb8aaf75aeb">getTop10Stats</a></div><div class="ttdeci">QString getTop10Stats()</div><div class="ttdoc">Запрос топ-10 пользователей по сумме набранных баллов (только для администратора).</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00126">clientfuncs.cpp:126</a></div></div>
+<div class="ttc" id="aclientfuncs_8cpp_html_aab931635632b195bedb3a9f318f62820"><div class="ttname"><a href="clientfuncs_8cpp.html#aab931635632b195bedb3a9f318f62820">getAllStats</a></div><div class="ttdeci">QString getAllStats()</div><div class="ttdoc">Запрос статистики по всем пользователям (только для администратора).</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00115">clientfuncs.cpp:115</a></div></div>
+<div class="ttc" id="aclientfuncs_8cpp_html_add978382e7aabf7079a55f7693bb6348"><div class="ttname"><a href="clientfuncs_8cpp.html#add978382e7aabf7079a55f7693bb6348">getStatsTable</a></div><div class="ttdeci">QString getStatsTable(QString serverData)</div><div class="ttdoc">Форматирование сырых данных от сервера в псевдографическую таблицу.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00156">clientfuncs.cpp:156</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html"><div class="ttname"><a href="clientfuncs_8h.html">clientfuncs.h</a></div><div class="ttdoc">Объявление изолированных глобальных функций для отправки запросов на сервер и обработки ответов.</div></div>
+<div class="ttc" id="acommands_8cpp_html_a4533bc81e41a993c24f46f074576c198"><div class="ttname"><a href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a></div><div class="ttdeci">QString login(QStringList args, int socket_descriptor)</div><div class="ttdoc">Аутентификация (вход) пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00027">commands.cpp:27</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_aa6ef2530c17760c7e7c610061c9fe5f7"><div class="ttname"><a href="commands_8cpp.html#aa6ef2530c17760c7e7c610061c9fe5f7">delete_user</a></div><div class="ttdeci">QString delete_user(QStringList args, int socket_descriptor)</div><div class="ttdoc">Удаление пользователя из базы данных (доступно только админу).</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00145">commands.cpp:145</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Определения</b> <a href="adminform_8h_source.html#l00009">adminform.h:9</a></div></div>
+<div class="ttc" id="aui__adminform_8h_html"><div class="ttname"><a href="ui__adminform_8h.html">ui_adminform.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bd9d13ba29125fed5638b81172b09125.html">GUI_client</a></li><li class="navelem"><a href="dir_7e883cbf8e75d9054497414a31e91d8a.html">GUI_Client</a></li><li class="navelem"><a href="adminform_8cpp.html">adminform.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

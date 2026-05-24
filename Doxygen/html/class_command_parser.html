@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Класс CommandParser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_command_parser.html','','class_command_parser-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс CommandParser</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для разбора входящих сетевых команд и вызова соответствующих функций-обработчиков.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="commandparser_8h_source.html">commandparser.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1fd17c361d85ec13c212cbac1999b9b3" id="r_a1fd17c361d85ec13c212cbac1999b9b3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1fd17c361d85ec13c212cbac1999b9b3">CommandParser</a> ()</td></tr>
+<tr class="memdesc:a1fd17c361d85ec13c212cbac1999b9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию. Инициализирует карту доступных команд и привязывает их к функциям из <a class="el" href="commands_8h.html" title="Объявление функций-обработчиков для различных команд протокола.">commands.h</a>.  <br /></td></tr>
+<tr class="memitem:aa81635e9295b3479ae8271c7707f2beb" id="r_aa81635e9295b3479ae8271c7707f2beb"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#aa81635e9295b3479ae8271c7707f2beb">parse</a> (QString, int)</td></tr>
+<tr class="memdesc:aa81635e9295b3479ae8271c7707f2beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разбирает входящую строку команды и вызывает нужный обработчик.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a0393ca5cc5ab72728fdf75c4b9a9902c" id="r_a0393ca5cc5ab72728fdf75c4b9a9902c"><td class="memItemLeft">QMap&lt; QString, std::function&lt; QString(QStringList, int)&gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a></td></tr>
+<tr class="memdesc:a0393ca5cc5ab72728fdf75c4b9a9902c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Карта зарегистрированных команд. Ключ — имя команды (например, "REG", "LOG"), значение — лямбда или функция-обработчик с сигнатурой <span class="tt">QString(QStringList, int)</span>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для разбора входящих сетевых команд и вызова соответствующих функций-обработчиков. </p>
+<ul>
+<li>Данный класс хранит отображение (сопоставление) текстовых строк команд к их функциональным указателям на обработчики. </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="commandparser_8h_source.html">commandparser.h</a> строка <a class="el" href="commandparser_8h_source.html#l00023">23</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a1fd17c361d85ec13c212cbac1999b9b3" name="a1fd17c361d85ec13c212cbac1999b9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd17c361d85ec13c212cbac1999b9b3">&#9670;&#160;</a></span>CommandParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandParser::CommandParser </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор по умолчанию. Инициализирует карту доступных команд и привязывает их к функциям из <a class="el" href="commands_8h.html" title="Объявление функций-обработчиков для различных команд протокола.">commands.h</a>. </p>
+<p>Заполняет ассоциативный массив (карту) доступных серверных команд, связывая их строковые имена с соответствующими указателями на функции-обработчики. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commandparser_8cpp_source.html">commandparser.cpp</a> строка <a class="el" href="commandparser_8cpp_source.html#l00012">12</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>                             {</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;REG&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#a31d0c049846a1d969950dae60935d751">register_user</a>;</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;LOG&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a>;</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;OUT&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#acc0f060a4ab4c531d4a5c6479917df91">logout</a>;</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;GST&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#aa21ab48d13f2f897a250ee6bbdd81622">get_current_stat</a>;</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;AST&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#ad7695bd21f15694cb041c5cbc1b6320c">get_all_stat</a>;</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;GET_TASK&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#a52e60618f039f05c3e749df4c410fd11">get_task</a>;</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;SOLVE&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#aa5cb5a9c5b5ece54174535f455b6b0ae">solve_task</a>;</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;DEL_USER&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#aa6ef2530c17760c7e7c610061c9fe5f7">delete_user</a>;</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>[<span class="stringliteral">&quot;GST10&quot;</span>] = <a class="code hl_function" href="commands_8cpp.html#a9e2e0fcce12b225ad09d2e3761015f9a">get_top10_stat</a>;</div>
+<div class="line"><span class="lineno">   22</span>}</div>
+<div class="ttc" id="aclass_command_parser_html_a0393ca5cc5ab72728fdf75c4b9a9902c"><div class="ttname"><a href="#a0393ca5cc5ab72728fdf75c4b9a9902c">CommandParser::commands</a></div><div class="ttdeci">QMap&lt; QString, std::function&lt; QString(QStringList, int)&gt; &gt; commands</div><div class="ttdoc">Карта зарегистрированных команд. Ключ — имя команды (например, &quot;REG&quot;, &quot;LOG&quot;), значение — лямбда или ф...</div><div class="ttdef"><b>Определения</b> <a href="commandparser_8h_source.html#l00031">commandparser.h:31</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_a31d0c049846a1d969950dae60935d751"><div class="ttname"><a href="commands_8cpp.html#a31d0c049846a1d969950dae60935d751">register_user</a></div><div class="ttdeci">QString register_user(QStringList args, int socket_descriptor)</div><div class="ttdoc">Регистрация нового пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00012">commands.cpp:12</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_a4533bc81e41a993c24f46f074576c198"><div class="ttname"><a href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a></div><div class="ttdeci">QString login(QStringList args, int socket_descriptor)</div><div class="ttdoc">Аутентификация (вход) пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00027">commands.cpp:27</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_a52e60618f039f05c3e749df4c410fd11"><div class="ttname"><a href="commands_8cpp.html#a52e60618f039f05c3e749df4c410fd11">get_task</a></div><div class="ttdeci">QString get_task(QStringList args, int socket_descriptor)</div><div class="ttdoc">Получение математической или логической задачи.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00078">commands.cpp:78</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_a9e2e0fcce12b225ad09d2e3761015f9a"><div class="ttname"><a href="commands_8cpp.html#a9e2e0fcce12b225ad09d2e3761015f9a">get_top10_stat</a></div><div class="ttdeci">QString get_top10_stat(QStringList args, int socket_descriptor)</div><div class="ttdoc">Получение топ-10 пользователей по сумме баллов (доступно только админу).</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00159">commands.cpp:159</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_aa21ab48d13f2f897a250ee6bbdd81622"><div class="ttname"><a href="commands_8cpp.html#aa21ab48d13f2f897a250ee6bbdd81622">get_current_stat</a></div><div class="ttdeci">QString get_current_stat(QStringList args, int socket_descriptor)</div><div class="ttdoc">Получение статистики текущего (авторизованного) пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00057">commands.cpp:57</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_aa5cb5a9c5b5ece54174535f455b6b0ae"><div class="ttname"><a href="commands_8cpp.html#aa5cb5a9c5b5ece54174535f455b6b0ae">solve_task</a></div><div class="ttdeci">QString solve_task(QStringList args, int socket_descriptor)</div><div class="ttdoc">Проверка решения задачи, отправленного пользователем.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00109">commands.cpp:109</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_aa6ef2530c17760c7e7c610061c9fe5f7"><div class="ttname"><a href="commands_8cpp.html#aa6ef2530c17760c7e7c610061c9fe5f7">delete_user</a></div><div class="ttdeci">QString delete_user(QStringList args, int socket_descriptor)</div><div class="ttdoc">Удаление пользователя из базы данных (доступно только админу).</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00145">commands.cpp:145</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_acc0f060a4ab4c531d4a5c6479917df91"><div class="ttname"><a href="commands_8cpp.html#acc0f060a4ab4c531d4a5c6479917df91">logout</a></div><div class="ttdeci">QString logout(QStringList args, int socket_descriptor)</div><div class="ttdoc">Выход пользователя из системы (разрыв сессии).</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00044">commands.cpp:44</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_ad7695bd21f15694cb041c5cbc1b6320c"><div class="ttname"><a href="commands_8cpp.html#ad7695bd21f15694cb041c5cbc1b6320c">get_all_stat</a></div><div class="ttdeci">QString get_all_stat(QStringList args, int socket_descriptor)</div><div class="ttdoc">Получение статистики всех пользователей (доступно только админу).</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00067">commands.cpp:67</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa81635e9295b3479ae8271c7707f2beb" name="aa81635e9295b3479ae8271c7707f2beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81635e9295b3479ae8271c7707f2beb">&#9670;&#160;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString CommandParser::parse </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>input_command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разбирает входящую строку команды и вызывает нужный обработчик. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_command</td><td>Полная строка команды, полученная от клиента. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета клиента, отправившего команду. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Ответ сервера, готовый к отправке обратно клиенту.</dd></dl>
+<p>Выполняет очистку строки от пробельных символов, разбивает её по пробелам на имя команды и аргументы. Если команда найдена в списке зарегистрированных, вызывает привязанный обработчик. В противном случае возвращает статус ошибки. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commandparser_8cpp_source.html">commandparser.cpp</a> строка <a class="el" href="commandparser_8cpp_source.html#l00029">29</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
+<div class="line"><span class="lineno">   31</span>    input_command = input_command.trimmed();</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">if</span> (input_command.isEmpty())</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;empty_command\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    QStringList list = input_command.split(<span class="charliteral">&#39; &#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">if</span> (list.isEmpty())</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;empty_command\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    <span class="keyword">auto</span> iter = <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>.find(list[0]);</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span> (iter == <a class="code hl_variable" href="#a0393ca5cc5ab72728fdf75c4b9a9902c">commands</a>.end()) {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown_command\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">return</span> iter.value()(list, socket_descriptor);</div>
+<div class="line"><span class="lineno">   46</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a0393ca5cc5ab72728fdf75c4b9a9902c" name="a0393ca5cc5ab72728fdf75c4b9a9902c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0393ca5cc5ab72728fdf75c4b9a9902c">&#9670;&#160;</a></span>commands</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, std::function&lt;QString(QStringList, int)&gt; &gt; CommandParser::commands</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Карта зарегистрированных команд. Ключ — имя команды (например, "REG", "LOG"), значение — лямбда или функция-обработчик с сигнатурой <span class="tt">QString(QStringList, int)</span>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commandparser_8h_source.html">commandparser.h</a> строка <a class="el" href="commandparser_8h_source.html#l00031">31</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>server/app/<a class="el" href="commandparser_8h_source.html">commandparser.h</a></li>
+<li>server/app/<a class="el" href="commandparser_8cpp_source.html">commandparser.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_command_parser.html">CommandParser</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Исходный файл GUI_client/GUI_Client/authregform.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('authregform_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">authregform.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="authregform_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef AUTHREGFORM_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define AUTHREGFORM_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="clientfuncs_8h.html">clientfuncs.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>QT_BEGIN_NAMESPACE</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_ui_1_1_auth_reg_form.html">AuthRegForm</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>QT_END_NAMESPACE</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_auth_reg_form.html">   25</a></span><span class="keyword">class </span><a class="code hl_function" href="class_auth_reg_form.html#a7ec2ba2a7980453c629e141a90602e68">AuthRegForm</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    Q_OBJECT</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_auth_reg_form.html#a7ec2ba2a7980453c629e141a90602e68">AuthRegForm</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="class_auth_reg_form.html#a8b95ad00c5d29338f850a0f179b12078">~AuthRegForm</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_auth_reg_form.html#ae3e4ec7882bbfffa82d9a5a8b64c76cc">on_pushButtonAuth_clicked</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_auth_reg_form.html#a05a904038d3e770747d5aef407fba092">on_pushButtonChangeToREG_clicked</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_auth_reg_form.html#a9a00900426d56e69d01137aaafde4db0">on_pushButtonChangeToAUTH_clicked</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_auth_reg_form.html#a46a85d01b4f199864ac5d8f7ed3cd598">on_pushButtonReg_clicked</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>signals:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_auth_reg_form.html#afbbddfc72e39a3f00bd7951c05767c06">auth_ok</a>(<span class="keyword">const</span> QString&amp; role);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_auth_reg_form.html#a49013bf306403251ba25b8200a0676b2">reg_ok</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_auth_reg_form.html#abc34a5cc090ed5359af9de44c551ac0a">   69</a></span>    <a class="code hl_class" href="class_ui_1_1_auth_reg_form.html">Ui::AuthRegForm</a> *<a class="code hl_variable" href="class_auth_reg_form.html#abc34a5cc090ed5359af9de44c551ac0a">ui</a>; </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// AUTHREGFORM_H</span></div>
+<div class="ttc" id="aclass_auth_reg_form_html_a05a904038d3e770747d5aef407fba092"><div class="ttname"><a href="class_auth_reg_form.html#a05a904038d3e770747d5aef407fba092">AuthRegForm::on_pushButtonChangeToREG_clicked</a></div><div class="ttdeci">void on_pushButtonChangeToREG_clicked()</div><div class="ttdoc">Слот переключения интерфейса в режим регистрации нового аккаунта.</div><div class="ttdef"><b>Определения</b> <a href="authregform_8cpp_source.html#l00096">authregform.cpp:96</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_a46a85d01b4f199864ac5d8f7ed3cd598"><div class="ttname"><a href="class_auth_reg_form.html#a46a85d01b4f199864ac5d8f7ed3cd598">AuthRegForm::on_pushButtonReg_clicked</a></div><div class="ttdeci">void on_pushButtonReg_clicked()</div><div class="ttdoc">Слот нажатия кнопки «Зарегистрироваться». Отправляет данные на сервер для добавления в БД.</div><div class="ttdef"><b>Определения</b> <a href="authregform_8cpp_source.html#l00062">authregform.cpp:62</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_a49013bf306403251ba25b8200a0676b2"><div class="ttname"><a href="class_auth_reg_form.html#a49013bf306403251ba25b8200a0676b2">AuthRegForm::reg_ok</a></div><div class="ttdeci">void reg_ok()</div><div class="ttdoc">Сигнал, сообщающий об успешном создании новой учетной записи.</div><div class="ttdef"><b>Определения</b> <a href="moc__authregform_8cpp_source.html#l00145">moc_authregform.cpp:145</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_a7ec2ba2a7980453c629e141a90602e68"><div class="ttname"><a href="class_auth_reg_form.html#a7ec2ba2a7980453c629e141a90602e68">AuthRegForm::AuthRegForm</a></div><div class="ttdeci">AuthRegForm(QWidget *parent=nullptr)</div><div class="ttdoc">Конструктор формы авторизации.</div><div class="ttdef"><b>Определения</b> <a href="authregform_8cpp_source.html#l00014">authregform.cpp:14</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_a8b95ad00c5d29338f850a0f179b12078"><div class="ttname"><a href="class_auth_reg_form.html#a8b95ad00c5d29338f850a0f179b12078">AuthRegForm::~AuthRegForm</a></div><div class="ttdeci">~AuthRegForm()</div><div class="ttdoc">Деструктор, уничтожающий элементы графического интерфейса UI.</div><div class="ttdef"><b>Определения</b> <a href="authregform_8cpp_source.html#l00031">authregform.cpp:31</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_a9a00900426d56e69d01137aaafde4db0"><div class="ttname"><a href="class_auth_reg_form.html#a9a00900426d56e69d01137aaafde4db0">AuthRegForm::on_pushButtonChangeToAUTH_clicked</a></div><div class="ttdeci">void on_pushButtonChangeToAUTH_clicked()</div><div class="ttdoc">Слот возврата интерфейса в режим авторизации (входа).</div><div class="ttdef"><b>Определения</b> <a href="authregform_8cpp_source.html#l00113">authregform.cpp:113</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_abc34a5cc090ed5359af9de44c551ac0a"><div class="ttname"><a href="class_auth_reg_form.html#abc34a5cc090ed5359af9de44c551ac0a">AuthRegForm::ui</a></div><div class="ttdeci">Ui::AuthRegForm * ui</div><div class="ttdoc">Указатель на графические элементы UI-формы.</div><div class="ttdef"><b>Определения</b> <a href="#l00069">authregform.h:69</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_ae3e4ec7882bbfffa82d9a5a8b64c76cc"><div class="ttname"><a href="class_auth_reg_form.html#ae3e4ec7882bbfffa82d9a5a8b64c76cc">AuthRegForm::on_pushButtonAuth_clicked</a></div><div class="ttdeci">void on_pushButtonAuth_clicked()</div><div class="ttdoc">Слот нажатия кнопки «Войти». Вызывает логику проверки логина и пароля.</div><div class="ttdef"><b>Определения</b> <a href="authregform_8cpp_source.html#l00041">authregform.cpp:41</a></div></div>
+<div class="ttc" id="aclass_auth_reg_form_html_afbbddfc72e39a3f00bd7951c05767c06"><div class="ttname"><a href="class_auth_reg_form.html#afbbddfc72e39a3f00bd7951c05767c06">AuthRegForm::auth_ok</a></div><div class="ttdeci">void auth_ok(const QString &amp;role)</div><div class="ttdoc">Сигнал, отправляемый при успешном прохождении авторизации.</div><div class="ttdef"><b>Определения</b> <a href="moc__authregform_8cpp_source.html#l00139">moc_authregform.cpp:139</a></div></div>
+<div class="ttc" id="aclass_ui_1_1_auth_reg_form_html"><div class="ttname"><a href="class_ui_1_1_auth_reg_form.html">Ui::AuthRegForm</a></div><div class="ttdef"><b>Определения</b> <a href="ui__authregform_8h_source.html#l00146">ui_authregform.h:146</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html"><div class="ttname"><a href="clientfuncs_8h.html">clientfuncs.h</a></div><div class="ttdoc">Объявление изолированных глобальных функций для отправки запросов на сервер и обработки ответов.</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Определения</b> <a href="adminform_8h_source.html#l00009">adminform.h:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bd9d13ba29125fed5638b81172b09125.html">GUI_client</a></li><li class="navelem"><a href="dir_7e883cbf8e75d9054497414a31e91d8a.html">GUI_Client</a></li><li class="navelem"><a href="authregform_8h.html">authregform.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
