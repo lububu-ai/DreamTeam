@@ -2,15 +2,15 @@
 PROJECT_NAME = "TCP Client-Server"
 
 # Папка для генерации документации
-OUTPUT_DIRECTORY = docs
+OUTPUT_DIRECTORY = Doxygen
 
-# Язык документации (очень важно для перевода интерфейса Doxygen на русский)
+# Язык документации
 OUTPUT_LANGUAGE = Russian
 
-# Кодировка исходников (Qt по умолчанию использует UTF-8)
+# Кодировка исходников
 INPUT_ENCODING = UTF-8
 
-# Какие файлы сканировать (убедитесь, что пути указаны относительно Doxyfile)
+# Какие файлы сканировать
 INPUT = server/ GUI_client/
 
 # Расширения файлов, которые нужно обрабатывать
@@ -19,7 +19,7 @@ FILE_PATTERNS = *.cpp *.h
 # Рекурсивный обход папок
 RECURSIVE = YES
 
-# Включить все элементы (даже без комментариев)
+# Включить все элементы
 EXTRACT_ALL = YES
 
 # Показывать private методы классов
@@ -28,14 +28,3 @@ EXTRACT_PRIVATE = YES
 # Генерация HTML и включение удобного поиска
 GENERATE_HTML = YES
 SEARCHENGINE = YES
-
-# Отключаем генерацию тяжелого LaTeX, если не нужен PDF
-GENERATE_LATEX = NO
-
-# Включить интеграцию исходного кода в документацию
-SOURCE_BROWSER = YES
-INLINE_SOURCES = YES
-
-# Если у вас установлена утилита Graphviz (рекомендуется для красивых диаграмм связей)
-HAVE_DOT = YES
-CLASS_DIAGRAMS = YES
