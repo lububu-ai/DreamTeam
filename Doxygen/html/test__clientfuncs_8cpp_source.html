@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Исходный файл GUI_client/GUI_Client_UnitTest/test_clientfuncs.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('test__clientfuncs_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_clientfuncs.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__clientfuncs_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="test__clientfuncs_8h.html">test_clientfuncs.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="clientfuncs_8h.html">clientfuncs.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_mock_singleton_client.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mock_singleton_client.html">MockSingletonClient</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">    6</a></span>    <span class="keyword">static</span> QString <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">mockResponse</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">    7</a></span>    <span class="keyword">static</span> QString <a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">lastSentMessage</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_mock_singleton_client.html#a8c24343b55bc3c8460b4f634cd1f9e86">    8</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_mock_singleton_client.html#a8c24343b55bc3c8460b4f634cd1f9e86">sendCount</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">   10</a></span>    <span class="keyword">static</span> QString <a class="code hl_function" href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">send_msg_to_server</a>(<span class="keyword">const</span> QString&amp; msg) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">lastSentMessage</a> = msg;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_variable" href="class_mock_singleton_client.html#a8c24343b55bc3c8460b4f634cd1f9e86">sendCount</a>++;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">mockResponse</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">   16</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">reset</a>() {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">mockResponse</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">lastSentMessage</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="class_mock_singleton_client.html#a8c24343b55bc3c8460b4f634cd1f9e86">sendCount</a> = 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>QString <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>QString <a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">MockSingletonClient::lastSentMessage</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> <a class="code hl_variable" href="class_mock_singleton_client.html#a8c24343b55bc3c8460b4f634cd1f9e86">MockSingletonClient::sendCount</a> = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespace_test_wrappers.html">   27</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_test_wrappers.html">TestWrappers</a> {</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084">   28</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084">testAuth</a>(<span class="keyword">const</span> QString&amp; log, <span class="keyword">const</span> QString&amp; pw) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    QString msg = <span class="stringliteral">&quot;LOG &quot;</span> + log + <span class="stringliteral">&quot; &quot;</span> + pw + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    QString servAns = <a class="code hl_function" href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">MockSingletonClient::send_msg_to_server</a>(msg);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> servAns == <span class="stringliteral">&quot;log_success\r\n&quot;</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespace_test_wrappers.html#af4a297320cb9b967c1d286973e903f62">   34</a></span>QString <a class="code hl_function" href="namespace_test_wrappers.html#af4a297320cb9b967c1d286973e903f62">testGetTask</a>(<span class="keyword">const</span> QString&amp; num) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    QString msg = <span class="stringliteral">&quot;GET_TASK &quot;</span> + num + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">MockSingletonClient::send_msg_to_server</a>(msg);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9">   39</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9">testSendAnswer</a>(<span class="keyword">const</span> QString&amp; num, <span class="keyword">const</span> QString&amp; answer) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    QString msg = <span class="stringliteral">&quot;SOLVE &quot;</span> + num + <span class="stringliteral">&quot; &quot;</span> + answer + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QString servAns = <a class="code hl_function" href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">MockSingletonClient::send_msg_to_server</a>(msg);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> servAns == <span class="stringliteral">&quot;answer_correct\r\n&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#a22d01f51868b9ba230f387e85f726d9e">   46</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#a22d01f51868b9ba230f387e85f726d9e">TestClientFuncs::testExtractArgsNormal</a>()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    QString response = <span class="stringliteral">&quot;GET_TASK 1 0.1;1.0;2.0;3.0\n&quot;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    QVector&lt;QString&gt; expected = {<span class="stringliteral">&quot;0.1&quot;</span>, <span class="stringliteral">&quot;1.0&quot;</span>, <span class="stringliteral">&quot;2.0&quot;</span>, <span class="stringliteral">&quot;3.0&quot;</span>};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    QVector&lt;QString&gt; actual(4);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_function" href="clientfuncs_8cpp.html#a86ec19bcf37bc6cfe4d5d9a1c71aaa19">extractArgs</a>(response, actual);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; expected.size(); ++i) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        QCOMPARE(actual[i], expected[i]);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#a6591815cd3c718c14eb95ffea5198470">   59</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#a6591815cd3c718c14eb95ffea5198470">TestClientFuncs::testAuthMessageFormat</a>()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;log_success\r\n&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_function" href="namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084">TestWrappers::testAuth</a>(<span class="stringliteral">&quot;user123&quot;</span>, <span class="stringliteral">&quot;pass456&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    QString expected = <span class="stringliteral">&quot;LOG user123 pass456\r\n&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    QCOMPARE(<a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">MockSingletonClient::lastSentMessage</a>, expected);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#a4166f3643271c81cae27af7e26ef21e3">   70</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#a4166f3643271c81cae27af7e26ef21e3">TestClientFuncs::testRegMessageFormat</a>()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;reg_success\r\n&quot;</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QString msg = <span class="stringliteral">&quot;REG newuser email@test.com pass123\r\n&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_function" href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">MockSingletonClient::send_msg_to_server</a>(msg);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QString expected = <span class="stringliteral">&quot;REG newuser email@test.com pass123\r\n&quot;</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    QCOMPARE(<a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">MockSingletonClient::lastSentMessage</a>, expected);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#a2c2808b311b5cb057417f0cefb4a6d2b">   82</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#a2c2808b311b5cb057417f0cefb4a6d2b">TestClientFuncs::testGetTaskMessageFormat</a>()</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_function" href="namespace_test_wrappers.html#af4a297320cb9b967c1d286973e903f62">TestWrappers::testGetTask</a>(<span class="stringliteral">&quot;2&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    QString expected = <span class="stringliteral">&quot;GET_TASK 2\r\n&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    QCOMPARE(<a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">MockSingletonClient::lastSentMessage</a>, expected);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#a244212f9ca0ddfab978268c09aa98d24">   91</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#a244212f9ca0ddfab978268c09aa98d24">TestClientFuncs::testSendAnswerMessageFormat</a>()</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_function" href="namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9">TestWrappers::testSendAnswer</a>(<span class="stringliteral">&quot;3&quot;</span>, <span class="stringliteral">&quot;2.71828&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    QString expected = <span class="stringliteral">&quot;SOLVE 3 2.71828\r\n&quot;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    QCOMPARE(<a class="code hl_variable" href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">MockSingletonClient::lastSentMessage</a>, expected);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#aa824b8feff54b643441aa60c27d07f89">  100</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#aa824b8feff54b643441aa60c27d07f89">TestClientFuncs::testAuthSuccess</a>()</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;log_success\r\n&quot;</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">bool</span> result = <a class="code hl_function" href="namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084">TestWrappers::testAuth</a>(<span class="stringliteral">&quot;user&quot;</span>, <span class="stringliteral">&quot;pass&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    QVERIFY(result);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#ab405019fa258eb40749e2f8b39ef0e0a">  109</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#ab405019fa258eb40749e2f8b39ef0e0a">TestClientFuncs::testAuthFail</a>()</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;log_failed\r\n&quot;</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">bool</span> result = <a class="code hl_function" href="namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084">TestWrappers::testAuth</a>(<span class="stringliteral">&quot;user&quot;</span>, <span class="stringliteral">&quot;wrong&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    QVERIFY(!result);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#a73e5dde955b14671096734cbf64a79b2">  118</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#a73e5dde955b14671096734cbf64a79b2">TestClientFuncs::testSendAnswerCorrect</a>()</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;answer_correct\r\n&quot;</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">bool</span> result = <a class="code hl_function" href="namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9">TestWrappers::testSendAnswer</a>(<span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;2.5&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    QVERIFY(result);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_test_client_funcs.html#aab2b3f840022034f4f977dad867d5cb0">  127</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_client_funcs.html#aab2b3f840022034f4f977dad867d5cb0">TestClientFuncs::testSendAnswerIncorrect</a>()</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>{</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_function" href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <a class="code hl_variable" href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a> = <span class="stringliteral">&quot;answer_incorrect\r\n&quot;</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">bool</span> result = <a class="code hl_function" href="namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9">TestWrappers::testSendAnswer</a>(<span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;wrong&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    QVERIFY(!result);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
+<div class="ttc" id="aclass_mock_singleton_client_html"><div class="ttname"><a href="class_mock_singleton_client.html">MockSingletonClient</a></div><div class="ttdef"><b>Определения</b> <a href="#l00004">test_clientfuncs.cpp:4</a></div></div>
+<div class="ttc" id="aclass_mock_singleton_client_html_a15c431514ed91253ced487060a5da3a2"><div class="ttname"><a href="class_mock_singleton_client.html#a15c431514ed91253ced487060a5da3a2">MockSingletonClient::lastSentMessage</a></div><div class="ttdeci">static QString lastSentMessage</div><div class="ttdef"><b>Определения</b> <a href="#l00007">test_clientfuncs.cpp:7</a></div></div>
+<div class="ttc" id="aclass_mock_singleton_client_html_a8c24343b55bc3c8460b4f634cd1f9e86"><div class="ttname"><a href="class_mock_singleton_client.html#a8c24343b55bc3c8460b4f634cd1f9e86">MockSingletonClient::sendCount</a></div><div class="ttdeci">static int sendCount</div><div class="ttdef"><b>Определения</b> <a href="#l00008">test_clientfuncs.cpp:8</a></div></div>
+<div class="ttc" id="aclass_mock_singleton_client_html_aa05167e205cbd9328f4705caa8daa92a"><div class="ttname"><a href="class_mock_singleton_client.html#aa05167e205cbd9328f4705caa8daa92a">MockSingletonClient::mockResponse</a></div><div class="ttdeci">static QString mockResponse</div><div class="ttdef"><b>Определения</b> <a href="#l00006">test_clientfuncs.cpp:6</a></div></div>
+<div class="ttc" id="aclass_mock_singleton_client_html_aa52abde2e282a6f94d52a501ef92be47"><div class="ttname"><a href="class_mock_singleton_client.html#aa52abde2e282a6f94d52a501ef92be47">MockSingletonClient::reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdef"><b>Определения</b> <a href="#l00016">test_clientfuncs.cpp:16</a></div></div>
+<div class="ttc" id="aclass_mock_singleton_client_html_ab5a2e500f446f9c925ca1709aaf4fd69"><div class="ttname"><a href="class_mock_singleton_client.html#ab5a2e500f446f9c925ca1709aaf4fd69">MockSingletonClient::send_msg_to_server</a></div><div class="ttdeci">static QString send_msg_to_server(const QString &amp;msg)</div><div class="ttdef"><b>Определения</b> <a href="#l00010">test_clientfuncs.cpp:10</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_a22d01f51868b9ba230f387e85f726d9e"><div class="ttname"><a href="class_test_client_funcs.html#a22d01f51868b9ba230f387e85f726d9e">TestClientFuncs::testExtractArgsNormal</a></div><div class="ttdeci">void testExtractArgsNormal()</div><div class="ttdef"><b>Определения</b> <a href="#l00046">test_clientfuncs.cpp:46</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_a244212f9ca0ddfab978268c09aa98d24"><div class="ttname"><a href="class_test_client_funcs.html#a244212f9ca0ddfab978268c09aa98d24">TestClientFuncs::testSendAnswerMessageFormat</a></div><div class="ttdeci">void testSendAnswerMessageFormat()</div><div class="ttdef"><b>Определения</b> <a href="#l00091">test_clientfuncs.cpp:91</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_a2c2808b311b5cb057417f0cefb4a6d2b"><div class="ttname"><a href="class_test_client_funcs.html#a2c2808b311b5cb057417f0cefb4a6d2b">TestClientFuncs::testGetTaskMessageFormat</a></div><div class="ttdeci">void testGetTaskMessageFormat()</div><div class="ttdef"><b>Определения</b> <a href="#l00082">test_clientfuncs.cpp:82</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_a4166f3643271c81cae27af7e26ef21e3"><div class="ttname"><a href="class_test_client_funcs.html#a4166f3643271c81cae27af7e26ef21e3">TestClientFuncs::testRegMessageFormat</a></div><div class="ttdeci">void testRegMessageFormat()</div><div class="ttdef"><b>Определения</b> <a href="#l00070">test_clientfuncs.cpp:70</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_a6591815cd3c718c14eb95ffea5198470"><div class="ttname"><a href="class_test_client_funcs.html#a6591815cd3c718c14eb95ffea5198470">TestClientFuncs::testAuthMessageFormat</a></div><div class="ttdeci">void testAuthMessageFormat()</div><div class="ttdef"><b>Определения</b> <a href="#l00059">test_clientfuncs.cpp:59</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_a73e5dde955b14671096734cbf64a79b2"><div class="ttname"><a href="class_test_client_funcs.html#a73e5dde955b14671096734cbf64a79b2">TestClientFuncs::testSendAnswerCorrect</a></div><div class="ttdeci">void testSendAnswerCorrect()</div><div class="ttdef"><b>Определения</b> <a href="#l00118">test_clientfuncs.cpp:118</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_aa824b8feff54b643441aa60c27d07f89"><div class="ttname"><a href="class_test_client_funcs.html#aa824b8feff54b643441aa60c27d07f89">TestClientFuncs::testAuthSuccess</a></div><div class="ttdeci">void testAuthSuccess()</div><div class="ttdef"><b>Определения</b> <a href="#l00100">test_clientfuncs.cpp:100</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_aab2b3f840022034f4f977dad867d5cb0"><div class="ttname"><a href="class_test_client_funcs.html#aab2b3f840022034f4f977dad867d5cb0">TestClientFuncs::testSendAnswerIncorrect</a></div><div class="ttdeci">void testSendAnswerIncorrect()</div><div class="ttdef"><b>Определения</b> <a href="#l00127">test_clientfuncs.cpp:127</a></div></div>
+<div class="ttc" id="aclass_test_client_funcs_html_ab405019fa258eb40749e2f8b39ef0e0a"><div class="ttname"><a href="class_test_client_funcs.html#ab405019fa258eb40749e2f8b39ef0e0a">TestClientFuncs::testAuthFail</a></div><div class="ttdeci">void testAuthFail()</div><div class="ttdef"><b>Определения</b> <a href="#l00109">test_clientfuncs.cpp:109</a></div></div>
+<div class="ttc" id="aclientfuncs_8cpp_html_a86ec19bcf37bc6cfe4d5d9a1c71aaa19"><div class="ttname"><a href="clientfuncs_8cpp.html#a86ec19bcf37bc6cfe4d5d9a1c71aaa19">extractArgs</a></div><div class="ttdeci">void extractArgs(QString servAns, QVector&lt; QString &gt; &amp;args)</div><div class="ttdoc">Вспомогательная функция для парсинга аргументов из ответа сервера.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00099">clientfuncs.cpp:99</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html"><div class="ttname"><a href="clientfuncs_8h.html">clientfuncs.h</a></div><div class="ttdoc">Объявление изолированных глобальных функций для отправки запросов на сервер и обработки ответов.</div></div>
+<div class="ttc" id="anamespace_test_wrappers_html"><div class="ttname"><a href="namespace_test_wrappers.html">TestWrappers</a></div><div class="ttdef"><b>Определения</b> <a href="#l00027">test_clientfuncs.cpp:27</a></div></div>
+<div class="ttc" id="anamespace_test_wrappers_html_a2313a6d544f6bf9826b99b963700c084"><div class="ttname"><a href="namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084">TestWrappers::testAuth</a></div><div class="ttdeci">bool testAuth(const QString &amp;log, const QString &amp;pw)</div><div class="ttdef"><b>Определения</b> <a href="#l00028">test_clientfuncs.cpp:28</a></div></div>
+<div class="ttc" id="anamespace_test_wrappers_html_a82c23384e02f06870f4aa46100af27f9"><div class="ttname"><a href="namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9">TestWrappers::testSendAnswer</a></div><div class="ttdeci">bool testSendAnswer(const QString &amp;num, const QString &amp;answer)</div><div class="ttdef"><b>Определения</b> <a href="#l00039">test_clientfuncs.cpp:39</a></div></div>
+<div class="ttc" id="anamespace_test_wrappers_html_af4a297320cb9b967c1d286973e903f62"><div class="ttname"><a href="namespace_test_wrappers.html#af4a297320cb9b967c1d286973e903f62">TestWrappers::testGetTask</a></div><div class="ttdeci">QString testGetTask(const QString &amp;num)</div><div class="ttdef"><b>Определения</b> <a href="#l00034">test_clientfuncs.cpp:34</a></div></div>
+<div class="ttc" id="atest__clientfuncs_8h_html"><div class="ttname"><a href="test__clientfuncs_8h.html">test_clientfuncs.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bd9d13ba29125fed5638b81172b09125.html">GUI_client</a></li><li class="navelem"><a href="dir_df9a101cb6562a87222d61b7052e7876.html">GUI_Client_UnitTest</a></li><li class="navelem"><a href="test__clientfuncs_8cpp.html">test_clientfuncs.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Файл server/app/tasks.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('tasks_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл tasks.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Определение структуры задачи и функции её генерации.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QStringList&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для tasks.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="tasks_8h__incl.png" border="0" usemap="#aserver_2app_2tasks_8h" loading="lazy" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="tasks_8h__dep__incl.png" border="0" usemap="#aserver_2app_2tasks_8hdep" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="tasks_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:CurrentTask" id="r_CurrentTask"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_current_task.html">CurrentTask</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура для хранения информации о текущей задаче, выданной пользователю.  <a href="struct_current_task.html#details">Подробнее...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a6f4df49123697f46c22d5ee11406a754" id="r_a6f4df49123697f46c22d5ee11406a754"><td class="memItemLeft"><a class="el" href="struct_current_task.html">CurrentTask</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6f4df49123697f46c22d5ee11406a754">generate_task</a> (int task_type)</td></tr>
+<tr class="memdesc:a6f4df49123697f46c22d5ee11406a754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генератор случайных задач по типам.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Определение структуры задачи и функции её генерации. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="tasks_8h_source.html">tasks.h</a></p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a6f4df49123697f46c22d5ee11406a754" name="a6f4df49123697f46c22d5ee11406a754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4df49123697f46c22d5ee11406a754">&#9670;&#160;</a></span>generate_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_current_task.html">CurrentTask</a> generate_task </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>task_type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Генератор случайных задач по типам. </p>
+<ul>
+<li>Поддерживает 5 различных математических/алгоритмических задач:</li>
+<li>1: Формула Симпсона (Мусихин)</li>
+<li>2: Метод хорд / Линейные функции (Филатов)</li>
+<li>3: Дихотомия / деление отрезка (Шилова)</li>
+<li>4: Поиск листьев в дереве обходом в глубину (Семенец)</li>
+<li>5: Вычисление аналитической функции с логарифмом и корнем (Рыбакин)</li>
+<li><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_type</td><td>Идентификатор типа задачи (1..5). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="struct_current_task.html" title="Структура для хранения информации о текущей задаче, выданной пользователю.">CurrentTask</a> Заполненный объект сгенерированной задачи.</dd></dl>
+Генерирует уникальный вариант задачи в зависимости от переданного числового типа (1..5). Наполняет payload параметрами, преобразует правильный математический ответ в строку с нужной точностью.</li>
+<li>Задача 1: Формула численного интегрирования Симпсона.</li>
+<li>Задача 2: Метод хорд для нелинейных уравнений.</li>
+<li>Задача 3: Метод дихотомии (деления отрезка пополам).</li>
+<li>Задача 4: Поиск листьев графа (дерева) с помощью алгоритма обхода в глубину (DFS).</li>
+<li>Задача 5: Вычисление выражения с аналитической функцией (логарифмы/корни). </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="tasks_8cpp_source.html">tasks.cpp</a> строка <a class="el" href="tasks_8cpp_source.html#l00036">36</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a> task;</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">switch</span> (task_type) {</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">case</span> 1: <span class="comment">//Мусихин</span></div>
+<div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">double</span> h = (rand() % 10 + 1) / 10.0;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">double</span> y0 = rand() % 10;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">double</span> y1 = rand() % 10;</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">double</span> y2 = rand() % 10;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">double</span> answer = h / 3.0 * (y0 + 4.0 * y1 + y2);</div>
+<div class="line"><span class="lineno">   47</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 1;</div>
+<div class="line"><span class="lineno">   48</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3;%4&quot;</span>).arg(h).arg(y0).arg(y1).arg(y2);</div>
+<div class="line"><span class="lineno">   49</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">case</span> 2: <span class="comment">//Филатов</span></div>
+<div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">int</span> function_id = rand() % 5; <span class="comment">// 0..4</span></div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">int</span> a = -10 + rand() % 16;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">int</span> b = a + 1 + rand() % 10;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>        QString funcText;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">double</span> fa = 0.0;</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">double</span> fb = 0.0;</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">double</span> answer = -100.0;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">switch</span> (function_id) {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   65</span>            funcText = <span class="stringliteral">&quot;2x-4&quot;</span>;</div>
+<div class="line"><span class="lineno">   66</span>            fa = 2.0 * a - 4.0;</div>
+<div class="line"><span class="lineno">   67</span>            fb = 2.0 * b - 4.0;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   70</span>            funcText = <span class="stringliteral">&quot;x^2-9&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>            fa = a * a - 9.0;</div>
+<div class="line"><span class="lineno">   72</span>            fb = b * b - 9.0;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   75</span>            funcText = <span class="stringliteral">&quot;x^2-4x+3&quot;</span>;</div>
+<div class="line"><span class="lineno">   76</span>            fa = a * a - 4.0 * a + 3.0;</div>
+<div class="line"><span class="lineno">   77</span>            fb = b * b - 4.0 * b + 3.0;</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">   80</span>            funcText = <span class="stringliteral">&quot;x^3-8&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>            fa = a * a * a - 8.0;</div>
+<div class="line"><span class="lineno">   82</span>            fb = b * b * b - 8.0;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   85</span>            funcText = <span class="stringliteral">&quot;|x|-3&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>            fa = std::abs(a) - 3.0;</div>
+<div class="line"><span class="lineno">   87</span>            fb = std::abs(b) - 3.0;</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> ((fa * fb &lt;= 0.0) &amp;&amp; !(fa == 0.0 &amp;&amp; fb == 0.0) &amp;&amp; (fb - fa != 0.0)) {</div>
+<div class="line"><span class="lineno">   92</span>            answer = (a * fb - b * fa) / (fb - fa);</div>
+<div class="line"><span class="lineno">   93</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   94</span>            answer = -100.0;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 2;</div>
+<div class="line"><span class="lineno">   98</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3;%4;%5&quot;</span>)</div>
+<div class="line"><span class="lineno">   99</span>                           .arg(funcText)</div>
+<div class="line"><span class="lineno">  100</span>                           .arg(a)</div>
+<div class="line"><span class="lineno">  101</span>                           .arg(b)</div>
+<div class="line"><span class="lineno">  102</span>                           .arg(QString::number(fa, <span class="charliteral">&#39;f&#39;</span>, 3))</div>
+<div class="line"><span class="lineno">  103</span>                           .arg(QString::number(fb, <span class="charliteral">&#39;f&#39;</span>, 3));</div>
+<div class="line"><span class="lineno">  104</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">case</span> 3: <span class="comment">//Шилова</span></div>
+<div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">double</span> a = rand() % 10;</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">double</span> b = a + 1 + rand() % 10;</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordtype">int</span> k = 1 + rand() % 5;</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">double</span> answer = (b-a) / std::pow(2.0, k);</div>
+<div class="line"><span class="lineno">  113</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 3;</div>
+<div class="line"><span class="lineno">  114</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3&quot;</span>).arg(a).arg(b).arg(k);</div>
+<div class="line"><span class="lineno">  115</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">case</span> 4: <span class="comment">//Семенец</span></div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">int</span> n = 6 + rand() % 5;</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">int</span> root = rand() % n;</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        std::vector&lt;std::vector&lt;int&gt;&gt; adj(n);</div>
+<div class="line"><span class="lineno">  124</span>        std::vector&lt;std::pair&lt;int,int&gt;&gt; edges;</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v = 1; v &lt; n; ++v) {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordtype">int</span> parent = rand() % v;</div>
+<div class="line"><span class="lineno">  128</span>            adj[parent].push_back(v);</div>
+<div class="line"><span class="lineno">  129</span>            adj[v].push_back(parent);</div>
+<div class="line"><span class="lineno">  130</span>            edges.push_back({parent, v});</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>        std::vector&lt;int&gt; leaves;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        std::function&lt;void(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>)&gt; dfs = [&amp;](<span class="keywordtype">int</span> v, <span class="keywordtype">int</span> p) {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordtype">bool</span> hasChildren = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> to : adj[v]) {</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">if</span> (to != p) {</div>
+<div class="line"><span class="lineno">  139</span>                    hasChildren = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  140</span>                    dfs(to, v);</div>
+<div class="line"><span class="lineno">  141</span>                }</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (!hasChildren) {</div>
+<div class="line"><span class="lineno">  144</span>                leaves.push_back(v);</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        };</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>        dfs(root, -1);</div>
+<div class="line"><span class="lineno">  149</span>        std::sort(leaves.begin(), leaves.end());</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>        QStringList edgeParts;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : edges) {</div>
+<div class="line"><span class="lineno">  153</span>            edgeParts &lt;&lt; QString(<span class="stringliteral">&quot;%1-%2&quot;</span>).arg(e.first).arg(e.second);</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>        QStringList leafParts;</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x : leaves) {</div>
+<div class="line"><span class="lineno">  158</span>            leafParts &lt;&lt; QString::number(x);</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 4;</div>
+<div class="line"><span class="lineno">  162</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3&quot;</span>).arg(n).arg(root).arg(edgeParts.join(<span class="stringliteral">&quot;,&quot;</span>));</div>
+<div class="line"><span class="lineno">  163</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = leafParts.join(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">case</span> 5: <span class="comment">//Рыбакин</span></div>
+<div class="line"><span class="lineno">  167</span>    {</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">double</span> a, b, c, d, x0, answer;</div>
+<div class="line"><span class="lineno">  169</span>        a = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  170</span>        b = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  171</span>        c = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  172</span>        d = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  173</span>        x0 = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  174</span>        answer = a * std::log(std::abs(x0) + 1.0) + b * std::sqrt(std::abs(c * x0 + d));</div>
+<div class="line"><span class="lineno">  175</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 5;</div>
+<div class="line"><span class="lineno">  176</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3;%4;%5&quot;</span>).arg(a).arg(b).arg(c).arg(d).arg(x0);</div>
+<div class="line"><span class="lineno">  177</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> task;</div>
+<div class="line"><span class="lineno">  184</span>}</div>
+<div class="ttc" id="astruct_current_task_html"><div class="ttname"><a href="struct_current_task.html">CurrentTask</a></div><div class="ttdoc">Структура для хранения информации о текущей задаче, выданной пользователю.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00022">tasks.h:22</a></div></div>
+<div class="ttc" id="astruct_current_task_html_a1f46291795105264e18e44b712290c0d"><div class="ttname"><a href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">CurrentTask::answer</a></div><div class="ttdeci">QString answer</div><div class="ttdoc">Правильный ответ на задачу для проверки серверной частью.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00025">tasks.h:25</a></div></div>
+<div class="ttc" id="astruct_current_task_html_a33706acdf888e7780664f5372a9b12fe"><div class="ttname"><a href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">CurrentTask::payload</a></div><div class="ttdeci">QString payload</div><div class="ttdoc">Исходные параметры задачи (строка с разделителями для отправки клиенту).</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00024">tasks.h:24</a></div></div>
+<div class="ttc" id="astruct_current_task_html_a996c17b3149dbcce1aec6f45aa47aa58"><div class="ttname"><a href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">CurrentTask::type</a></div><div class="ttdeci">int type</div><div class="ttdoc">Тип (номер) задачи от 1 до 5. Значение 0 означает отсутствие задачи.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00023">tasks.h:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a href="dir_fbea892794e5b570563d887d17fc5d9e.html">app</a></li><li class="navelem"><a href="tasks_8h.html">tasks.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
