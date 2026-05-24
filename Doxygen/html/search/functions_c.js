@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['testauth_0',['testAuth',['../namespace_test_wrappers.html#a2313a6d544f6bf9826b99b963700c084',1,'TestWrappers']]],
+  ['testauthfail_1',['testAuthFail',['../class_test_client_funcs.html#ab405019fa258eb40749e2f8b39ef0e0a',1,'TestClientFuncs']]],
+  ['testauthmessageformat_2',['testAuthMessageFormat',['../class_test_client_funcs.html#a6591815cd3c718c14eb95ffea5198470',1,'TestClientFuncs']]],
+  ['testauthsuccess_3',['testAuthSuccess',['../class_test_client_funcs.html#aa824b8feff54b643441aa60c27d07f89',1,'TestClientFuncs']]],
+  ['testemptymessage_4',['testEmptyMessage',['../class_test_singleton_client.html#a7c6957f374d9064b70a0a046b36b564d',1,'TestSingletonClient']]],
+  ['testextractargsnormal_5',['testExtractArgsNormal',['../class_test_client_funcs.html#a22d01f51868b9ba230f387e85f726d9e',1,'TestClientFuncs']]],
+  ['testgetinstance_6',['testGetInstance',['../class_test_singleton_client.html#a62bcbb7fb1037d5f9180cd0feae0823a',1,'TestSingletonClient']]],
+  ['testgettask_7',['testGetTask',['../namespace_test_wrappers.html#af4a297320cb9b967c1d286973e903f62',1,'TestWrappers']]],
+  ['testgettaskmessageformat_8',['testGetTaskMessageFormat',['../class_test_client_funcs.html#a2c2808b311b5cb057417f0cefb4a6d2b',1,'TestClientFuncs']]],
+  ['testmultiplemessages_9',['testMultipleMessages',['../class_test_singleton_client.html#a5fe0d4a757defdd47b2161e36056c8ff',1,'TestSingletonClient']]],
+  ['testregmessageformat_10',['testRegMessageFormat',['../class_test_client_funcs.html#a4166f3643271c81cae27af7e26ef21e3',1,'TestClientFuncs']]],
+  ['testsendanswer_11',['testSendAnswer',['../namespace_test_wrappers.html#a82c23384e02f06870f4aa46100af27f9',1,'TestWrappers']]],
+  ['testsendanswercorrect_12',['testSendAnswerCorrect',['../class_test_client_funcs.html#a73e5dde955b14671096734cbf64a79b2',1,'TestClientFuncs']]],
+  ['testsendanswerincorrect_13',['testSendAnswerIncorrect',['../class_test_client_funcs.html#aab2b3f840022034f4f977dad867d5cb0',1,'TestClientFuncs']]],
+  ['testsendanswermessageformat_14',['testSendAnswerMessageFormat',['../class_test_client_funcs.html#a244212f9ca0ddfab978268c09aa98d24',1,'TestClientFuncs']]],
+  ['testsendmessage_15',['testSendMessage',['../class_test_singleton_client.html#a30a79a7ec2073780e9229fe88286a221',1,'TestSingletonClient']]],
+  ['testsingletonpattern_16',['testSingletonPattern',['../class_test_singleton_client.html#a2815b502dd8fe31925e293c86a3f4100',1,'TestSingletonClient']]]
+];
