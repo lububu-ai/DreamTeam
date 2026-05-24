@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['generate_5ftask_0',['generate_task',['../commands_8h.html#a8b96a9119c4c895f059c17141709289d',1,'generate_task(int):&#160;tasks.cpp'],['../tasks_8cpp.html#a6f4df49123697f46c22d5ee11406a754',1,'generate_task(int task_type):&#160;tasks.cpp'],['../tasks_8h.html#a6f4df49123697f46c22d5ee11406a754',1,'generate_task(int task_type):&#160;tasks.cpp']]],
+  ['get_5fall_5fstat_1',['get_all_stat',['../class_database.html#aea453b6d630f11840e3a4a7619356445',1,'Database::get_all_stat()'],['../commands_8cpp.html#ad7695bd21f15694cb041c5cbc1b6320c',1,'get_all_stat(QStringList args, int socket_descriptor):&#160;commands.cpp'],['../commands_8h.html#ae4b434fc0d8fad1a3bf597a868cce74f',1,'get_all_stat(QStringList, int):&#160;commands.cpp']]],
+  ['get_5fcurrent_5fstat_2',['get_current_stat',['../class_database.html#a959ba4a6dd5f31ec9694b93fe7d25fca',1,'Database::get_current_stat()'],['../commands_8cpp.html#aa21ab48d13f2f897a250ee6bbdd81622',1,'get_current_stat(QStringList args, int socket_descriptor):&#160;commands.cpp'],['../commands_8h.html#ae1301fb75560effa07e4b7efea0198c8',1,'get_current_stat(QStringList, int):&#160;commands.cpp']]],
+  ['get_5fcurrent_5ftask_3',['get_current_task',['../class_database.html#ad656bbad31e26a64aa9fcae535c2608f',1,'Database']]],
+  ['get_5ftask_4',['get_task',['../commands_8cpp.html#a52e60618f039f05c3e749df4c410fd11',1,'get_task(QStringList args, int socket_descriptor):&#160;commands.cpp'],['../commands_8h.html#a91734908e4986a3eecd6bc0a1fba06f5',1,'get_task(QStringList, int):&#160;commands.cpp']]],
+  ['get_5ftask_5ferror_5',['get_task_error',['../class_test_command_parser.html#ab143fe1edd0caf5f85a4f4349440e2f1',1,'TestCommandParser']]],
+  ['get_5ftask_5fsuccess_6',['get_task_success',['../class_test_command_parser.html#ace10eefd56897a89051b0161115678a5',1,'TestCommandParser']]],
+  ['get_5ftop10_5fstat_7',['get_top10_stat',['../commands_8cpp.html#a9e2e0fcce12b225ad09d2e3761015f9a',1,'get_top10_stat(QStringList args, int socket_descriptor):&#160;commands.cpp'],['../commands_8h.html#a02ef92c2f35067c72623291473ad47c8',1,'get_top10_stat(QStringList, int):&#160;commands.cpp']]],
+  ['get_5ftop_5f10_5fstat_8',['get_top_10_stat',['../class_database.html#ac96957bafe50c8ec86a5da6d378e10a1',1,'Database']]],
+  ['getallstats_9',['getAllStats',['../clientfuncs_8cpp.html#aab931635632b195bedb3a9f318f62820',1,'getAllStats():&#160;clientfuncs.cpp'],['../clientfuncs_8h.html#aab931635632b195bedb3a9f318f62820',1,'getAllStats():&#160;clientfuncs.cpp']]],
+  ['getinstance_10',['getInstance',['../class_database.html#a5a3b028f980a577ea0b809eb92312761',1,'Database::getInstance()'],['../class_singleton_client.html#a27e7002d7386698d26f4127939567493',1,'SingletonClient::getInstance()']]],
+  ['getstats_11',['getStats',['../clientfuncs_8cpp.html#a15992e026e1b66fb335a34285a95df26',1,'getStats():&#160;clientfuncs.cpp'],['../clientfuncs_8h.html#a15992e026e1b66fb335a34285a95df26',1,'getStats():&#160;clientfuncs.cpp']]],
+  ['getstatstable_12',['getStatsTable',['../clientfuncs_8cpp.html#add978382e7aabf7079a55f7693bb6348',1,'getStatsTable(QString serverData):&#160;clientfuncs.cpp'],['../clientfuncs_8h.html#add978382e7aabf7079a55f7693bb6348',1,'getStatsTable(QString serverData):&#160;clientfuncs.cpp']]],
+  ['gettask_13',['getTask',['../clientfuncs_8cpp.html#a885015840fa0e39a85710de7074f1899',1,'getTask(QString num):&#160;clientfuncs.cpp'],['../clientfuncs_8h.html#a885015840fa0e39a85710de7074f1899',1,'getTask(QString num):&#160;clientfuncs.cpp']]],
+  ['gettop10stats_14',['getTop10Stats',['../clientfuncs_8cpp.html#a09932038075aee79f06c9cb8aaf75aeb',1,'getTop10Stats():&#160;clientfuncs.cpp'],['../clientfuncs_8h.html#a09932038075aee79f06c9cb8aaf75aeb',1,'getTop10Stats():&#160;clientfuncs.cpp']]],
+  ['gridlayout_15',['gridLayout',['../class_ui___auth_reg_form.html#a98b1df0b430b15fe5eda0755791baa97',1,'Ui_AuthRegForm::gridLayout'],['../class_ui___main_form.html#a9fd7b18b35b3eca44425b52b7647a38d',1,'Ui_MainForm::gridLayout']]],
+  ['gridlayoutwidget_16',['gridLayoutWidget',['../class_ui___auth_reg_form.html#aeb6467e31cfb15c7ce8394919ed5261f',1,'Ui_AuthRegForm']]]
+];
