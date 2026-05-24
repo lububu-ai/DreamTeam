@@ -1,7 +1,19 @@
 #include "clientfuncs.h"
 #include "singletonclient.h"
+/**
+ * @file clientfuncs.cpp
+ * @brief Реализация функций сетевого взаимодействия, валидации и форматирования данных для клиента.
+ */
 
-
+/**
+ * @brief Авторизация пользователя в системе.
+ * * Формирует строку запроса вида "LOG login password\r\n", отправляет её на сервер
+ * и анализирует ответ для определения роли пользователя.
+ * @param log Логин пользователя.
+ * @param pw Пароль пользователя.
+ * @param[out] role Ссылка для сохранения роли ("admin" или "user").
+ * @return true, если авторизация успешна (сервер вернул "log_success"), иначе false.
+ */
 bool auth(QString log, QString pw, QString& role){
     QString msg = "LOG " + log + " " + pw + "\r\n";
     QString servAns = SingletonClient::getInstance()->send_msg_to_server(msg);
@@ -19,6 +31,16 @@ bool auth(QString log, QString pw, QString& role){
     return false;
 }
 
+/**
+ * @brief Регистрация нового пользователя в системе.
+ * * Отправляет запрос "REG login email password\r\n". При успешной регистрации
+ * пользователю автоматически присваивается стандартная роль "user".
+ * @param log Логин пользователя.
+ * @param email Электронная почта.
+ * @param pw Пароль пользователя.
+ * @param[out] role Ссылка для записи роли по умолчанию.
+ * @return true, если регистрация прошла успешно, иначе false.
+ */
 bool reg(QString log, QString email, QString pw, QString& role){
     QString msg = "REG " + log + " " + email + " " + pw + "\r\n";
     QString servAns = SingletonClient::getInstance()->send_msg_to_server(msg);
@@ -30,6 +52,11 @@ bool reg(QString log, QString email, QString pw, QString& role){
     return false;
 }
 
+/**
+ * @brief Запрос payload-строки параметров математической задачи у сервера.
+ * @param num Строковый номер типа задачи (1-5).
+ * @return QString Сырой ответ сервера, содержащий сгенерированные параметры.
+ */
 QString getTask(QString num){
     QString msg = "GET_TASK " + num + "\r\n";
     QString servAns = SingletonClient::getInstance()->send_msg_to_server(msg);
@@ -37,6 +64,10 @@ QString getTask(QString num){
     return servAns;
 }
 
+/**
+ * @brief Получение персональной статистики текущего авторизованного пользователя.
+ * @return QString Строка со статистикой по выполненным задачам.
+ */
 bool sendAnswer(QString num, QString answer){
     QString msg = "SOLVE " + num + " " + answer + "\r\n";
     QString servAns = SingletonClient::getInstance()->send_msg_to_server(msg);
@@ -46,6 +77,12 @@ bool sendAnswer(QString num, QString answer){
     return false;
 }
 
+/**
+ * @brief Отправка ответа на задачу для проверки на стороне сервера.
+ * @param num Номер проверяемой задачи.
+ * @param answer Строка с ответом, введённым пользователем.
+ * @return true, если сервер подтвердил правильность ответа ("answer_correct"), иначе false.
+ */
 QString getStats(){
     QString servAns = SingletonClient::getInstance()
                           ->send_msg_to_server(QString::fromStdString("GST\r\n"));
@@ -53,6 +90,12 @@ QString getStats(){
     return servAns;
 }
 
+/**
+ * @brief Вспомогательная функция для парсинга аргументов из ответа сервера.
+ * * Разбивает строку по разделителю "||" и удаляет символы переноса строки.
+ * @param servAns Ответ, пришедший от сервера.
+ * @param[out] args Вектор для сохранения извлеченных параметров.
+ */
 void extractArgs(QString servAns, QVector <QString> &args){
     servAns = servAns.trimmed();
 
@@ -65,6 +108,10 @@ void extractArgs(QString servAns, QVector <QString> &args){
     }
 }
 
+/**
+ * @brief Запрос статистики по всем пользователям (только для администратора).
+ * @return QString Сводный текстовый массив данных всех учетных записей.
+ */
 QString getAllStats(){
     QString servAns = SingletonClient::getInstance()
     ->send_msg_to_server(QString::fromStdString("AST\r\n"));
@@ -72,6 +119,10 @@ QString getAllStats(){
     return servAns;
 }
 
+/**
+ * @brief Запрос топ-10 пользователей по сумме набранных баллов (только для администратора).
+ * @return QString Текстовая таблица лидеров от сервера.
+ */
 QString getTop10Stats(){
     QString servAns = SingletonClient::getInstance()
     ->send_msg_to_server(QString::fromStdString("GST10\r\n"));
@@ -79,6 +130,11 @@ QString getTop10Stats(){
     return servAns;
 }
 
+/**
+ * @brief Удаление пользователя из базы данных по его логину (только для администратора).
+ * @param login Логин удаляемого пользователя.
+ * @return true, если удаление прошло успешно на сервере, иначе false.
+ */
 bool delete_user(QString login){
     QString msg = "DEL_USER " + login + "\r\n";
     QString servAns = SingletonClient::getInstance()->send_msg_to_server(msg);
@@ -90,6 +146,13 @@ bool delete_user(QString login){
     return false;
 }
 
+/**
+ * @brief Форматирование сырых данных от сервера в псевдографическую таблицу.
+ * * Вычисляет оптимальную ширину столбцов на основе входящих данных и
+ * строит текстовую таблицу с выравниванием по левому краю.
+ * @param serverData Ответ сервера, содержащий строки, разделенные "\r\n", и столбцы, разделенные "||".
+ * @return QString Готовая для вывода в интерфейс моноширинная текстовая таблица.
+ */
 QString getStatsTable(QString serverData) {
     QStringList lines = serverData.split("\r\n", Qt::SkipEmptyParts);
 

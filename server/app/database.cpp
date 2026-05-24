@@ -1,10 +1,21 @@
 #include "database.h"
 
+/**
+ * @file database.cpp
+ * @brief Реализация Singleton-класса взаимодействия со встроенной базой данных SQLite.
+ */
+
+/**
+ * @details Уничтожает единственный статический экземпляр базы данных при завершении жизненного цикла приложения.
+ */
 DatabaseDestroyer::~DatabaseDestroyer()
 {
     delete p_instance;
 }
 
+/**
+ * @details Связывает разрушитель базы данных с указателем на Singleton-экземпляр.
+ */
 void DatabaseDestroyer::initialize(Database * p){
     p_instance = p;
 };
@@ -12,6 +23,11 @@ void DatabaseDestroyer::initialize(Database * p){
 Database * Database::p_instance;
 DatabaseDestroyer Database::destroyer;
 
+/**
+ * @details Настраивает драйвер соединения QSQLITE, указывает имя файла базы данных ("SQLite.db").
+ * Открывает подключение к файлу. Если соединение успешно открыто, проверяет существование таблицы `User`
+ * и при необходимости создает её со всеми обязательными столбцами (логин, пароль, роль, сокет, статистика по задачам).
+ */
 Database::Database(){
     //подключение к бд
     db = QSqlDatabase::addDatabase("QSQLITE");
@@ -39,11 +55,17 @@ Database::Database(){
                "task5_stat int not NULL)");
 }
 
+/**
+ * @details Корректно закрывает соединение с файлом SQLite.
+ */
 Database::~Database() {
     //отключить бд
     db.close();
 }
 
+/**
+ * @details Создает объект при первом вызове. Гарантирует уникальность экземпляра на протяжении всей работы сервера.
+ */
 Database* Database::getInstance() {
     if (!p_instance)
     {
@@ -53,6 +75,10 @@ Database* Database::getInstance() {
     return p_instance;
 }
 
+/**
+ * @details Проверяет, содержит ли поле `role` значение 'admin' для пользователя,
+ * у которого `socket_id` совпадает с переданным дескриптором.
+ */
 bool Database::is_admin(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -69,6 +95,10 @@ bool Database::is_admin(int socket_descriptor)
     return false;
 }
 
+/**
+ * @details Прямое удаление пользователя по логину без каких-либо проверок уровня доступа сокета.
+ * Используется в автоматических тестах архитектуры.
+ */
 bool Database::delete_user_test(QString login)
 {
     QSqlQuery query(db);
@@ -77,6 +107,10 @@ bool Database::delete_user_test(QString login)
     return query.exec();
 }
 
+/**
+ * @details Выполняет SQL-запрос DELETE для удаления строки пользователя.
+ * Предварительно проверяет через `is_admin()`, имеет ли право данный сокет совершать удаление.
+ */
 bool Database::delete_user(QString login, int socket_descriptor)
 {
     if (is_admin(socket_descriptor)) {
@@ -89,6 +123,9 @@ bool Database::delete_user(QString login, int socket_descriptor)
 
 }
 
+/**
+ * @details Проверяет, закреплен ли за каким-либо пользователем в таблице данный сетевой сокет.
+ */
 bool Database::is_connected(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -104,6 +141,10 @@ bool Database::is_connected(int socket_descriptor)
     return false;
 };
 
+/**
+ * @details Проверяет связку логин/пароль. Если пара верна, обновляет поле `socket_id`,
+ * привязывая дескриптор текущего сетевого соединения к сессии пользователя.
+ */
 bool Database::is_auth_ok(QString login, QString password, int socket_descriptor)
 {
     if (!is_connected(socket_descriptor)) {
@@ -146,6 +187,10 @@ bool Database::is_auth_ok(QString login, QString password, int socket_descriptor
     return false;
 };
 
+/**
+ * @details Сначала проверяет, нет ли уже пользователя с таким же логином. Если логин свободен,
+ * создает новую запись с ролью 'user', привязывает сокет и выставляет начальную статистику в 0.
+ */
 bool Database::is_reg_ok(QString login, QString email, QString password, int socket_descriptor)
 {
     if (!is_connected(socket_descriptor)) {
@@ -178,6 +223,10 @@ bool Database::is_reg_ok(QString login, QString email, QString password, int soc
 
 };
 
+/**
+ * @details Записывает параметры сгенерированной задачи (тип, payload, правильный ответ)
+ * в профиль пользователя, чтобы сервер мог проверить её при последующем вызове команды SOLVE.
+ */
 bool Database::save_current_task(int socket_descriptor, const CurrentTask& task)
 {
     QSqlQuery query(db);
@@ -197,6 +246,9 @@ bool Database::save_current_task(int socket_descriptor, const CurrentTask& task)
     return true;
 }
 
+/**
+ * @details Вытаскивает сохраненные поля задачи из БД и собирает их обратно в структуру CurrentTask.
+ */
 CurrentTask Database::get_current_task(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -217,6 +269,9 @@ CurrentTask Database::get_current_task(int socket_descriptor)
     return task;
 }
 
+/**
+ * @details Зануляет поля текущей задачи. Вызывается сразу после того, как пользователь прислал ответ.
+ */
 bool Database::clear_current_task(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -233,6 +288,10 @@ bool Database::clear_current_task(int socket_descriptor)
     return true;
 };
 
+/**
+ * @details Динамически формирует SQL-запрос обновления статистики на базе номера задачи.
+ * Прибавляет +1 балл за правильный ответ или вычитает -2 балла за неверный.
+ */
 bool Database::update_stat(int task_number, int socket_descriptor, bool is_correct)
 {
     QString column;
@@ -261,6 +320,10 @@ bool Database::update_stat(int task_number, int socket_descriptor, bool is_corre
     return true;
 }
 
+/**
+ * @details Проставляет всем записям `socket_id = NULL`. Используется для очистки зависших
+ * сессий, если сервер упал или был перезагружен во время активности пользователей.
+ */
 bool Database::drop_all_connections()
 {
     QSqlQuery query(db);
@@ -271,6 +334,9 @@ bool Database::drop_all_connections()
     return true;
 };
 
+/**
+ * @details Находит пользователя по дескриптору сокета и сбрасывает поле `socket_id` в значение NULL.
+ */
 bool Database::log_out(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -282,6 +348,10 @@ bool Database::log_out(int socket_descriptor)
     }
     return true;
 };
+
+/**
+ * @details Достает баллы по всем пяти задачам для конкретного сокета и упаковывает их в строку с разделителями "||".
+ */
 QString Database::get_current_stat(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -303,6 +373,11 @@ QString Database::get_current_stat(int socket_descriptor)
     }
     return "curr_stat_error\r\n";
 };
+
+/**
+ * @details Считывает логин, почту, роль и очки пользователей из базы, лимитируя выборку первыми 15 записями.
+ * Доступно только администраторам.
+ */
 QString Database::get_all_stat(int socket_descriptor)
 {
     QSqlQuery query(db);
@@ -328,6 +403,10 @@ QString Database::get_all_stat(int socket_descriptor)
     }
 };
 
+/**
+ * @details Формирует вычисляемое «на лету» поле `all_stats` как сумму баллов за все пять задач,
+ * сортирует пользователей по убыванию этой суммы и возвращает первые 10 строк.
+ */
 QString Database::get_top_10_stat(int socket_descriptor)
 {
     QSqlQuery query(db);

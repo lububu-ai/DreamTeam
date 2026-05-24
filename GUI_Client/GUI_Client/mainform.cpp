@@ -2,6 +2,15 @@
 #include "mainform.h"
 #include "ui_mainform.h"
 //ответы с точностью до 6 числа после запятой
+/**
+ * @file mainform.cpp
+ * @brief Реализация логики главного окна личного кабинета обычного пользователя.
+ */
+
+/**
+ * @brief Конструктор формы MainForm. Скрывает элементы интерфейса отображения и решения задач.
+ * @param parent Указатель на родительский виджет.
+ */
 MainForm::MainForm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MainForm)
@@ -20,11 +29,18 @@ MainForm::MainForm(QWidget *parent)
     ui->labelShowStats->setVisible(false);
 }
 
+/**
+ * @brief Деструктор класса MainForm.
+ */
 MainForm::~MainForm()
 {
     delete ui;
 }
 
+/**
+ * @brief Управление видимостью виджетов для переключения между меню и экраном задачи.
+ * @param flag Если true — отображается меню выбора задач, если false — интерфейс ввода ответа.
+ */
 void MainForm::changeToTask(bool flag){
     ui->labelChooseTask->setVisible(flag);
     ui->pushButtonTASK1->setVisible(flag);
@@ -53,7 +69,9 @@ void MainForm::changeToTask(bool flag){
     task_num = "0";
 }
 
-
+/**
+ * @brief Обработчик выбора Задачи №1 (Формула Симпсона). Запрашивает данные с сервера и выводит на экран.
+ */
 void MainForm::on_pushButtonTASK1_clicked(){//Musikhin
     //Дано: Функция, шаг h, значения в трех точках y₀, y₁, y₂.
     //Найти: интеграл на двойном отрезке [x₀, x₂] методом Симпсона.
@@ -78,6 +96,9 @@ void MainForm::on_pushButtonTASK1_clicked(){//Musikhin
 
 }
 
+/**
+ * @brief Обработчик выбора Задачи №2 (Метод хорд).
+ */
 void MainForm::on_pushButtonTASK2_clicked(){//Filatov
     //Дано: Функция, значения на концах отрезка f(a) и f(b).
     //Найти: точку пересечения хорды с осью OX.
@@ -102,6 +123,9 @@ void MainForm::on_pushButtonTASK2_clicked(){//Filatov
     ui->labelToDo->setText(uslovie);
 }
 
+/**
+ * @brief Обработчик выбора Задачи №3 (Метод дихотомии).
+ */
 void MainForm::on_pushButtonTASK3_clicked(){//Shilova
     //Дано: Функция, отрезок [a, b], количество итераций k.
     //Найти: длину итогового отрезка после k итераций.
@@ -123,6 +147,9 @@ void MainForm::on_pushButtonTASK3_clicked(){//Shilova
     ui->labelToDo->setText(uslovie);
 }
 
+/**
+ * @brief Обработчик выбора Задачи №4 (Поиск листьев дерева в DFS).
+ */
 void MainForm::on_pushButtonTASK4_clicked(){//Semenets
     //Дано: Дерево, корневая вершина.
     //Найти: список листьев.
@@ -142,6 +169,9 @@ void MainForm::on_pushButtonTASK4_clicked(){//Semenets
     ui->labelToDo->setText(uslovie);
 }
 
+/**
+ * @brief Обработчик выбора Задачи №5 (Вычисление математической функции).
+ */
 void MainForm::on_pushButtonTASK5_clicked(){//Rybakin
     //Дано: Уравнение, приведенное к виду x = φ(x), начальное приближение x₀.
     //Найти: x₁.
@@ -167,16 +197,25 @@ void MainForm::on_pushButtonTASK5_clicked(){//Rybakin
     ui->labelToDo->setText(uslovie);
 }
 
+/**
+ * @brief Закрытие текущей формы (выход из аккаунта).
+ */
 void MainForm::on_pushButtonEXIT_clicked(){
     //Change to (LOG) OUT
     this->close();
 }
 
+/**
+ * @brief Кнопка возврата в меню выбора из экрана решения.
+ */
 void MainForm::on_pushButtonBACK_clicked(){
     changeToTask(true);
     ui->lineEditAnswer->setText("");
 }
 
+/**
+ * @brief Запрос личной статистики, ее парсинг и построение текстовой таблицы достижений.
+ */
 void MainForm::on_pushButtonSTATS_clicked(){
     changeToTask(false);
     ui->labelToDo->setVisible(false);
@@ -240,6 +279,9 @@ void MainForm::on_pushButtonSTATS_clicked(){
     ui->labelShowStats->setText(result);
 }
 
+/**
+ * @brief Считывание ответа и отправка серверу. Информирует пользователя о результате проверки.
+ */
 void MainForm::on_pushButtonSendAnswer_clicked(){
     QString ans = ui->lineEditAnswer->text();
 

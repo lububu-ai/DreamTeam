@@ -1,5 +1,14 @@
 #include "commandparser.h"
 
+/**
+ * @file commandparser.cpp
+ * @brief Реализация класса CommandParser для диспетчеризации входящих команд.
+ */
+
+/**
+ * @details Заполняет ассоциативный массив (карту) доступных серверных команд,
+ * связывая их строковые имена с соответствующими указателями на функции-обработчики.
+ */
 CommandParser::CommandParser() {
     commands["REG"] = register_user;
     commands["LOG"] = login;
@@ -12,6 +21,11 @@ CommandParser::CommandParser() {
     commands["GST10"] = get_top10_stat;
 }
 
+/**
+ * @details Выполняет очистку строки от пробельных символов, разбивает её по пробелам
+ * на имя команды и аргументы. Если команда найдена в списке зарегистрированных,
+ * вызывает привязанный обработчик. В противном случае возвращает статус ошибки.
+ */
 QString CommandParser::parse(QString input_command, int socket_descriptor)
 {
     input_command = input_command.trimmed();

@@ -1,5 +1,14 @@
 #include "commands.h"
 
+/**
+ * @file commands.cpp
+ * @brief Определение функций, реализующих бизнес-логику ответов сервера на команды протокола.
+ */
+
+/**
+ * @details Проверяет наличие всех необходимых параметров регистрации, обращается к инстансу
+ * базы данных и пытается добавить пользователя. Возвращает текстовый статус операции.
+ */
 QString register_user(QStringList args, int socket_descriptor)
 {
     Database* db = Database::getInstance();
@@ -11,6 +20,10 @@ QString register_user(QStringList args, int socket_descriptor)
     return "reg_fail\r\n";
 }
 
+/**
+ * @details Извлекает логин и пароль, сопоставляет их с записями в БД. Если аутентификация успешна,
+ * дополнительно проверяет роль пользователя (администратор или обычный пользователь) для возврата правильного токена.
+ */
 QString login(QStringList args, int socket_descriptor)
 {
     Database* db = Database::getInstance();
@@ -24,7 +37,10 @@ QString login(QStringList args, int socket_descriptor)
     }
     return "log_fail\r\n";
 }
-
+/**
+ * @details Проверяет, авторизован ли текущий сокет, и вызывает метод log_out в БД.
+ * Разрывает логическую сессию пользователя без закрытия самого сетевого соединения.
+ */
 QString logout(QStringList args, int socket_descriptor)
 {
     Database* db = Database::getInstance();
@@ -34,18 +50,31 @@ QString logout(QStringList args, int socket_descriptor)
     return "logout_fail\r\n";
 }
 
+/**
+ * @details Запрашивает из БД статистику по всем 5 типам задач именно для того пользователя,
+ * который закреплен за текущим сокетом.
+ */
 QString get_current_stat(QStringList args, int socket_descriptor)
 {
     Database* db = Database::getInstance();
     return db->get_current_stat(socket_descriptor);
 }
 
+/**
+ * @details Администраторская команда. Возвращает сводную матрицу результатов
+ * (до 15 пользователей), если у вызывающего сокета есть права администратора.
+ */
 QString get_all_stat(QStringList args, int socket_descriptor)
 {
     Database* db = Database::getInstance();
     return db->get_all_stat(socket_descriptor);
 }
 
+/**
+ * @details Проверяет права доступа и текущее состояние задач пользователя. Если задача выбранного типа
+ * уже сгенерирована и активна, функция возвращает её payload. Если активной задачи нет,
+ * генерирует новую через generate_task() и сохраняет её в БД перед отправкой клиенту.
+ */
 QString get_task(QStringList args, int socket_descriptor) {
     Database* db = Database::getInstance();
     if(args.size() < 2) {
@@ -72,6 +101,11 @@ QString get_task(QStringList args, int socket_descriptor) {
     return QString("TASK %1 %2\r\n").arg(new_task.type).arg(new_task.payload);
 }
 
+/**
+ * @details Получает сохраненную для данного сокета задачу, сравнивает ответ пользователя с правильным ответом.
+ * Для нестроковых (математических) ответов производит сравнение вещественных чисел с эпсилон-точностью 1e-3.
+ * Обновляет статистику баллов в БД и сбрасывает активную задачу.
+ */
 QString solve_task(QStringList args, int socket_descriptor) {
     Database* db = Database::getInstance();
     CurrentTask task = db->get_current_task(socket_descriptor);
@@ -104,6 +138,10 @@ QString solve_task(QStringList args, int socket_descriptor) {
     return "solve_task_error\r\n";
 }
 
+/**
+ * @details Администраторская команда. Извлекает логин целевого пользователя из аргументов
+ * и полностью удаляет его из таблицы БД, если сокет-отправитель валиден и имеет роль 'admin'.
+ */
 QString delete_user(QStringList args, int socket_descriptor){
     Database* db = Database::getInstance();
     QString login = args[1];
@@ -114,6 +152,10 @@ QString delete_user(QStringList args, int socket_descriptor){
     return "del_user_error\r\n";
 }
 
+/**
+ * @details Администраторская команда. Формирует сортированную по убыванию общего балла
+ * таблицу из топ-10 пользователей системы. При отсутствии прав возвращает ошибку доступа.
+ */
 QString get_top10_stat(QStringList args, int socket_descriptor)
 {
     Database* db = Database::getInstance();

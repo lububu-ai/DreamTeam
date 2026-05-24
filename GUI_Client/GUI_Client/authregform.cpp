@@ -2,6 +2,15 @@
 #include "clientfuncs.h"
 #include "ui_authregform.h"
 
+/**
+ * @file authregform.cpp
+ * @brief Реализация логики интерфейса формы авторизации и регистрации.
+ */
+
+/**
+ * @brief Конструктор формы AuthRegForm. Настраивает видимость элементов графического интерфейса.
+ * @param parent Указатель на родительский виджет.
+ */
 AuthRegForm::AuthRegForm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::AuthRegForm)
@@ -16,11 +25,19 @@ AuthRegForm::AuthRegForm(QWidget *parent)
     ui->pushButtonReg->setVisible(false);
 }
 
+/**
+ * @brief Деструктор класса. Освобождает память, выделенную под UI.
+ */
 AuthRegForm::~AuthRegForm()
 {
     delete ui;
 }
 
+/**
+ * @brief Слот обработки нажатия кнопки «Войти».
+ * * Извлекает данные из полей ввода, вызывает функцию auth() и, в случае успеха,
+ * генерирует сигнал auth_ok(role), скрывая текущее окно. При ошибке выводит QMessageBox.
+ */
 void AuthRegForm::on_pushButtonAuth_clicked(){
     QString log = ui->lineEditLogin->text();
     QString pw = ui->lineEditPassword->text();
@@ -37,6 +54,11 @@ void AuthRegForm::on_pushButtonAuth_clicked(){
     }
 }
 
+/**
+ * @brief Слот обработки нажатия кнопки «Зарегистрироваться».
+ * * Проверяет совпадение паролей. Если проверка пройдена, отправляет регистрационные данные на сервер.
+ * При успешном ответе авторизует пользователя и отправляет сигнал auth_ok(role).
+ */
 void AuthRegForm::on_pushButtonReg_clicked(){
     QString log = ui->lineEditLogin->text();
     QString email = ui->lineEditEmail->text();
@@ -67,6 +89,10 @@ void AuthRegForm::on_pushButtonReg_clicked(){
     }
 }
 
+/**
+ * @brief Слот переключения интерфейса формы в режим «Регистрация».
+ * * Делает видимыми поля ввода почты и подтверждения пароля, корректирует доступность кнопок.
+ */
 void AuthRegForm::on_pushButtonChangeToREG_clicked(){
     ui->labelConfirmPW->setVisible(true);
     ui->labelEmail->setVisible(true);
@@ -80,6 +106,10 @@ void AuthRegForm::on_pushButtonChangeToREG_clicked(){
     ui->pushButtonAuth->setVisible(false);
 }
 
+/**
+ * @brief Слот переключения интерфейса формы обратно в режим «Авторизация».
+ * * Скрывает дополнительные поля регистрации.
+ */
 void AuthRegForm::on_pushButtonChangeToAUTH_clicked(){
     ui->labelConfirmPW->setVisible(false);
     ui->labelEmail->setVisible(false);
