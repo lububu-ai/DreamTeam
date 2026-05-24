@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Исходный файл GUI_client/GUI_Client/clientfuncs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('clientfuncs_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">clientfuncs.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="clientfuncs_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CLIENTFUNCS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CLIENTFUNCS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include&lt;QString&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QVector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">bool</span> <a class="code hl_function" href="clientfuncs_8h.html#abc19cb4202fc85e4bf00e1cc24ed2624">auth</a>(QString log, QString pw, QString&amp; role);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">bool</span> <a class="code hl_function" href="clientfuncs_8h.html#ab50077671fb35113a0972836bed1b33f">reg</a>(QString log, QString email, QString pw, QString&amp; role);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>QString <a class="code hl_function" href="clientfuncs_8h.html#a885015840fa0e39a85710de7074f1899">getTask</a>(QString num);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>QString <a class="code hl_function" href="clientfuncs_8h.html#a15992e026e1b66fb335a34285a95df26">getStats</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">bool</span> <a class="code hl_function" href="clientfuncs_8h.html#a7d881186c921a456ba5a6846a0ab6013">sendAnswer</a>(QString num, QString answer);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="clientfuncs_8h.html#a86ec19bcf37bc6cfe4d5d9a1c71aaa19">extractArgs</a>(QString servAns, QVector &lt;QString&gt; &amp;args);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>QString <a class="code hl_function" href="clientfuncs_8h.html#aab931635632b195bedb3a9f318f62820">getAllStats</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>QString <a class="code hl_function" href="clientfuncs_8h.html#a09932038075aee79f06c9cb8aaf75aeb">getTop10Stats</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">bool</span> <a class="code hl_function" href="clientfuncs_8h.html#a12b2385cca3d55c691076625aa868ab6">delete_user</a>(QString <a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>QString <a class="code hl_function" href="clientfuncs_8h.html#add978382e7aabf7079a55f7693bb6348">getStatsTable</a>(QString serverData);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// CLIENTFUNCS_H</span></div>
+<div class="ttc" id="aclientfuncs_8h_html_a09932038075aee79f06c9cb8aaf75aeb"><div class="ttname"><a href="clientfuncs_8h.html#a09932038075aee79f06c9cb8aaf75aeb">getTop10Stats</a></div><div class="ttdeci">QString getTop10Stats()</div><div class="ttdoc">Запрос топ-10 пользователей по сумме набранных баллов (доступно только администратору).</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00126">clientfuncs.cpp:126</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_a12b2385cca3d55c691076625aa868ab6"><div class="ttname"><a href="clientfuncs_8h.html#a12b2385cca3d55c691076625aa868ab6">delete_user</a></div><div class="ttdeci">bool delete_user(QString login)</div><div class="ttdoc">Удаление пользователя из базы данных по его логину (доступно только администратору).</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00138">clientfuncs.cpp:138</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_a15992e026e1b66fb335a34285a95df26"><div class="ttname"><a href="clientfuncs_8h.html#a15992e026e1b66fb335a34285a95df26">getStats</a></div><div class="ttdeci">QString getStats()</div><div class="ttdoc">Получение персональной статистики текущего авторизованного пользователя.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00086">clientfuncs.cpp:86</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_a7d881186c921a456ba5a6846a0ab6013"><div class="ttname"><a href="clientfuncs_8h.html#a7d881186c921a456ba5a6846a0ab6013">sendAnswer</a></div><div class="ttdeci">bool sendAnswer(QString num, QString answer)</div><div class="ttdoc">Отправка ответа на задачу для проверки на стороне сервера.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00071">clientfuncs.cpp:71</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_a86ec19bcf37bc6cfe4d5d9a1c71aaa19"><div class="ttname"><a href="clientfuncs_8h.html#a86ec19bcf37bc6cfe4d5d9a1c71aaa19">extractArgs</a></div><div class="ttdeci">void extractArgs(QString servAns, QVector&lt; QString &gt; &amp;args)</div><div class="ttdoc">Вспомогательная функция для парсинга аргументов из сырого ответа сервера.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00099">clientfuncs.cpp:99</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_a885015840fa0e39a85710de7074f1899"><div class="ttname"><a href="clientfuncs_8h.html#a885015840fa0e39a85710de7074f1899">getTask</a></div><div class="ttdeci">QString getTask(QString num)</div><div class="ttdoc">Запрос payload-строки параметров математической задачи у сервера.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00060">clientfuncs.cpp:60</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_aab931635632b195bedb3a9f318f62820"><div class="ttname"><a href="clientfuncs_8h.html#aab931635632b195bedb3a9f318f62820">getAllStats</a></div><div class="ttdeci">QString getAllStats()</div><div class="ttdoc">Запрос статистики по всем пользователям (доступно только администратору).</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00115">clientfuncs.cpp:115</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_ab50077671fb35113a0972836bed1b33f"><div class="ttname"><a href="clientfuncs_8h.html#ab50077671fb35113a0972836bed1b33f">reg</a></div><div class="ttdeci">bool reg(QString log, QString email, QString pw, QString &amp;role)</div><div class="ttdoc">Регистрация нового пользователя в системе.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00044">clientfuncs.cpp:44</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_abc19cb4202fc85e4bf00e1cc24ed2624"><div class="ttname"><a href="clientfuncs_8h.html#abc19cb4202fc85e4bf00e1cc24ed2624">auth</a></div><div class="ttdeci">bool auth(QString log, QString pw, QString &amp;role)</div><div class="ttdoc">Авторизация пользователя в системе.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00017">clientfuncs.cpp:17</a></div></div>
+<div class="ttc" id="aclientfuncs_8h_html_add978382e7aabf7079a55f7693bb6348"><div class="ttname"><a href="clientfuncs_8h.html#add978382e7aabf7079a55f7693bb6348">getStatsTable</a></div><div class="ttdeci">QString getStatsTable(QString serverData)</div><div class="ttdoc">Форматирование сырых данных от сервера в удобочитаемый вид HTML-таблицы или текста.</div><div class="ttdef"><b>Определения</b> <a href="clientfuncs_8cpp_source.html#l00156">clientfuncs.cpp:156</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_a4533bc81e41a993c24f46f074576c198"><div class="ttname"><a href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a></div><div class="ttdeci">QString login(QStringList args, int socket_descriptor)</div><div class="ttdoc">Аутентификация (вход) пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00027">commands.cpp:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bd9d13ba29125fed5638b81172b09125.html">GUI_client</a></li><li class="navelem"><a href="dir_7e883cbf8e75d9054497414a31e91d8a.html">GUI_Client</a></li><li class="navelem"><a href="clientfuncs_8h.html">clientfuncs.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

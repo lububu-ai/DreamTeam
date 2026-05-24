@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Файл GUI_client/GUI_Client/clientfuncs.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('clientfuncs_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл clientfuncs.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Реализация функций сетевого взаимодействия, валидации и форматирования данных для клиента.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="clientfuncs_8h_source.html">clientfuncs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="singletonclient_8h_source.html">singletonclient.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для clientfuncs.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="clientfuncs_8cpp__incl.png" border="0" usemap="#a_g_u_i__client_2_g_u_i___client_2clientfuncs_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="clientfuncs_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:abc19cb4202fc85e4bf00e1cc24ed2624" id="r_abc19cb4202fc85e4bf00e1cc24ed2624"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abc19cb4202fc85e4bf00e1cc24ed2624">auth</a> (QString log, QString pw, QString &amp;role)</td></tr>
+<tr class="memdesc:abc19cb4202fc85e4bf00e1cc24ed2624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация пользователя в системе.  <br /></td></tr>
+<tr class="memitem:ab50077671fb35113a0972836bed1b33f" id="r_ab50077671fb35113a0972836bed1b33f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab50077671fb35113a0972836bed1b33f">reg</a> (QString log, QString email, QString pw, QString &amp;role)</td></tr>
+<tr class="memdesc:ab50077671fb35113a0972836bed1b33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация нового пользователя в системе.  <br /></td></tr>
+<tr class="memitem:a885015840fa0e39a85710de7074f1899" id="r_a885015840fa0e39a85710de7074f1899"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a885015840fa0e39a85710de7074f1899">getTask</a> (QString num)</td></tr>
+<tr class="memdesc:a885015840fa0e39a85710de7074f1899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрос payload-строки параметров математической задачи у сервера.  <br /></td></tr>
+<tr class="memitem:a7d881186c921a456ba5a6846a0ab6013" id="r_a7d881186c921a456ba5a6846a0ab6013"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7d881186c921a456ba5a6846a0ab6013">sendAnswer</a> (QString num, QString answer)</td></tr>
+<tr class="memdesc:a7d881186c921a456ba5a6846a0ab6013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение персональной статистики текущего авторизованного пользователя.  <br /></td></tr>
+<tr class="memitem:a15992e026e1b66fb335a34285a95df26" id="r_a15992e026e1b66fb335a34285a95df26"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a15992e026e1b66fb335a34285a95df26">getStats</a> ()</td></tr>
+<tr class="memdesc:a15992e026e1b66fb335a34285a95df26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка ответа на задачу для проверки на стороне сервера.  <br /></td></tr>
+<tr class="memitem:a86ec19bcf37bc6cfe4d5d9a1c71aaa19" id="r_a86ec19bcf37bc6cfe4d5d9a1c71aaa19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86ec19bcf37bc6cfe4d5d9a1c71aaa19">extractArgs</a> (QString servAns, QVector&lt; QString &gt; &amp;args)</td></tr>
+<tr class="memdesc:a86ec19bcf37bc6cfe4d5d9a1c71aaa19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вспомогательная функция для парсинга аргументов из ответа сервера.  <br /></td></tr>
+<tr class="memitem:aab931635632b195bedb3a9f318f62820" id="r_aab931635632b195bedb3a9f318f62820"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#aab931635632b195bedb3a9f318f62820">getAllStats</a> ()</td></tr>
+<tr class="memdesc:aab931635632b195bedb3a9f318f62820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрос статистики по всем пользователям (только для администратора).  <br /></td></tr>
+<tr class="memitem:a09932038075aee79f06c9cb8aaf75aeb" id="r_a09932038075aee79f06c9cb8aaf75aeb"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a09932038075aee79f06c9cb8aaf75aeb">getTop10Stats</a> ()</td></tr>
+<tr class="memdesc:a09932038075aee79f06c9cb8aaf75aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрос топ-10 пользователей по сумме набранных баллов (только для администратора).  <br /></td></tr>
+<tr class="memitem:a12b2385cca3d55c691076625aa868ab6" id="r_a12b2385cca3d55c691076625aa868ab6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a12b2385cca3d55c691076625aa868ab6">delete_user</a> (QString <a class="el" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a>)</td></tr>
+<tr class="memdesc:a12b2385cca3d55c691076625aa868ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователя из базы данных по его логину (только для администратора).  <br /></td></tr>
+<tr class="memitem:add978382e7aabf7079a55f7693bb6348" id="r_add978382e7aabf7079a55f7693bb6348"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#add978382e7aabf7079a55f7693bb6348">getStatsTable</a> (QString serverData)</td></tr>
+<tr class="memdesc:add978382e7aabf7079a55f7693bb6348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Форматирование сырых данных от сервера в псевдографическую таблицу.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Реализация функций сетевого взаимодействия, валидации и форматирования данных для клиента. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a></p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="abc19cb4202fc85e4bf00e1cc24ed2624" name="abc19cb4202fc85e4bf00e1cc24ed2624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc19cb4202fc85e4bf00e1cc24ed2624">&#9670;&#160;</a></span>auth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool auth </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>pw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;</td>          <td class="paramname"><span class="paramname"><em>role</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Авторизация пользователя в системе. </p>
+<ul>
+<li>Формирует строку запроса вида "LOG login password\r\n", отправляет её на сервер и анализирует ответ для определения роли пользователя. <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">log</td><td>Логин пользователя. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pw</td><td>Пароль пользователя. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">role</td><td>Ссылка для сохранения роли ("admin" или "user"). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если авторизация успешна (сервер вернул "log_success"), иначе false. </dd></dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00017">17</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                 {</div>
+<div class="line"><span class="lineno">   18</span>    QString msg = <span class="stringliteral">&quot;LOG &quot;</span> + log + <span class="stringliteral">&quot; &quot;</span> + pw + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()-&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(msg);</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">if</span>(servAns.startsWith(<span class="stringliteral">&quot;log_success&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   22</span>        qInfo() &lt;&lt; <span class="stringliteral">&quot;Success log_success&quot;</span>;</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (servAns.contains(<span class="stringliteral">&quot;admin&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   24</span>            role = <span class="stringliteral">&quot;admin&quot;</span>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   27</span>            role = <span class="stringliteral">&quot;user&quot;</span>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="aclass_singleton_client_html_a27e7002d7386698d26f4127939567493"><div class="ttname"><a href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a></div><div class="ttdeci">static SingletonClient * getInstance()</div><div class="ttdoc">Получение или создание единственного экземпляра SingletonClient.</div><div class="ttdef"><b>Определения</b> <a href="singletonclient_8h_source.html#l00068">singletonclient.h:68</a></div></div>
+<div class="ttc" id="aclass_singleton_client_html_a7fc0e9d67ca316793cfcd8fab31824c4"><div class="ttname"><a href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">SingletonClient::send_msg_to_server</a></div><div class="ttdeci">QString send_msg_to_server(QString query)</div><div class="ttdoc">Синхронная/блокирующая отправка текстового запроса на сервер и ожидание ответа.</div><div class="ttdef"><b>Определения</b> <a href="singletonclient_8cpp_source.html#l00026">singletonclient.cpp:26</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a12b2385cca3d55c691076625aa868ab6" name="a12b2385cca3d55c691076625aa868ab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b2385cca3d55c691076625aa868ab6">&#9670;&#160;</a></span>delete_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool delete_user </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>login</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователя из базы данных по его логину (только для администратора). </p>
+<p>Удаление пользователя из базы данных по его логину (доступно только администратору).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198" title="Аутентификация (вход) пользователя.">login</a></td><td>Логин удаляемого пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если удаление прошло успешно на сервере, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00138">138</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                               {</div>
+<div class="line"><span class="lineno">  139</span>    QString msg = <span class="stringliteral">&quot;DEL_USER &quot;</span> + <a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a> + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  140</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()-&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(msg);</div>
+<div class="line"><span class="lineno">  141</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;Server answer:&quot;</span> &lt;&lt; servAns;</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span>(servAns.startsWith(<span class="stringliteral">&quot;del_user_success&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
+<div class="ttc" id="acommands_8cpp_html_a4533bc81e41a993c24f46f074576c198"><div class="ttname"><a href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a></div><div class="ttdeci">QString login(QStringList args, int socket_descriptor)</div><div class="ttdoc">Аутентификация (вход) пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00027">commands.cpp:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86ec19bcf37bc6cfe4d5d9a1c71aaa19" name="a86ec19bcf37bc6cfe4d5d9a1c71aaa19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ec19bcf37bc6cfe4d5d9a1c71aaa19">&#9670;&#160;</a></span>extractArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void extractArgs </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>servAns</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QString &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вспомогательная функция для парсинга аргументов из ответа сервера. </p>
+<p>Вспомогательная функция для парсинга аргументов из сырого ответа сервера.</p>
+<ul>
+<li>Разбивает строку по разделителю "||" и удаляет символы переноса строки. <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">servAns</td><td>Ответ, пришедший от сервера. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">args</td><td>Вектор для сохранения извлеченных параметров. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00099">99</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                          {</div>
+<div class="line"><span class="lineno">  100</span>    servAns = servAns.trimmed();</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    QStringList medium_rare = servAns.split(<span class="charliteral">&#39; &#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">  103</span>    QStringList medium_well = medium_rare[2].split(<span class="charliteral">&#39;;&#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">//qDebug() &lt;&lt; medium_well;</span></div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; args.size();++i){</div>
+<div class="line"><span class="lineno">  107</span>        args[i] = medium_well[i];</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aab931635632b195bedb3a9f318f62820" name="aab931635632b195bedb3a9f318f62820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab931635632b195bedb3a9f318f62820">&#9670;&#160;</a></span>getAllStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString getAllStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запрос статистики по всем пользователям (только для администратора). </p>
+<p>Запрос статистики по всем пользователям (доступно только администратору).</p>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Сводный текстовый массив данных всех учетных записей. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00115">115</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>                     {</div>
+<div class="line"><span class="lineno">  116</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()</div>
+<div class="line"><span class="lineno">  117</span>    -&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(QString::fromStdString(<span class="stringliteral">&quot;AST\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  118</span>    qDebug() &lt;&lt; servAns;</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> servAns;</div>
+<div class="line"><span class="lineno">  120</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a15992e026e1b66fb335a34285a95df26" name="a15992e026e1b66fb335a34285a95df26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15992e026e1b66fb335a34285a95df26">&#9670;&#160;</a></span>getStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString getStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка ответа на задачу для проверки на стороне сервера. </p>
+<p>Получение персональной статистики текущего авторизованного пользователя.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>Номер проверяемой задачи. </td></tr>
+    <tr><td class="paramname">answer</td><td>Строка с ответом, введённым пользователем. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если сервер подтвердил правильность ответа ("answer_correct"), иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00086">86</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>                  {</div>
+<div class="line"><span class="lineno">   87</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()</div>
+<div class="line"><span class="lineno">   88</span>                          -&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(QString::fromStdString(<span class="stringliteral">&quot;GST\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">   89</span>    qDebug() &lt;&lt; servAns;</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> servAns;</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="add978382e7aabf7079a55f7693bb6348" name="add978382e7aabf7079a55f7693bb6348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add978382e7aabf7079a55f7693bb6348">&#9670;&#160;</a></span>getStatsTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString getStatsTable </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>serverData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Форматирование сырых данных от сервера в псевдографическую таблицу. </p>
+<p>Форматирование сырых данных от сервера в удобочитаемый вид HTML-таблицы или текста.</p>
+<ul>
+<li>Вычисляет оптимальную ширину столбцов на основе входящих данных и строит текстовую таблицу с выравниванием по левому краю. <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serverData</td><td>Ответ сервера, содержащий строки, разделенные "\r\n", и столбцы, разделенные "||". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Готовая для вывода в интерфейс моноширинная текстовая таблица. </dd></dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00156">156</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>                                          {</div>
+<div class="line"><span class="lineno">  157</span>    QStringList lines = serverData.split(<span class="stringliteral">&quot;\r\n&quot;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">if</span> (lines.isEmpty()) {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Нет данных для отображения&quot;</span>;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>    QVector&lt;QStringList&gt; usersData;</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordtype">int</span> maxLoginLen = 6;</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordtype">int</span> maxTaskLen[5] = {4, 4, 4, 4, 4};</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordtype">int</span> maxTotalLen = 5;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> QString&amp; line : lines) {</div>
+<div class="line"><span class="lineno">  169</span>        QStringList parts = line.split(<span class="stringliteral">&quot;||&quot;</span>);</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (parts.size() &gt;= 7) {</div>
+<div class="line"><span class="lineno">  171</span>            usersData.append(parts);</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>            maxLoginLen = qMax(maxLoginLen, parts[0].length());</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
+<div class="line"><span class="lineno">  176</span>                maxTaskLen[i] = qMax(maxTaskLen[i], parts[i + 1].length());</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            maxTotalLen = qMax(maxTotalLen, parts[6].length());</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    maxLoginLen += 2;</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
+<div class="line"><span class="lineno">  184</span>        maxTaskLen[i] += 2;</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
+<div class="line"><span class="lineno">  186</span>    maxTotalLen += 2;</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>    QString result;</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    <span class="keyword">auto</span> addSeparator = [&amp;]() {</div>
+<div class="line"><span class="lineno">  191</span>        result += <span class="stringliteral">&quot;+&quot;</span>;</div>
+<div class="line"><span class="lineno">  192</span>        result += QString(<span class="stringliteral">&quot;-&quot;</span>).repeated(maxLoginLen) + <span class="stringliteral">&quot;+&quot;</span>;</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
+<div class="line"><span class="lineno">  194</span>            result += QString(<span class="stringliteral">&quot;-&quot;</span>).repeated(maxTaskLen[i]) + <span class="stringliteral">&quot;+&quot;</span>;</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        result += QString(<span class="stringliteral">&quot;-&quot;</span>).repeated(maxTotalLen) + <span class="stringliteral">&quot;+\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  197</span>    };</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>    addSeparator();</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    result += <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  202</span>    result += QString(<span class="stringliteral">&quot;Логин&quot;</span>).leftJustified(maxLoginLen) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  203</span>    result += QString(<span class="stringliteral">&quot;T1&quot;</span>).leftJustified(maxTaskLen[0]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  204</span>    result += QString(<span class="stringliteral">&quot;T2&quot;</span>).leftJustified(maxTaskLen[1]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  205</span>    result += QString(<span class="stringliteral">&quot;T3&quot;</span>).leftJustified(maxTaskLen[2]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  206</span>    result += QString(<span class="stringliteral">&quot;T4&quot;</span>).leftJustified(maxTaskLen[3]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  207</span>    result += QString(<span class="stringliteral">&quot;T5&quot;</span>).leftJustified(maxTaskLen[4]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  208</span>    result += QString(<span class="stringliteral">&quot;Итого&quot;</span>).leftJustified(maxTotalLen) + <span class="stringliteral">&quot;|\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>    addSeparator();</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; parts : usersData) {</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keyword">auto</span> formatValue = [](<span class="keyword">const</span> QString&amp; val) -&gt; QString {</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordtype">int</span> num = val.toInt();</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">if</span> (num &gt; 0) <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;+%1&quot;</span>).arg(num);</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">return</span> val;</div>
+<div class="line"><span class="lineno">  217</span>        };</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>        result += <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  220</span>        result += parts[0].leftJustified(maxLoginLen) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  221</span>        result += formatValue(parts[1]).leftJustified(maxTaskLen[0]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  222</span>        result += formatValue(parts[2]).leftJustified(maxTaskLen[1]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  223</span>        result += formatValue(parts[3]).leftJustified(maxTaskLen[2]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  224</span>        result += formatValue(parts[4]).leftJustified(maxTaskLen[3]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  225</span>        result += formatValue(parts[5]).leftJustified(maxTaskLen[4]) + <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>        QString totalStr = parts[6];</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordtype">int</span> total = totalStr.toInt();</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (total &gt; 0) totalStr = <span class="stringliteral">&quot;+&quot;</span> + totalStr;</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>        result += totalStr.leftJustified(maxTotalLen) + <span class="stringliteral">&quot;|\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
+<div class="line"><span class="lineno">  233</span>    addSeparator();</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  236</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a885015840fa0e39a85710de7074f1899" name="a885015840fa0e39a85710de7074f1899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a885015840fa0e39a85710de7074f1899">&#9670;&#160;</a></span>getTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString getTask </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запрос payload-строки параметров математической задачи у сервера. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>Строковый номер типа задачи (1-5). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Сырой ответ сервера, содержащий сгенерированные параметры. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00060">60</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                            {</div>
+<div class="line"><span class="lineno">   61</span>    QString msg = <span class="stringliteral">&quot;GET_TASK &quot;</span> + num + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()-&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(msg);</div>
+<div class="line"><span class="lineno">   63</span>    qDebug() &lt;&lt; servAns;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> servAns;</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a09932038075aee79f06c9cb8aaf75aeb" name="a09932038075aee79f06c9cb8aaf75aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09932038075aee79f06c9cb8aaf75aeb">&#9670;&#160;</a></span>getTop10Stats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString getTop10Stats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запрос топ-10 пользователей по сумме набранных баллов (только для администратора). </p>
+<p>Запрос топ-10 пользователей по сумме набранных баллов (доступно только администратору).</p>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Текстовая таблица лидеров от сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00126">126</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                       {</div>
+<div class="line"><span class="lineno">  127</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()</div>
+<div class="line"><span class="lineno">  128</span>    -&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(QString::fromStdString(<span class="stringliteral">&quot;GST10\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  129</span>    qDebug() &lt;&lt; servAns;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> servAns;</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab50077671fb35113a0972836bed1b33f" name="ab50077671fb35113a0972836bed1b33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50077671fb35113a0972836bed1b33f">&#9670;&#160;</a></span>reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reg </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>email</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>pw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;</td>          <td class="paramname"><span class="paramname"><em>role</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация нового пользователя в системе. </p>
+<ul>
+<li>Отправляет запрос "REG login email password\r\n". При успешной регистрации пользователю автоматически присваивается стандартная роль "user". <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">log</td><td>Логин пользователя. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">email</td><td>Электронная почта. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pw</td><td>Пароль пользователя. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">role</td><td>Ссылка для записи роли по умолчанию. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если регистрация прошла успешно, иначе false. </dd></dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00044">44</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                               {</div>
+<div class="line"><span class="lineno">   45</span>    QString msg = <span class="stringliteral">&quot;REG &quot;</span> + log + <span class="stringliteral">&quot; &quot;</span> + email + <span class="stringliteral">&quot; &quot;</span> + pw + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()-&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(msg);</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span>(servAns.startsWith(<span class="stringliteral">&quot;reg_success&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   49</span>        role = <span class="stringliteral">&quot;user&quot;</span>;</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7d881186c921a456ba5a6846a0ab6013" name="a7d881186c921a456ba5a6846a0ab6013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d881186c921a456ba5a6846a0ab6013">&#9670;&#160;</a></span>sendAnswer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sendAnswer </td>
+          <td>(</td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>answer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение персональной статистики текущего авторизованного пользователя. </p>
+<p>Отправка ответа на задачу для проверки на стороне сервера.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Строка со статистикой по выполненным задачам. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientfuncs_8cpp_source.html">clientfuncs.cpp</a> строка <a class="el" href="clientfuncs_8cpp_source.html#l00071">71</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                                            {</div>
+<div class="line"><span class="lineno">   72</span>    QString msg = <span class="stringliteral">&quot;SOLVE &quot;</span> + num + <span class="stringliteral">&quot; &quot;</span> + answer + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   73</span>    QString servAns = <a class="code hl_function" href="class_singleton_client.html#a27e7002d7386698d26f4127939567493">SingletonClient::getInstance</a>()-&gt;<a class="code hl_function" href="class_singleton_client.html#a7fc0e9d67ca316793cfcd8fab31824c4">send_msg_to_server</a>(msg);</div>
+<div class="line"><span class="lineno">   74</span>    qDebug() &lt;&lt; servAns;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span>(servAns == QString::fromStdString(<span class="stringliteral">&quot;answer_correct\r\n&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bd9d13ba29125fed5638b81172b09125.html">GUI_client</a></li><li class="navelem"><a href="dir_7e883cbf8e75d9054497414a31e91d8a.html">GUI_Client</a></li><li class="navelem"><a href="clientfuncs_8cpp.html">clientfuncs.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

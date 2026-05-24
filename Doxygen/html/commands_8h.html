@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Файл server/app/commands.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('commands_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл commands.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Объявление функций-обработчиков для различных команд протокола.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QStringList&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="database_8h_source.html">database.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tasks_8h_source.html">tasks.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для commands.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="commands_8h__incl.png" border="0" usemap="#aserver_2app_2commands_8h" loading="lazy" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="commands_8h__dep__incl.png" border="0" usemap="#aserver_2app_2commands_8hdep" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="commands_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5f7d56e478776b2081786b0df026e356" id="r_a5f7d56e478776b2081786b0df026e356"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a5f7d56e478776b2081786b0df026e356">register_user</a> (QStringList, int)</td></tr>
+<tr class="memdesc:a5f7d56e478776b2081786b0df026e356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация нового пользователя.  <br /></td></tr>
+<tr class="memitem:ac756b10beea2d291fb96544fc47779f6" id="r_ac756b10beea2d291fb96544fc47779f6"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ac756b10beea2d291fb96544fc47779f6">login</a> (QStringList, int)</td></tr>
+<tr class="memdesc:ac756b10beea2d291fb96544fc47779f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Аутентификация (вход) пользователя.  <br /></td></tr>
+<tr class="memitem:a23cbfbc2d173ac2133f9a7280a2a5e88" id="r_a23cbfbc2d173ac2133f9a7280a2a5e88"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a23cbfbc2d173ac2133f9a7280a2a5e88">logout</a> (QStringList, int)</td></tr>
+<tr class="memdesc:a23cbfbc2d173ac2133f9a7280a2a5e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выход пользователя из системы (разрыв сессии).  <br /></td></tr>
+<tr class="memitem:ae1301fb75560effa07e4b7efea0198c8" id="r_ae1301fb75560effa07e4b7efea0198c8"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ae1301fb75560effa07e4b7efea0198c8">get_current_stat</a> (QStringList, int)</td></tr>
+<tr class="memdesc:ae1301fb75560effa07e4b7efea0198c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение статистики текущего (авторизованного) пользователя.  <br /></td></tr>
+<tr class="memitem:ae4b434fc0d8fad1a3bf597a868cce74f" id="r_ae4b434fc0d8fad1a3bf597a868cce74f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ae4b434fc0d8fad1a3bf597a868cce74f">get_all_stat</a> (QStringList, int)</td></tr>
+<tr class="memdesc:ae4b434fc0d8fad1a3bf597a868cce74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение статистики всех пользователей (доступно только админу).  <br /></td></tr>
+<tr class="memitem:a91734908e4986a3eecd6bc0a1fba06f5" id="r_a91734908e4986a3eecd6bc0a1fba06f5"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a91734908e4986a3eecd6bc0a1fba06f5">get_task</a> (QStringList, int)</td></tr>
+<tr class="memdesc:a91734908e4986a3eecd6bc0a1fba06f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение математической или логической задачи.  <br /></td></tr>
+<tr class="memitem:a2b5df4d884f1408954d38a567bb5f62f" id="r_a2b5df4d884f1408954d38a567bb5f62f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a2b5df4d884f1408954d38a567bb5f62f">solve_task</a> (QStringList, int)</td></tr>
+<tr class="memdesc:a2b5df4d884f1408954d38a567bb5f62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка решения задачи, отправленного пользователем.  <br /></td></tr>
+<tr class="memitem:a8b96a9119c4c895f059c17141709289d" id="r_a8b96a9119c4c895f059c17141709289d"><td class="memItemLeft"><a class="el" href="struct_current_task.html">CurrentTask</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8b96a9119c4c895f059c17141709289d">generate_task</a> (int)</td></tr>
+<tr class="memdesc:a8b96a9119c4c895f059c17141709289d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генератор случайных задач по типам.  <br /></td></tr>
+<tr class="memitem:a5ab404b564ed6b305027ead1e7ba937e" id="r_a5ab404b564ed6b305027ead1e7ba937e"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a5ab404b564ed6b305027ead1e7ba937e">delete_user</a> (QStringList, int)</td></tr>
+<tr class="memdesc:a5ab404b564ed6b305027ead1e7ba937e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователя из базы данных (доступно только админу).  <br /></td></tr>
+<tr class="memitem:a02ef92c2f35067c72623291473ad47c8" id="r_a02ef92c2f35067c72623291473ad47c8"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a02ef92c2f35067c72623291473ad47c8">get_top10_stat</a> (QStringList, int)</td></tr>
+<tr class="memdesc:a02ef92c2f35067c72623291473ad47c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение топ-10 пользователей по сумме баллов (доступно только админу).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Объявление функций-обработчиков для различных команд протокола. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8h_source.html">commands.h</a></p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a5ab404b564ed6b305027ead1e7ba937e" name="a5ab404b564ed6b305027ead1e7ba937e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab404b564ed6b305027ead1e7ba937e">&#9670;&#160;</a></span>delete_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString delete_user </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователя из базы данных (доступно только админу). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов: [1] - login удаляемого пользователя. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString "del_user_success\r\n" или "del_user_error\r\n".</dd></dl>
+<p>Администраторская команда. Извлекает логин целевого пользователя из аргументов и полностью удаляет его из таблицы БД, если сокет-отправитель валиден и имеет роль 'admin'. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00145">145</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                            {</div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">  147</span>    QString <a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a> = args[1];</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span> (db-&gt;<a class="code hl_function" href="class_database.html#a7ae69f86a3dc94985692b2dd90ee93e9">delete_user</a>(<a class="code hl_function" href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a>, socket_descriptor)) {</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;del_user_success\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;del_user_error\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="class_database.html">Database</a></div><div class="ttdoc">Обертка над базой данных SQLite для управления пользователями, сессиями и статистикой.</div><div class="ttdef"><b>Определения</b> <a href="database_8h_source.html#l00044">database.h:45</a></div></div>
+<div class="ttc" id="aclass_database_html_a5a3b028f980a577ea0b809eb92312761"><div class="ttname"><a href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a></div><div class="ttdeci">static Database * getInstance()</div><div class="ttdoc">Возвращает указатель на единственный экземпляр класса.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00069">database.cpp:69</a></div></div>
+<div class="ttc" id="aclass_database_html_a7ae69f86a3dc94985692b2dd90ee93e9"><div class="ttname"><a href="class_database.html#a7ae69f86a3dc94985692b2dd90ee93e9">Database::delete_user</a></div><div class="ttdeci">bool delete_user(QString, int)</div><div class="ttdoc">Удаляет пользователя по его логину, проверяя права администратора у текущего сокета.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00114">database.cpp:114</a></div></div>
+<div class="ttc" id="acommands_8cpp_html_a4533bc81e41a993c24f46f074576c198"><div class="ttname"><a href="commands_8cpp.html#a4533bc81e41a993c24f46f074576c198">login</a></div><div class="ttdeci">QString login(QStringList args, int socket_descriptor)</div><div class="ttdoc">Аутентификация (вход) пользователя.</div><div class="ttdef"><b>Определения</b> <a href="commands_8cpp_source.html#l00027">commands.cpp:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b96a9119c4c895f059c17141709289d" name="a8b96a9119c4c895f059c17141709289d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b96a9119c4c895f059c17141709289d">&#9670;&#160;</a></span>generate_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_current_task.html">CurrentTask</a> generate_task </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>task_type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Генератор случайных задач по типам. </p>
+<ul>
+<li>Поддерживает 5 различных математических/алгоритмических задач:</li>
+<li>1: Формула Симпсона (Мусихин)</li>
+<li>2: Метод хорд / Линейные функции (Филатов)</li>
+<li>3: Дихотомия / деление отрезка (Шилова)</li>
+<li>4: Поиск листьев в дереве обходом в глубину (Семенец)</li>
+<li>5: Вычисление аналитической функции с логарифмом и корнем (Рыбакин) <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_type</td><td>Идентификатор типа задачи (от 1 до 5). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="struct_current_task.html" title="Структура для хранения информации о текущей задаче, выданной пользователю.">CurrentTask</a> Структура с типом, payload-строкой параметров и строкой правильного ответа.</dd></dl>
+Генерирует уникальный вариант задачи в зависимости от переданного числового типа (1..5). Наполняет payload параметрами, преобразует правильный математический ответ в строку с нужной точностью.</li>
+<li>Задача 1: Формула численного интегрирования Симпсона.</li>
+<li>Задача 2: Метод хорд для нелинейных уравнений.</li>
+<li>Задача 3: Метод дихотомии (деления отрезка пополам).</li>
+<li>Задача 4: Поиск листьев графа (дерева) с помощью алгоритма обхода в глубину (DFS).</li>
+<li>Задача 5: Вычисление выражения с аналитической функцией (логарифмы/корни). </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="tasks_8cpp_source.html">tasks.cpp</a> строка <a class="el" href="tasks_8cpp_source.html#l00036">36</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a> task;</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">switch</span> (task_type) {</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">case</span> 1: <span class="comment">//Мусихин</span></div>
+<div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">double</span> h = (rand() % 10 + 1) / 10.0;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">double</span> y0 = rand() % 10;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">double</span> y1 = rand() % 10;</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">double</span> y2 = rand() % 10;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">double</span> answer = h / 3.0 * (y0 + 4.0 * y1 + y2);</div>
+<div class="line"><span class="lineno">   47</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 1;</div>
+<div class="line"><span class="lineno">   48</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3;%4&quot;</span>).arg(h).arg(y0).arg(y1).arg(y2);</div>
+<div class="line"><span class="lineno">   49</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">case</span> 2: <span class="comment">//Филатов</span></div>
+<div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">int</span> function_id = rand() % 5; <span class="comment">// 0..4</span></div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">int</span> a = -10 + rand() % 16;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">int</span> b = a + 1 + rand() % 10;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>        QString funcText;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">double</span> fa = 0.0;</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">double</span> fb = 0.0;</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">double</span> answer = -100.0;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">switch</span> (function_id) {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   65</span>            funcText = <span class="stringliteral">&quot;2x-4&quot;</span>;</div>
+<div class="line"><span class="lineno">   66</span>            fa = 2.0 * a - 4.0;</div>
+<div class="line"><span class="lineno">   67</span>            fb = 2.0 * b - 4.0;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   70</span>            funcText = <span class="stringliteral">&quot;x^2-9&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>            fa = a * a - 9.0;</div>
+<div class="line"><span class="lineno">   72</span>            fb = b * b - 9.0;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   75</span>            funcText = <span class="stringliteral">&quot;x^2-4x+3&quot;</span>;</div>
+<div class="line"><span class="lineno">   76</span>            fa = a * a - 4.0 * a + 3.0;</div>
+<div class="line"><span class="lineno">   77</span>            fb = b * b - 4.0 * b + 3.0;</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">   80</span>            funcText = <span class="stringliteral">&quot;x^3-8&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>            fa = a * a * a - 8.0;</div>
+<div class="line"><span class="lineno">   82</span>            fb = b * b * b - 8.0;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   85</span>            funcText = <span class="stringliteral">&quot;|x|-3&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>            fa = std::abs(a) - 3.0;</div>
+<div class="line"><span class="lineno">   87</span>            fb = std::abs(b) - 3.0;</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> ((fa * fb &lt;= 0.0) &amp;&amp; !(fa == 0.0 &amp;&amp; fb == 0.0) &amp;&amp; (fb - fa != 0.0)) {</div>
+<div class="line"><span class="lineno">   92</span>            answer = (a * fb - b * fa) / (fb - fa);</div>
+<div class="line"><span class="lineno">   93</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   94</span>            answer = -100.0;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 2;</div>
+<div class="line"><span class="lineno">   98</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3;%4;%5&quot;</span>)</div>
+<div class="line"><span class="lineno">   99</span>                           .arg(funcText)</div>
+<div class="line"><span class="lineno">  100</span>                           .arg(a)</div>
+<div class="line"><span class="lineno">  101</span>                           .arg(b)</div>
+<div class="line"><span class="lineno">  102</span>                           .arg(QString::number(fa, <span class="charliteral">&#39;f&#39;</span>, 3))</div>
+<div class="line"><span class="lineno">  103</span>                           .arg(QString::number(fb, <span class="charliteral">&#39;f&#39;</span>, 3));</div>
+<div class="line"><span class="lineno">  104</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">case</span> 3: <span class="comment">//Шилова</span></div>
+<div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">double</span> a = rand() % 10;</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">double</span> b = a + 1 + rand() % 10;</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordtype">int</span> k = 1 + rand() % 5;</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">double</span> answer = (b-a) / std::pow(2.0, k);</div>
+<div class="line"><span class="lineno">  113</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 3;</div>
+<div class="line"><span class="lineno">  114</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3&quot;</span>).arg(a).arg(b).arg(k);</div>
+<div class="line"><span class="lineno">  115</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">case</span> 4: <span class="comment">//Семенец</span></div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">int</span> n = 6 + rand() % 5;</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">int</span> root = rand() % n;</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        std::vector&lt;std::vector&lt;int&gt;&gt; adj(n);</div>
+<div class="line"><span class="lineno">  124</span>        std::vector&lt;std::pair&lt;int,int&gt;&gt; edges;</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v = 1; v &lt; n; ++v) {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordtype">int</span> parent = rand() % v;</div>
+<div class="line"><span class="lineno">  128</span>            adj[parent].push_back(v);</div>
+<div class="line"><span class="lineno">  129</span>            adj[v].push_back(parent);</div>
+<div class="line"><span class="lineno">  130</span>            edges.push_back({parent, v});</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>        std::vector&lt;int&gt; leaves;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        std::function&lt;void(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>)&gt; dfs = [&amp;](<span class="keywordtype">int</span> v, <span class="keywordtype">int</span> p) {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordtype">bool</span> hasChildren = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> to : adj[v]) {</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">if</span> (to != p) {</div>
+<div class="line"><span class="lineno">  139</span>                    hasChildren = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  140</span>                    dfs(to, v);</div>
+<div class="line"><span class="lineno">  141</span>                }</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (!hasChildren) {</div>
+<div class="line"><span class="lineno">  144</span>                leaves.push_back(v);</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        };</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>        dfs(root, -1);</div>
+<div class="line"><span class="lineno">  149</span>        std::sort(leaves.begin(), leaves.end());</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>        QStringList edgeParts;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : edges) {</div>
+<div class="line"><span class="lineno">  153</span>            edgeParts &lt;&lt; QString(<span class="stringliteral">&quot;%1-%2&quot;</span>).arg(e.first).arg(e.second);</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>        QStringList leafParts;</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x : leaves) {</div>
+<div class="line"><span class="lineno">  158</span>            leafParts &lt;&lt; QString::number(x);</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 4;</div>
+<div class="line"><span class="lineno">  162</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3&quot;</span>).arg(n).arg(root).arg(edgeParts.join(<span class="stringliteral">&quot;,&quot;</span>));</div>
+<div class="line"><span class="lineno">  163</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = leafParts.join(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">case</span> 5: <span class="comment">//Рыбакин</span></div>
+<div class="line"><span class="lineno">  167</span>    {</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">double</span> a, b, c, d, x0, answer;</div>
+<div class="line"><span class="lineno">  169</span>        a = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  170</span>        b = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  171</span>        c = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  172</span>        d = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  173</span>        x0 = (-50.0 + rand() % (101)) / 10.0;</div>
+<div class="line"><span class="lineno">  174</span>        answer = a * std::log(std::abs(x0) + 1.0) + b * std::sqrt(std::abs(c * x0 + d));</div>
+<div class="line"><span class="lineno">  175</span>        task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> = 5;</div>
+<div class="line"><span class="lineno">  176</span>        task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a> = QString(<span class="stringliteral">&quot;%1;%2;%3;%4;%5&quot;</span>).arg(a).arg(b).arg(c).arg(d).arg(x0);</div>
+<div class="line"><span class="lineno">  177</span>        task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a> = QString::number(answer, <span class="charliteral">&#39;f&#39;</span>, 6);</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> task;</div>
+<div class="line"><span class="lineno">  184</span>}</div>
+<div class="ttc" id="astruct_current_task_html"><div class="ttname"><a href="struct_current_task.html">CurrentTask</a></div><div class="ttdoc">Структура для хранения информации о текущей задаче, выданной пользователю.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00022">tasks.h:22</a></div></div>
+<div class="ttc" id="astruct_current_task_html_a1f46291795105264e18e44b712290c0d"><div class="ttname"><a href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">CurrentTask::answer</a></div><div class="ttdeci">QString answer</div><div class="ttdoc">Правильный ответ на задачу для проверки серверной частью.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00025">tasks.h:25</a></div></div>
+<div class="ttc" id="astruct_current_task_html_a33706acdf888e7780664f5372a9b12fe"><div class="ttname"><a href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">CurrentTask::payload</a></div><div class="ttdeci">QString payload</div><div class="ttdoc">Исходные параметры задачи (строка с разделителями для отправки клиенту).</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00024">tasks.h:24</a></div></div>
+<div class="ttc" id="astruct_current_task_html_a996c17b3149dbcce1aec6f45aa47aa58"><div class="ttname"><a href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">CurrentTask::type</a></div><div class="ttdeci">int type</div><div class="ttdoc">Тип (номер) задачи от 1 до 5. Значение 0 означает отсутствие задачи.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00023">tasks.h:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae4b434fc0d8fad1a3bf597a868cce74f" name="ae4b434fc0d8fad1a3bf597a868cce74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b434fc0d8fad1a3bf597a868cce74f">&#9670;&#160;</a></span>get_all_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString get_all_stat </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение статистики всех пользователей (доступно только админу). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов команды. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Сводный список пользователей и их очков или сообщение об ошибке доступа.</dd></dl>
+<p>Администраторская команда. Возвращает сводную матрицу результатов (до 15 пользователей), если у вызывающего сокета есть права администратора. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00067">67</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{</div>
+<div class="line"><span class="lineno">   69</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> db-&gt;<a class="code hl_function" href="class_database.html#aea453b6d630f11840e3a4a7619356445">get_all_stat</a>(socket_descriptor);</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+<div class="ttc" id="aclass_database_html_aea453b6d630f11840e3a4a7619356445"><div class="ttname"><a href="class_database.html#aea453b6d630f11840e3a4a7619356445">Database::get_all_stat</a></div><div class="ttdeci">QString get_all_stat(int)</div><div class="ttdoc">Формирует список статистики первых 15 пользователей.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00381">database.cpp:381</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae1301fb75560effa07e4b7efea0198c8" name="ae1301fb75560effa07e4b7efea0198c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1301fb75560effa07e4b7efea0198c8">&#9670;&#160;</a></span>get_current_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString get_current_stat </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение статистики текущего (авторизованного) пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов команды. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Строка со статистикой по 5 задачам, разделенная "||".</dd></dl>
+<p>Запрашивает из БД статистику по всем 5 типам задач именно для того пользователя, который закреплен за текущим сокетом. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> db-&gt;<a class="code hl_function" href="class_database.html#a959ba4a6dd5f31ec9694b93fe7d25fca">get_current_stat</a>(socket_descriptor);</div>
+<div class="line"><span class="lineno">   61</span>}</div>
+<div class="ttc" id="aclass_database_html_a959ba4a6dd5f31ec9694b93fe7d25fca"><div class="ttname"><a href="class_database.html#a959ba4a6dd5f31ec9694b93fe7d25fca">Database::get_current_stat</a></div><div class="ttdeci">QString get_current_stat(int)</div><div class="ttdoc">Формирует строку персональной статистики пользователя.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00355">database.cpp:355</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a91734908e4986a3eecd6bc0a1fba06f5" name="a91734908e4986a3eecd6bc0a1fba06f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91734908e4986a3eecd6bc0a1fba06f5">&#9670;&#160;</a></span>get_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString get_task </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение математической или логической задачи. </p>
+<ul>
+<li>Если у пользователя уже есть активная задача выбранного типа, возвращается она. В противном случае генерируется и сохраняется новая.</li>
+<li><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов: [1] - тип задачи (от 1 до 5). </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Данные задачи (TASK тип payload) или текст ошибки.</dd></dl>
+Проверяет права доступа и текущее состояние задач пользователя. Если задача выбранного типа уже сгенерирована и активна, функция возвращает её payload. Если активной задачи нет, генерирует новую через <a class="el" href="#a8b96a9119c4c895f059c17141709289d" title="Генератор случайных задач по типам.">generate_task()</a> и сохраняет её в БД перед отправкой клиенту. </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00078">78</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                          {</div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span>(args.size() &lt; 2) {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;get_task_error\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (!db-&gt;<a class="code hl_function" href="class_database.html#ac9c2247d9cbc3722fba07cdf2117156e">is_connected</a>(socket_descriptor)) {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;not_authenticated\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordtype">int</span> task_type = args[1].toInt();</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span> (task_type &lt; 1 || task_type &gt; 5) {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;task_not_found\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a> current = db-&gt;<a class="code hl_function" href="class_database.html#ad656bbad31e26a64aa9fcae535c2608f">get_current_task</a>(socket_descriptor);</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span> (current.<a class="code hl_function" href="struct_current_task.html#aa2de28b14d0b35a374abd3420995edeb">is_valid</a>() &amp;&amp; current.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a> == task_type) {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;TASK %1 %2\r\n&quot;</span>).arg(current.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a>).arg(current.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a>);</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a> new_task = <a class="code hl_function" href="#a8b96a9119c4c895f059c17141709289d">generate_task</a>(task_type);</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">if</span> (!new_task.<a class="code hl_function" href="struct_current_task.html#aa2de28b14d0b35a374abd3420995edeb">is_valid</a>()) {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;task_generation_error\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span> (!db-&gt;<a class="code hl_function" href="class_database.html#acd69a3440e1e105e021fc7e250f74988">save_current_task</a>(socket_descriptor, new_task)) {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;task_save_error\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;TASK %1 %2\r\n&quot;</span>).arg(new_task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a>).arg(new_task.<a class="code hl_variable" href="struct_current_task.html#a33706acdf888e7780664f5372a9b12fe">payload</a>);</div>
+<div class="line"><span class="lineno">  102</span>}</div>
+<div class="ttc" id="aclass_database_html_ac9c2247d9cbc3722fba07cdf2117156e"><div class="ttname"><a href="class_database.html#ac9c2247d9cbc3722fba07cdf2117156e">Database::is_connected</a></div><div class="ttdeci">bool is_connected(int)</div><div class="ttdoc">Проверяет, привязан ли сокет к какому-либо авторизованному пользователю.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00129">database.cpp:129</a></div></div>
+<div class="ttc" id="aclass_database_html_acd69a3440e1e105e021fc7e250f74988"><div class="ttname"><a href="class_database.html#acd69a3440e1e105e021fc7e250f74988">Database::save_current_task</a></div><div class="ttdeci">bool save_current_task(int, const CurrentTask &amp;)</div><div class="ttdoc">Сохраняет текущую выданную задачу в профиль пользователя.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00230">database.cpp:230</a></div></div>
+<div class="ttc" id="aclass_database_html_ad656bbad31e26a64aa9fcae535c2608f"><div class="ttname"><a href="class_database.html#ad656bbad31e26a64aa9fcae535c2608f">Database::get_current_task</a></div><div class="ttdeci">CurrentTask get_current_task(int)</div><div class="ttdoc">Возвращает структуру текущей задачи пользователя.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00252">database.cpp:252</a></div></div>
+<div class="ttc" id="acommands_8h_html_a8b96a9119c4c895f059c17141709289d"><div class="ttname"><a href="#a8b96a9119c4c895f059c17141709289d">generate_task</a></div><div class="ttdeci">CurrentTask generate_task(int)</div><div class="ttdoc">Генератор случайных задач по типам.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8cpp_source.html#l00036">tasks.cpp:36</a></div></div>
+<div class="ttc" id="astruct_current_task_html_aa2de28b14d0b35a374abd3420995edeb"><div class="ttname"><a href="struct_current_task.html#aa2de28b14d0b35a374abd3420995edeb">CurrentTask::is_valid</a></div><div class="ttdeci">bool is_valid() const</div><div class="ttdoc">Проверяет, валидна (задана) ли текущая задача.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8cpp_source.html#l00011">tasks.cpp:11</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a02ef92c2f35067c72623291473ad47c8" name="a02ef92c2f35067c72623291473ad47c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ef92c2f35067c72623291473ad47c8">&#9670;&#160;</a></span>get_top10_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString get_top10_stat </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение топ-10 пользователей по сумме баллов (доступно только админу). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов команды. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Список топ-10 или сообщение об ошибке доступа.</dd></dl>
+<p>Администраторская команда. Формирует сортированную по убыванию общего балла таблицу из топ-10 пользователей системы. При отсутствии прав возвращает ошибку доступа. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00159">159</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>{</div>
+<div class="line"><span class="lineno">  161</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> db-&gt;<a class="code hl_function" href="class_database.html#ac96957bafe50c8ec86a5da6d378e10a1">get_top_10_stat</a>(socket_descriptor);</div>
+<div class="line"><span class="lineno">  163</span>}</div>
+<div class="ttc" id="aclass_database_html_ac96957bafe50c8ec86a5da6d378e10a1"><div class="ttname"><a href="class_database.html#ac96957bafe50c8ec86a5da6d378e10a1">Database::get_top_10_stat</a></div><div class="ttdeci">QString get_top_10_stat(int)</div><div class="ttdoc">Формирует список топ-10 пользователей, отсортированный по убыванию баллов.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00410">database.cpp:410</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac756b10beea2d291fb96544fc47779f6" name="ac756b10beea2d291fb96544fc47779f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac756b10beea2d291fb96544fc47779f6">&#9670;&#160;</a></span>login()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString login </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Аутентификация (вход) пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов команды: [0] - "LOG", [1] - login, [2] - password. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString Статус входа: для админа, пользователя, либо ошибка.</dd></dl>
+<p>Извлекает логин и пароль, сопоставляет их с записями в БД. Если аутентификация успешна, дополнительно проверяет роль пользователя (администратор или обычный пользователь) для возврата правильного токена. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00027">27</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span> (args.size() &gt;= 3) {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (db-&gt;<a class="code hl_function" href="class_database.html#afa8e1c210326915761a1a4ca5c4a4257">is_auth_ok</a>(args[1], args[2], socket_descriptor)) {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (db-&gt;<a class="code hl_function" href="class_database.html#aaf7cda5a66d39e9f2d6e4ef09dae2a25">is_admin</a>(socket_descriptor)) {</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;log_success admin\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;log_success user\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;log_fail\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
+<div class="ttc" id="aclass_database_html_aaf7cda5a66d39e9f2d6e4ef09dae2a25"><div class="ttname"><a href="class_database.html#aaf7cda5a66d39e9f2d6e4ef09dae2a25">Database::is_admin</a></div><div class="ttdeci">bool is_admin(int)</div><div class="ttdoc">Проверяет, является ли пользователь с данным сокетом администратором.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00082">database.cpp:82</a></div></div>
+<div class="ttc" id="aclass_database_html_afa8e1c210326915761a1a4ca5c4a4257"><div class="ttname"><a href="class_database.html#afa8e1c210326915761a1a4ca5c4a4257">Database::is_auth_ok</a></div><div class="ttdeci">bool is_auth_ok(QString, QString, int)</div><div class="ttdoc">Авторизует пользователя, проверяя логин/пароль и привязывая socket_descriptor.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00148">database.cpp:148</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a23cbfbc2d173ac2133f9a7280a2a5e88" name="a23cbfbc2d173ac2133f9a7280a2a5e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23cbfbc2d173ac2133f9a7280a2a5e88">&#9670;&#160;</a></span>logout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString logout </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выход пользователя из системы (разрыв сессии). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов команды. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString "logout_success\r\n" или "logout_fail\r\n".</dd></dl>
+<p>Проверяет, авторизован ли текущий сокет, и вызывает метод log_out в БД. Разрывает логическую сессию пользователя без закрытия самого сетевого соединения. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00044">44</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> (db-&gt;<a class="code hl_function" href="class_database.html#ab1aad87819c053ab5e5a31873b1b8519">log_out</a>(socket_descriptor)) {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;logout_success\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;logout_fail\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+<div class="ttc" id="aclass_database_html_ab1aad87819c053ab5e5a31873b1b8519"><div class="ttname"><a href="class_database.html#ab1aad87819c053ab5e5a31873b1b8519">Database::log_out</a></div><div class="ttdeci">bool log_out(int)</div><div class="ttdoc">Отвязывает сокет от пользователя (устанавливает socket_id в NULL).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00340">database.cpp:340</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5f7d56e478776b2081786b0df026e356" name="a5f7d56e478776b2081786b0df026e356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7d56e478776b2081786b0df026e356">&#9670;&#160;</a></span>register_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString register_user </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация нового пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов команды: [0] - "REG", [1] - login, [2] - email, [3] - password. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString "reg_success user\r\n" или "reg_fail\r\n".</dd></dl>
+<p>Проверяет наличие всех необходимых параметров регистрации, обращается к инстансу базы данных и пытается добавить пользователя. Возвращает текстовый статус операции. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00012">12</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">if</span> (args.size() &gt;= 4){</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span>(db-&gt;<a class="code hl_function" href="class_database.html#aed8c6d317d8c2fe251dd3c481eaa3b2e">is_reg_ok</a>(args[1], args[2], args[3], socket_descriptor)) {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;reg_success user\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;reg_fail\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   21</span>}</div>
+<div class="ttc" id="aclass_database_html_aed8c6d317d8c2fe251dd3c481eaa3b2e"><div class="ttname"><a href="class_database.html#aed8c6d317d8c2fe251dd3c481eaa3b2e">Database::is_reg_ok</a></div><div class="ttdeci">bool is_reg_ok(QString, QString, QString, int)</div><div class="ttdoc">Регистрирует нового пользователя с ролью &#39;user&#39; и начальной нулевой статистикой.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00194">database.cpp:194</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b5df4d884f1408954d38a567bb5f62f" name="a2b5df4d884f1408954d38a567bb5f62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5df4d884f1408954d38a567bb5f62f">&#9670;&#160;</a></span>solve_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString solve_task </td>
+          <td>(</td>
+          <td class="paramtype">QStringList</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket_descriptor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка решения задачи, отправленного пользователем. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Список аргументов: [1] - номер задачи, [2] - ответ пользователя. </td></tr>
+    <tr><td class="paramname">socket_descriptor</td><td>Дескриптор сокета текущего подключения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>QString "answer_correct\r\n" или "answer_incorrect\r\n".</dd></dl>
+<p>Получает сохраненную для данного сокета задачу, сравнивает ответ пользователя с правильным ответом. Для нестроковых (математических) ответов производит сравнение вещественных чисел с эпсилон-точностью 1e-3. Обновляет статистику баллов в БД и сбрасывает активную задачу. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="commands_8cpp_source.html">commands.cpp</a> строка <a class="el" href="commands_8cpp_source.html#l00109">109</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                            {</div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_class" href="class_database.html">Database</a>* db = <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a>();</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a> task = db-&gt;<a class="code hl_function" href="class_database.html#ad656bbad31e26a64aa9fcae535c2608f">get_current_task</a>(socket_descriptor);</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">if</span> (args.size() &gt;= 3 &amp;&amp; db-&gt;<a class="code hl_function" href="class_database.html#ac9c2247d9cbc3722fba07cdf2117156e">is_connected</a>(socket_descriptor) &amp;&amp; task.<a class="code hl_function" href="struct_current_task.html#aa2de28b14d0b35a374abd3420995edeb">is_valid</a>()) {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> task_number = args[1].toInt();</div>
+<div class="line"><span class="lineno">  115</span>        QString user_answer = args[2];</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (task_number &lt; 1 || task_number &gt; 5 || task_number != task.<a class="code hl_variable" href="struct_current_task.html#a996c17b3149dbcce1aec6f45aa47aa58">type</a>) {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;task_not_found\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">bool</span> is_correct = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (task_number == 4) {</div>
+<div class="line"><span class="lineno">  124</span>            is_correct = (user_answer == task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a>);</div>
+<div class="line"><span class="lineno">  125</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordtype">bool</span> ok1 = <span class="keyword">false</span>, ok2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordtype">double</span> a = user_answer.toDouble(&amp;ok1);</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">double</span> b = task.<a class="code hl_variable" href="struct_current_task.html#a1f46291795105264e18e44b712290c0d">answer</a>.toDouble(&amp;ok2);</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (ok1 &amp;&amp; ok2) {</div>
+<div class="line"><span class="lineno">  130</span>                is_correct = std::abs(a - b) &lt; 1e-3;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>        db-&gt;<a class="code hl_function" href="class_database.html#ac06f50d57b732edf93838282f32849e6">update_stat</a>(task_number, socket_descriptor, is_correct);</div>
+<div class="line"><span class="lineno">  135</span>        db-&gt;<a class="code hl_function" href="class_database.html#a9c09b68143af4e0b5455c7f679f09251">clear_current_task</a>(socket_descriptor);</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> is_correct ? <span class="stringliteral">&quot;answer_correct\r\n&quot;</span> : <span class="stringliteral">&quot;answer_incorrect\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;solve_task_error\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  139</span>}</div>
+<div class="ttc" id="aclass_database_html_a9c09b68143af4e0b5455c7f679f09251"><div class="ttname"><a href="class_database.html#a9c09b68143af4e0b5455c7f679f09251">Database::clear_current_task</a></div><div class="ttdeci">bool clear_current_task(int)</div><div class="ttdoc">Очищает поля текущей задачи у пользователя (сбрасывает в состояние по умолчанию).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00275">database.cpp:275</a></div></div>
+<div class="ttc" id="aclass_database_html_ac06f50d57b732edf93838282f32849e6"><div class="ttname"><a href="class_database.html#ac06f50d57b732edf93838282f32849e6">Database::update_stat</a></div><div class="ttdeci">bool update_stat(int, int, bool)</div><div class="ttdoc">Обновляет статистику (баллы) по конкретной задаче (+1 за верный ответ, -2 за неверный).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00295">database.cpp:295</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a href="dir_fbea892794e5b570563d887d17fc5d9e.html">app</a></li><li class="navelem"><a href="commands_8h.html">commands.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

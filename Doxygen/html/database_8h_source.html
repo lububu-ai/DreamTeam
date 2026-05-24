@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TCP Client-Server: Исходный файл server/app/database.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TCP Client-Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('database_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">database.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="database_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;QSqlDatabase&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QSqlQuery&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QSqlError&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QSqlRecord&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QVariant&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef DATABASE_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define DATABASE_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="tasks_8h.html">tasks.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="class_database.html">Database</a>;</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_database_destroyer.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_database_destroyer.html">DatabaseDestroyer</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_database_destroyer.html#a5f422a8a5b0f3170bc23174f3dedc0e8">   26</a></span>        <a class="code hl_class" href="class_database.html">Database</a> * <a class="code hl_variable" href="class_database_destroyer.html#a5f422a8a5b0f3170bc23174f3dedc0e8">p_instance</a>; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_function" href="class_database_destroyer.html#a85d3f148c74da0df13368b0579703ad3">~DatabaseDestroyer</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_database_destroyer.html#ae0b3be6d8d66425c59eaf705a121a2af">initialize</a>(<a class="code hl_class" href="class_database.html">Database</a> * p);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_database.html">   44</a></span><span class="keyword">class </span><a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_database.html#a42e130dace776ef032ac526bc7bce7b6">   47</a></span>        <span class="keyword">static</span> <a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a> * <a class="code hl_variable" href="class_database.html#a42e130dace776ef032ac526bc7bce7b6">p_instance</a>; </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_database.html#afed2be0625dac9e9aa1dac8ac21be415">   48</a></span>        <span class="keyword">static</span> <a class="code hl_friend" href="class_database.html#a4588ee946c5d5c8fcff08e29489f676e">DatabaseDestroyer</a> <a class="code hl_variable" href="class_database.html#afed2be0625dac9e9aa1dac8ac21be415">destroyer</a>; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_database.html#aea64d7d99483faec8f049cdd817bb693">   49</a></span>        QSqlDatabase <a class="code hl_variable" href="class_database.html#aea64d7d99483faec8f049cdd817bb693">db</a>; </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_database.html#a83f8b6d2941a4aee50f225e08e97291c">   55</a></span>        <a class="code hl_function" href="class_database.html#a83f8b6d2941a4aee50f225e08e97291c">Database</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_database.html#a6c7f04aad691f2be9b7bc8caae0a7cb7">   56</a></span>        <a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a>&amp; <a class="code hl_function" href="class_database.html#a6c7f04aad691f2be9b7bc8caae0a7cb7">operator = </a>(<a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="class_database.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_database.html#a4588ee946c5d5c8fcff08e29489f676e">   61</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_database.html#a4588ee946c5d5c8fcff08e29489f676e">DatabaseDestroyer</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">static</span> <a class="code hl_function" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a>* <a class="code hl_function" href="class_database.html#a5a3b028f980a577ea0b809eb92312761">getInstance</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a7ae69f86a3dc94985692b2dd90ee93e9">delete_user</a>(QString, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a8203305a808ebdba8c0457abe59bec01">delete_user_test</a>(QString);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#aaf7cda5a66d39e9f2d6e4ef09dae2a25">is_admin</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#ac9c2247d9cbc3722fba07cdf2117156e">is_connected</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#afa8e1c210326915761a1a4ca5c4a4257">is_auth_ok</a>(QString, QString, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#aed8c6d317d8c2fe251dd3c481eaa3b2e">is_reg_ok</a>(QString, QString, QString, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#ab1aad87819c053ab5e5a31873b1b8519">log_out</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#acd69a3440e1e105e021fc7e250f74988">save_current_task</a>(<span class="keywordtype">int</span>, <span class="keyword">const</span> <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a>&amp;);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_struct" href="struct_current_task.html">CurrentTask</a> <a class="code hl_function" href="class_database.html#ad656bbad31e26a64aa9fcae535c2608f">get_current_task</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a9c09b68143af4e0b5455c7f679f09251">clear_current_task</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#ac06f50d57b732edf93838282f32849e6">update_stat</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#accfaed8899ec8d66ad75875a8459e710">drop_all_connections</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        QString <a class="code hl_function" href="class_database.html#a959ba4a6dd5f31ec9694b93fe7d25fca">get_current_stat</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        QString <a class="code hl_function" href="class_database.html#aea453b6d630f11840e3a4a7619356445">get_all_stat</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        QString <a class="code hl_function" href="class_database.html#ac96957bafe50c8ec86a5da6d378e10a1">get_top_10_stat</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>};</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// DATABASE_H</span></div>
+<div class="ttc" id="aclass_database_destroyer_html"><div class="ttname"><a href="class_database_destroyer.html">DatabaseDestroyer</a></div><div class="ttdoc">Вспомогательный класс для корректного освобождения памяти Singleton-экземпляра Database.</div><div class="ttdef"><b>Определения</b> <a href="#l00023">database.h:24</a></div></div>
+<div class="ttc" id="aclass_database_destroyer_html_a5f422a8a5b0f3170bc23174f3dedc0e8"><div class="ttname"><a href="class_database_destroyer.html#a5f422a8a5b0f3170bc23174f3dedc0e8">DatabaseDestroyer::p_instance</a></div><div class="ttdeci">Database * p_instance</div><div class="ttdoc">Указатель на единственный экземпляр Database.</div><div class="ttdef"><b>Определения</b> <a href="#l00026">database.h:26</a></div></div>
+<div class="ttc" id="aclass_database_destroyer_html_a85d3f148c74da0df13368b0579703ad3"><div class="ttname"><a href="class_database_destroyer.html#a85d3f148c74da0df13368b0579703ad3">DatabaseDestroyer::~DatabaseDestroyer</a></div><div class="ttdeci">~DatabaseDestroyer()</div><div class="ttdoc">Деструктор. Удаляет выделенный объект Database.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00011">database.cpp:11</a></div></div>
+<div class="ttc" id="aclass_database_destroyer_html_ae0b3be6d8d66425c59eaf705a121a2af"><div class="ttname"><a href="class_database_destroyer.html#ae0b3be6d8d66425c59eaf705a121a2af">DatabaseDestroyer::initialize</a></div><div class="ttdeci">void initialize(Database *p)</div><div class="ttdoc">Инициализация деструктора ссылкой на экземпляр.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00019">database.cpp:19</a></div></div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="class_database.html">Database</a></div><div class="ttdoc">Обертка над базой данных SQLite для управления пользователями, сессиями и статистикой.</div><div class="ttdef"><b>Определения</b> <a href="#l00044">database.h:45</a></div></div>
+<div class="ttc" id="aclass_database_html_a42e130dace776ef032ac526bc7bce7b6"><div class="ttname"><a href="class_database.html#a42e130dace776ef032ac526bc7bce7b6">Database::p_instance</a></div><div class="ttdeci">static Database * p_instance</div><div class="ttdoc">Единственный экземпляр класса Database.</div><div class="ttdef"><b>Определения</b> <a href="#l00047">database.h:47</a></div></div>
+<div class="ttc" id="aclass_database_html_a4588ee946c5d5c8fcff08e29489f676e"><div class="ttname"><a href="class_database.html#a4588ee946c5d5c8fcff08e29489f676e">Database::DatabaseDestroyer</a></div><div class="ttdeci">friend class DatabaseDestroyer</div><div class="ttdef"><b>Определения</b> <a href="#l00061">database.h:61</a></div></div>
+<div class="ttc" id="aclass_database_html_a4703c80e6969d33565ea340f768fdadf"><div class="ttname"><a href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database::Database</a></div><div class="ttdeci">Database()</div><div class="ttdoc">Защищенный конструктор. Выполняет открытие БД и создание таблиц, если они отсутствуют.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00031">database.cpp:31</a></div></div>
+<div class="ttc" id="aclass_database_html_a5a3b028f980a577ea0b809eb92312761"><div class="ttname"><a href="class_database.html#a5a3b028f980a577ea0b809eb92312761">Database::getInstance</a></div><div class="ttdeci">static Database * getInstance()</div><div class="ttdoc">Возвращает указатель на единственный экземпляр класса.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00069">database.cpp:69</a></div></div>
+<div class="ttc" id="aclass_database_html_a6c7f04aad691f2be9b7bc8caae0a7cb7"><div class="ttname"><a href="class_database.html#a6c7f04aad691f2be9b7bc8caae0a7cb7">Database::operator=</a></div><div class="ttdeci">Database &amp; operator=(Database &amp;)=delete</div></div>
+<div class="ttc" id="aclass_database_html_a7ae69f86a3dc94985692b2dd90ee93e9"><div class="ttname"><a href="class_database.html#a7ae69f86a3dc94985692b2dd90ee93e9">Database::delete_user</a></div><div class="ttdeci">bool delete_user(QString, int)</div><div class="ttdoc">Удаляет пользователя по его логину, проверяя права администратора у текущего сокета.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00114">database.cpp:114</a></div></div>
+<div class="ttc" id="aclass_database_html_a8203305a808ebdba8c0457abe59bec01"><div class="ttname"><a href="class_database.html#a8203305a808ebdba8c0457abe59bec01">Database::delete_user_test</a></div><div class="ttdeci">bool delete_user_test(QString)</div><div class="ttdoc">Тестовое удаление пользователя (без проверки прав администратора).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00102">database.cpp:102</a></div></div>
+<div class="ttc" id="aclass_database_html_a83f8b6d2941a4aee50f225e08e97291c"><div class="ttname"><a href="class_database.html#a83f8b6d2941a4aee50f225e08e97291c">Database::Database</a></div><div class="ttdeci">Database(const Database &amp;)=delete</div></div>
+<div class="ttc" id="aclass_database_html_a84d399a2ad58d69daab9b05330e1316d"><div class="ttname"><a href="class_database.html#a84d399a2ad58d69daab9b05330e1316d">Database::~Database</a></div><div class="ttdeci">~Database()</div><div class="ttdoc">Защищенный деструктор. Закрывает соединение с БД.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00061">database.cpp:61</a></div></div>
+<div class="ttc" id="aclass_database_html_a959ba4a6dd5f31ec9694b93fe7d25fca"><div class="ttname"><a href="class_database.html#a959ba4a6dd5f31ec9694b93fe7d25fca">Database::get_current_stat</a></div><div class="ttdeci">QString get_current_stat(int)</div><div class="ttdoc">Формирует строку персональной статистики пользователя.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00355">database.cpp:355</a></div></div>
+<div class="ttc" id="aclass_database_html_a9c09b68143af4e0b5455c7f679f09251"><div class="ttname"><a href="class_database.html#a9c09b68143af4e0b5455c7f679f09251">Database::clear_current_task</a></div><div class="ttdeci">bool clear_current_task(int)</div><div class="ttdoc">Очищает поля текущей задачи у пользователя (сбрасывает в состояние по умолчанию).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00275">database.cpp:275</a></div></div>
+<div class="ttc" id="aclass_database_html_aaf7cda5a66d39e9f2d6e4ef09dae2a25"><div class="ttname"><a href="class_database.html#aaf7cda5a66d39e9f2d6e4ef09dae2a25">Database::is_admin</a></div><div class="ttdeci">bool is_admin(int)</div><div class="ttdoc">Проверяет, является ли пользователь с данным сокетом администратором.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00082">database.cpp:82</a></div></div>
+<div class="ttc" id="aclass_database_html_ab1aad87819c053ab5e5a31873b1b8519"><div class="ttname"><a href="class_database.html#ab1aad87819c053ab5e5a31873b1b8519">Database::log_out</a></div><div class="ttdeci">bool log_out(int)</div><div class="ttdoc">Отвязывает сокет от пользователя (устанавливает socket_id в NULL).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00340">database.cpp:340</a></div></div>
+<div class="ttc" id="aclass_database_html_ac06f50d57b732edf93838282f32849e6"><div class="ttname"><a href="class_database.html#ac06f50d57b732edf93838282f32849e6">Database::update_stat</a></div><div class="ttdeci">bool update_stat(int, int, bool)</div><div class="ttdoc">Обновляет статистику (баллы) по конкретной задаче (+1 за верный ответ, -2 за неверный).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00295">database.cpp:295</a></div></div>
+<div class="ttc" id="aclass_database_html_ac96957bafe50c8ec86a5da6d378e10a1"><div class="ttname"><a href="class_database.html#ac96957bafe50c8ec86a5da6d378e10a1">Database::get_top_10_stat</a></div><div class="ttdeci">QString get_top_10_stat(int)</div><div class="ttdoc">Формирует список топ-10 пользователей, отсортированный по убыванию баллов.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00410">database.cpp:410</a></div></div>
+<div class="ttc" id="aclass_database_html_ac9c2247d9cbc3722fba07cdf2117156e"><div class="ttname"><a href="class_database.html#ac9c2247d9cbc3722fba07cdf2117156e">Database::is_connected</a></div><div class="ttdeci">bool is_connected(int)</div><div class="ttdoc">Проверяет, привязан ли сокет к какому-либо авторизованному пользователю.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00129">database.cpp:129</a></div></div>
+<div class="ttc" id="aclass_database_html_accfaed8899ec8d66ad75875a8459e710"><div class="ttname"><a href="class_database.html#accfaed8899ec8d66ad75875a8459e710">Database::drop_all_connections</a></div><div class="ttdeci">bool drop_all_connections()</div><div class="ttdoc">Сбрасывает все активные сокеты в базе данных (используется при старте сервера).</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00327">database.cpp:327</a></div></div>
+<div class="ttc" id="aclass_database_html_acd69a3440e1e105e021fc7e250f74988"><div class="ttname"><a href="class_database.html#acd69a3440e1e105e021fc7e250f74988">Database::save_current_task</a></div><div class="ttdeci">bool save_current_task(int, const CurrentTask &amp;)</div><div class="ttdoc">Сохраняет текущую выданную задачу в профиль пользователя.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00230">database.cpp:230</a></div></div>
+<div class="ttc" id="aclass_database_html_ad656bbad31e26a64aa9fcae535c2608f"><div class="ttname"><a href="class_database.html#ad656bbad31e26a64aa9fcae535c2608f">Database::get_current_task</a></div><div class="ttdeci">CurrentTask get_current_task(int)</div><div class="ttdoc">Возвращает структуру текущей задачи пользователя.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00252">database.cpp:252</a></div></div>
+<div class="ttc" id="aclass_database_html_aea453b6d630f11840e3a4a7619356445"><div class="ttname"><a href="class_database.html#aea453b6d630f11840e3a4a7619356445">Database::get_all_stat</a></div><div class="ttdeci">QString get_all_stat(int)</div><div class="ttdoc">Формирует список статистики первых 15 пользователей.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00381">database.cpp:381</a></div></div>
+<div class="ttc" id="aclass_database_html_aea64d7d99483faec8f049cdd817bb693"><div class="ttname"><a href="class_database.html#aea64d7d99483faec8f049cdd817bb693">Database::db</a></div><div class="ttdeci">QSqlDatabase db</div><div class="ttdoc">Объект соединения с SQLite.</div><div class="ttdef"><b>Определения</b> <a href="#l00049">database.h:49</a></div></div>
+<div class="ttc" id="aclass_database_html_aed8c6d317d8c2fe251dd3c481eaa3b2e"><div class="ttname"><a href="class_database.html#aed8c6d317d8c2fe251dd3c481eaa3b2e">Database::is_reg_ok</a></div><div class="ttdeci">bool is_reg_ok(QString, QString, QString, int)</div><div class="ttdoc">Регистрирует нового пользователя с ролью &#39;user&#39; и начальной нулевой статистикой.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00194">database.cpp:194</a></div></div>
+<div class="ttc" id="aclass_database_html_afa8e1c210326915761a1a4ca5c4a4257"><div class="ttname"><a href="class_database.html#afa8e1c210326915761a1a4ca5c4a4257">Database::is_auth_ok</a></div><div class="ttdeci">bool is_auth_ok(QString, QString, int)</div><div class="ttdoc">Авторизует пользователя, проверяя логин/пароль и привязывая socket_descriptor.</div><div class="ttdef"><b>Определения</b> <a href="database_8cpp_source.html#l00148">database.cpp:148</a></div></div>
+<div class="ttc" id="aclass_database_html_afed2be0625dac9e9aa1dac8ac21be415"><div class="ttname"><a href="class_database.html#afed2be0625dac9e9aa1dac8ac21be415">Database::destroyer</a></div><div class="ttdeci">static DatabaseDestroyer destroyer</div><div class="ttdoc">Объект-разрушитель для очистки памяти.</div><div class="ttdef"><b>Определения</b> <a href="#l00048">database.h:48</a></div></div>
+<div class="ttc" id="astruct_current_task_html"><div class="ttname"><a href="struct_current_task.html">CurrentTask</a></div><div class="ttdoc">Структура для хранения информации о текущей задаче, выданной пользователю.</div><div class="ttdef"><b>Определения</b> <a href="tasks_8h_source.html#l00022">tasks.h:22</a></div></div>
+<div class="ttc" id="atasks_8h_html"><div class="ttname"><a href="tasks_8h.html">tasks.h</a></div><div class="ttdoc">Определение структуры задачи и функции её генерации.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a href="dir_fbea892794e5b570563d887d17fc5d9e.html">app</a></li><li class="navelem"><a href="database_8h.html">database.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
