@@ -2,37 +2,39 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Moscow
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
-RUN echo $TZ > /etc/timezone
+# Устанавливаем Qt5 и инструменты сборки
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    qtbase5-dev \
+    qtchooser \
+    qt5-qmake \
+    qtbase5-dev-tools \
+    libqt5sql5 \
+    libqt5sql5-sqlite \
+    qtwayland5 \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update
-RUN apt-get install -y qtbase5-dev
-RUN apt-get install -y qtchooser
-RUN apt-get install -y qt5-qmake
-RUN apt-get install -y qtbase5-dev-tools
-RUN apt-get install -y libqt5sql5
-RUN apt-get install -y libqt5sql5-sqlite
-RUN apt-get install -y qtwayland5
-RUN apt-get install -y build-essential
-
-WORKDIR /app
-
+# Рабочая директория для исходников
+WORKDIR /server_build
 COPY . .
 
-RUN find . -maxdepth 2 -name "*.cpp" -exec mv {} . \; -- находим нужные файлы, если они в огтдельной папке
-RUN find . -maxdepth 2 -name "*.h" -exec mv {} . \;
-RUN find . -maxdepth 2 -name "*.pro" -exec mv {} . \;
+# Заходим в папку, собираем (бинарник рождается с именем tcpServer) и копируем его в корень
+RUN cd server/app && qmake app.pro && make && cp tcpServer /tcpServer
 
-RUN qmake tcpServer.pro
-RUN make
+# Создаем изолированную папку под базу данных
+RUN mkdir -p /db_storage
 
 EXPOSE 33333
 
-ENTRYPOINT ["./tcpServer"]
+# Папка базы данных становится рабочей директорией перед стартом
+WORKDIR /db_storage
 
--- docker build -t my-qt-server .                                                              - создание образа
--- touch update.db                                                                             - для базы данных
--- docker run -d --name qt-container -p 33333:33333 -v ./update.db:/app/SQLite.db my-qt-server - создание контейнера
--- docker stop qt-container                                                                    - останавка контейнера
--- docker rm qt-container                                                                      - удаление контейнера
+# Запуск сервера
+ENTRYPOINT ["/tcpServer"]
+
+# docker build -t my-qt-server . - создание образа
+# docker run -d --name qt-container -p 33333:33333 -v "${PWD}/SQLite.db:/app/runtime/SQLite.db" my-qt-server - создание контейнера
+# docker stop qt-container - останавка контейнера
+# docker rm qt-container - удаление контейнера
